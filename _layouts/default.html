@@ -1,11 +1,28 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <title>{{ page.title }}</title>
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/cv">CV</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="container">
 
+        {{ content }}
+
+    </div><!-- /.container -->
+    <footer>
+        <ul>
+            <li><a href="https://github.com/paphillips/DFB">DFB mini development environment on github</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
