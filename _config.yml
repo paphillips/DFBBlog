@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 theme: jekyll-theme-dinky 
 encoding: utf-8
 Exclude: [jekyll_notes.txt]
@@ -5,3 +6,6 @@ google_analytics: UA-114934911-1
 repository: paphillips/DFBBlog
 title: DFB Topics
 paginate: 5
+=======
+theme: jekyll-theme-dinky
+>>>>>>> 7b5f3253e9f201f6292588b7e024a95a4f44c7fc
