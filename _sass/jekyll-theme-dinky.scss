@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, ol, table, dl {
-  margin:0 0 12px;
+  margin:0 0 22px;
 }
 
 h1, h2, h3 {
@@ -309,8 +309,23 @@ header ul {
   padding:0;
 }
 
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
 header li.categories {
-	
 	display: inline-block;
 	/*list-style-type: none;*/
 	width:120px;
@@ -331,11 +346,17 @@ header li.categories {
 header li.categories:hover {
 	background: #C3001D;
 	background: -moz-linear-gradient(top, #C3001D 0%, #950119 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #C3001D 0%,#950119 100%);
-  background: -o-linear-gradient(top, #C3001D 0%,#950119 100%);
-  background: -ms-linear-gradient(top, #C3001D 0%,#950119 100%);
-  background: linear-gradient(top, #C3001D 0%,#950119 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
+	background: -webkit-linear-gradient(top, #C3001D 0%,#950119 100%);
+	background: -o-linear-gradient(top, #C3001D 0%,#950119 100%);
+	background: -ms-linear-gradient(top, #C3001D 0%,#950119 100%);
+	background: linear-gradient(top, #C3001D 0%,#950119 100%);
+}
+
+header.bannermenu {
+	display: inline-block;
+	background: none;
+	
 }
 
 a.buttons {
@@ -463,3 +484,14 @@ footer {
     color:#444;
   }
 }
+
+.w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.w3-left-align{text-align:left!important}.w3-right-align{text-align:right!important}.w3-justify{text-align:justify!important}.w3-center{text-align:center!important}
+.w3-circle{border-radius:50%}
+.w3-margin-right{margin-right:16px!important}
+.w3-button:hover{color:#000!important;background-color:#ccc!important}
+.w3-block{display:block;width:100%}
+.w3-dark-grey,.w3-hover-dark-grey:hover,.w3-dark-gray,.w3-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.w3-right-align{text-align:right!important}.w3-justify{text-align:justify!important}.w3-center{text-align:center!important}
