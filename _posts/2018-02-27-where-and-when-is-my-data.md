@@ -1,22 +1,23 @@
-﻿---
-layout: post
+---
+layout: default
 title: "Where and when is my data"
 date: 2018-02-27
+categories: [DFB Mini IDE, Intro]
 ---
 
-This site is intended to decrease the learning curve of the Digital FIlter Block (DFB), a limited-scope DSP engine that is built into the Cypress PSoC line.
+This site is intended to decrease the learning curve of the Digital Filter Block (DFB), a limited-scope DSP engine that is built into the Cypress PSoC line.
 
 The DFB is a powerful yet somewhat behind-the-scenes component in the PSoC line. 
 
 One component, the 'Filter', provides a friendly user interface on top of the DFB to configure a two channel streaming digital filter. 
 
-If this tool does not meet your needs, I see three design options:
+If this tool does not meet your needs I see three design options:
 
-* Do your processing in the application with the CPU
+* Do your processing with the CPU
 * Use an external DSP chip
 * Learn DFB assembler
 
-My design had more advanced requirements:
+My design had more advanced requirements than the filter component could provide:
 
 * 8 channel ADC threshold and peak monitoring in real-time
 * 4-channel x 24-sample linear regression slope calculation in the background
@@ -29,7 +30,7 @@ The learning curve is steep on DFB assembler due to several factors:
 
 * The assembler simulator provides limited output information of each subsystem within the DFB
 * The pipeline delays are not directly documented. The datasheet indicates:
-   > The instruction pipelining follows Figure 3 for the DFB processor. The diagram shows the locations of the pipeline registers so you can determine the instruction pipeline latency.
+   > _The instruction pipelining follows Figure 3 for the DFB processor. The diagram shows the locations of the pipeline registers so you can determine the instruction pipeline latency._
    * Perhaps the pipelining is obvious to a professional DSP engineer, but I did not find it to be clear especially when I have to keep referring to the diagram while programming.
 
 In order to achieve my design objectives I decided to take a few weeks and build a mini-development environment for the DFB. It provides the following benefits:

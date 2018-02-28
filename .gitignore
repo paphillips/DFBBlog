@@ -267,3 +267,4 @@ _site/
 #VS
 *.sln
 Properties
+jekyll_notes.txt
