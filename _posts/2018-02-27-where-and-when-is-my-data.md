@@ -2,7 +2,7 @@
 layout: default
 title: "Where and when is my data"
 date: 2018-02-27
-categories: [DFB Mini IDE, Intro]
+categories: [DFB_Mini_IDE, Intro]
 ---
 
 This site is intended to decrease the learning curve of the Digital Filter Block (DFB), a limited-scope DSP engine that is built into the Cypress PSoC line.

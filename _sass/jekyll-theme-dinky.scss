@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, ol, table, dl {
-  margin:0 0 22px;
+  margin:0 0 12px;
 }
 
 h1, h2, h3 {
@@ -145,7 +145,7 @@ hr {
 img {
   position: relative;
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 850px;
   padding: 5px;
   margin: 10px 0 32px 0;
   border: 1px solid #ccc;
@@ -360,11 +360,12 @@ a.buttons:hover {
 /* Section - for main page content */
 
 section {
-  width:650px;
-  float:right;
+  width:1024px;	/* distance from right side */
+  /*float:right;*/
+  float:left;
+  margin-left: 300px;
   padding-bottom:50px;
 }
-
 
 /* Footer */
 
