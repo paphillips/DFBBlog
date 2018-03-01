@@ -1,4 +1,5 @@
-<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<!-- use 100% for width and height with viewport to ensure it scales-->
+<svg width="100%" height="100%" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <g>
   <title>Wave</title>
   <rect width="40" y="0" stroke="#333333" fill="#333333" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" height="40" id="svg_3"/>
