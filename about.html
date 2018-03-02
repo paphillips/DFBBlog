@@ -1,0 +1,31 @@
+---
+layout: 	default
+title: 		"About"
+categories: [Intro]
+
+---
+<h1>About this site</h1>
+<hr>
+<div class="content">
+	<p><!--excerpt.start-->This site aims to decrease the learning curve of the Digital Filter Block (DFB), a limited-scope DSP engine that is built into the <a href="http://www.cypress.com/products/microcontrollers-mcus">Cypress PSoC</a> line, with a focus on the DFB assembler.<!--excerpt.end--></p>
+	<h2>Using the DFB in a PSoC microcontroller</h2>
+	<p>There are two ways to make use of the DFB:</p>
+	<ol>
+		<li>Filter Component</li>
+		<li>Digital Filter Block (DFB) Assembler</li>
+	</ol>
+	<h2>About the <a href="http://www.cypress.com/documentation/component-datasheets/filter">Filter Component</a></h2>
+	<p>This component provides a user friendly interface on top of the DFB to configure a two channel streaming digital filter with up to 128 taps. It is an excellent solution for simple requirements.</p>
+	<figure class="figure figure-med">
+		<img class="img-fullwidth" src="/assets/img/Digital-filter-screenshot.png"></img>
+		<figcaption class="figure-caption">The standard Digital Filter component user interface.</figcaption>
+	</figure>
+	<h2>About the <a href="http://www.cypress.com/documentation/component-datasheets/digital-filter-block-dfb-assembler">Digital Filter Block (DFB) Assembler</a></h2>
+	<p>This component allows low-level access hardware by writing programs in DFB assembler to do any type of data processing supported by the DFB.</p>
+	<div class="alert alert-success alert-half" role="alert">I recommend using the free DFB Mini IDE (available above on the menu bar) for developing and troubleshooting DFB assembler code prior to pasting in into the component. It has many enhancements over the standard component, including per-cycle state diagrams showing how the instruction and pipeline are effective.</div>
+	<figure class="figure figure-med">
+		<img class="img-fullwidth" src="/assets/img/Digital-filter-assembler-screenshot.png"></img>
+		<figcaption class="figure-caption">The Digital Filter Block assembler component user interface.</figcaption>
+	</figure>
+	</ol>
+</div>

@@ -1,0 +1,58 @@
+---
+layout: 	default
+title: 		"DFB Mini IDE Intro"
+categories: [DFB Mini IDE]
+thumb:		
+summary: 	"DFB Mini IDE Intro"
+---
+<h1>DFB Mini IDE Intro</h1>
+<hr>
+<div class="content">
+	<p>
+		The DFB mini-IDE provides a significant boost in productivity and reduces the learning curve for DFB assembler.
+	<p/>
+	<pre class="language-asmcypressdfb line-numbers"><code>// Example demonstrating a calculation to square the input value
+
+initial:
+    // ------------------------
+    // Setup and initialization
+    // ------------------------
+
+    // [acu]    Clear
+    // [alu]    Set to zero
+    acu(clear, clear) dmux(sa, sa) alu(set0) mac(hold)
+
+    // Set modulus arithmentic [ON]
+    // Unconditional jump to [wait_for_in1]
+    acu(setmod, setmod) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, wait_for_in1)
+
+wait_for_in1:
+    // -------------------------------------------------------
+    // Wait for data to be written to Staging Register Input 1
+    // -------------------------------------------------------
+
+    // JUMP:    Is value [in1] register populated with Stage_A data?
+    //          [True]   Value loaded - go to [dataRead]
+    //          [False]  Loop to [wait_for_in1]
+    // [dmux]   Set up to load Stage_A value into [mac].a and [mac].b
+    // [mac]    Set up to multiply a * b without adding any accumulated value
+    acu(hold, hold) addr(1) dmux(bm, bm) alu(hold) mac(clra) jmpl(in1, dataRead)
+
+dataRead:
+    // -----------------------------------------
+    // Run the calculation and output the result
+    // -----------------------------------------
+
+    // [mac]    Loads a and b from Stage_A -> Mux_0 -> Mux_1 -> Mux_2 -> mac
+    acu(hold, hold) dmux(sm, sm) alu(seta) mac(hold)
+
+    // [mac]    Multiplication of a and b is output
+    // [alu]    Set up to output mac result
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // [alu]    Output mac result
+    acu(hold, hold) dmux(sm, sm) alu(seta) mac(hold)
+
+    // [write]  Write calculation result to [Hold_A]
+    acu(hold, hold) addr(1) dmux(sm, sm) alu(hold) mac(hold) write(abus) jmp(eob, wait_for_in1)</code></pre>
+</div>

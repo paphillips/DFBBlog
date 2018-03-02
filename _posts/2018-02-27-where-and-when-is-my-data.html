@@ -1,0 +1,54 @@
+---
+layout: 	default
+title: 		"Where and when is my data?"
+categories: [Intro]
+thumb: 		"/assets/img/2018-02-27-where-and-when-is-my-data-thumb.png"
+summary: 	"This article goes over the development of the DFB Mini IDE, arising from advanced requirements and a desire to reduce the learning curve."
+---
+<h1>Where and when is my data? - the Mini IDE</h1>
+<hr>
+<div class="content">
+	<h2>Going the custom DSP route</h2>
+	<p>A recent design of mine had more advanced requirements than the digital filter component could provide.</p>
+	<p>I needed:</p>
+	<ul>
+		<li>8 channel ADC threshold and peak monitoring in real-time</li>
+		<li>4 channel x 24-sample linear regression slope calculation to run in the background on demand</li>
+	</ul>
+	<p>These are too heavy to do on the CPU with other tasks so I set out to learn DFB assembler.</p>
+	<p>During this learning cycle I found that while the datasheet covers each technical area in detail it lacks a macro view and is somewhat opaque in the pipelining aspects. As with most datasheets, it takes a long time for all of the information to 'click'.</p>
+	<p>The learning curve can be steep on DFB assembler due to several factors:</p>
+	<ul>
+		<li>The assembler simulator provides limited output information of each subsystem within the DFB</li>
+		<li>The pipeline delays are not directly documented. The datasheet indicates:<blockquote>The instruction pipelining follows Figure 3 for the DFB processor.<br>The diagram shows the locations of the pipeline registers so you can determine the instruction pipeline latency.</blockquote>
+		<li>Perhaps the pipelining is obvious to a professional DSP engineer, but I did not find it to be clear</li>
+	</ul>
+	<h2>Honorable mention</h2>
+	<p>In working my way up the learning curve I found very few resources outside of the datasheet, but these stood out:</p>
+	<ul>
+		<li><a href="http://arttools.blogspot.com/2016/02/psoc-5lp-dfb-assembler.html">Magnus Lundin</a> has been active on the PSoC forums with DFB advice, and also has a site with well-documented example code.</li>
+		<li><a href="https://www.hackster.io/antedeluvian/measuring-an-rms-signal-on-a-psoc5-a9fa6d">Aubrey Kagan</a> posted a nice article on calculating RMS using the DFB.</li>
+		<li>Chris Keeser and Dan Sweet at Cypress worked on DFB assembler improvements in 2013 and posted <a href="http://www.cypress.com/forum/psoc-community-components/dfb-assembler-and-significantly-improved-simulator-component">a very informative post here</a> describing the pipeline delays. Look for the attachment "Download UsefulDFB_Info.zip" which contains a lot of useful information.</li>
+		<li>There are also a number of examples in the <a href="https://community.cypress.com/search.jspa?q=(digital+filter+block)">Cypress developer forum</a>.</li>
+	</ul>
+	<h2>The tools to make the tools</h2>
+	<figure class="figure">
+		<object width="1024" type="image/svg+xml" data="/assets/svg/2018-02-27-where-and-when-is-my-data.svg">
+			Your browser does not support SVG
+		</object>
+		<figcaption class="figure-caption">A sample diagram from one cycle in the DFB Assembler Mini IDE (available above on the menu bar).</figcaption>
+	</figure>
+	<p>In order to achieve my design objectives and maintain a reasonable cognitive load I decided to take a few weeks and build a mini-development environment for the DFB. Some of the benefits include:
+	<ol>
+		<li>Visual diagram of the pipeline delays - you can see when an instruction is queued, when data is loaded, when the calculations take place, and when the output is put on the datapath</li>
+		<li>View of the data values as they move through the datapath</li>
+		<li>Visual indication of active datapath as configured by the muxes</li>
+		<li>Ability 'scrub' backward and forward through the code cycles</li>
+		<li>Full detail of ACU / Data ram and address registers at each cycle</li>
+		<li>Jump diagram to allow one to easily check that the ACU is positioned on the proper offset at each entry to a label</li>
+		<li>Ability to 'schedule' globals ahead of time at specific cycles, instead of hand entering them</li>
+		<li>A value converter to switch values between hex, integer, and DFB q.23 values one at a time or in bulk</li>
+	</ol>
+	<div class="alert alert-success alert-half" role="alert">The bottom line with this tool is that is that you may see <strong>where</strong> and <strong>when</strong> your data is inside the DFB, which is critical to efficient development. Being able to visualize the instruction pipelining while scrubbing back and forth drastically reduced my own design timeline.</div>
+	<p>The Mini DFB IDE source is available <a href="https://github.com/paphillips/DFB">free and open source on github</a>.</p>
+</div>

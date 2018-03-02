@@ -19,26 +19,158 @@
   line-height: 50px;
 }
 
+.nav-link {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+/* .nav-link:hover{ */
+	/* color: #fff; */
+	/* background-color: #0069d9; */
+	/* border-color: #0062cc; */
+	/* border-radius: 0.25rem; */
+/* } */
+
+/* .nav-link:focus { */
+  /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); */
+/* } */
+
 html, body {
   height: 100%;
   margin: 0;
 }
 
 body {
-	
+	background-clip: padding-box;
+}
+
+/* HEADINGS */
+h1 {
+	margin: 10px 0px 10px 0px;
+}
+
+h2 {
+	margin: 24px 0px 8px 0px;
+}
+
+/* ALERTS */
+.alert-half {
+	width: 50%
+}
+
+/* IMAGES AND FIGURES */
+.img-fullwidth {
+	width: 100%;
+}
+
+.figure-caption {
+	margin: 10px 0 10px 0;
+	text-align: center;
+}
+
+.figure-sm {
+	width: 25%;
+}
+
+.figure-med {
+	width: 50%;
+}
+
+.figure-lg {
+	width: 75%;
+}
+
+.figure-xl {
+	width: 100%;
 }
 
 .footer {
-  /*position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;*/
-  /*clear: both;*/
-  /* Set the fixed height of the footer here */
- /* height: 30px;*/
-  /*line-height: 30px;*/ /* Vertically center the text there */
   margin-top: 20px;
   background-color: #212529;
+}
+
+.logo {
+	margin: 0px;
+	width: 180px;
+	height: 50px;
+}
+
+.figure {
+	border-radius: 5px;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid gray;
+	box-shadow: 1px 1px 2px gray;
+}
+
+.card-columns {
+	flex-flow: row wrap;
+	flex-direction: row;
+}
+.card {
+	height: 100%;
+	flex: auto;
+	box-shadow: 2px 2px 2px gray;
+}
+
+.card-thumbnail {
+	height: 80px;
+	width: 80px;
+	/* float: left;  */
+	border: none;
+	align: middle;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-body {
+	height: 20rem;
+}
+
+.container-fluid {
+	margin-top: 80px;
+	margin-left: 0;
+	margin-right: auto;
+	flex: 1;
+}
+
+.row>* {
+	margin: 10px;
+ }
+	  
+.wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;flex-direction: column;
+}
+
+a.svglink:after{
+	content: ""; 
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 0;
+}
+
+a.svglink {
+  position: relative;
+  display: inline-block;
+}
+
+/* Flexbox stuff */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+.card {
+    flex: 1 0 500px;
+    box-sizing: border-box;
+    margin: 1rem .25em;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0.25rem;
 }
 
 .card-header-cornersvg {
@@ -48,72 +180,72 @@ body {
 	height: 28px;
 }
 
-.card-deck .card {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.card-deck .card:not(:last-child) {
-    margin-right: 15px;
-}
-
-.card-deck .card:not(:first-child) {
-    margin-left: 15px;
-}
-
-.card {
-	height: 100%;
-	/*margin-top: 50px;*/
-}
-
-.card-body {
+.card-content {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 4rem;
 	height: 20rem;
+	overflow: hidden;
+	display: inline-block;
 }
 
-.container-fluid {
-	margin-top: 120px;
-	margin-left: 0;
-	margin-right: auto;
-	
-	flex: 1;
-	/*overflow: auto;*/
-	/*margin-top: 100px
-	padding-bottom: 40px;*/
-}
-.cardcontainer {
-	min-width: 22rem;
-	width: 100%;
-	/*min-width: 300px;*/
-	/*margin-bottom: 50px;*/
-}
-/*.col-sm-6 .col-md-4 .col-lg-3 .col-xl-2 {margin-bottom: 10px;}*/
-
-.row>* {
-	/*flex: 1 1 160px;*/
-	margin: 10px;
- }
-	  
-.wrapper {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-/* Change column count based on media */
-@media (min-width: 576px) {
-    .card-columns {
-        column-count: 2;
+@media screen and (min-width: 20em) {
+    .card {
+       max-width: calc(100% -  1em);
     }
 }
 
-@media (min-width: 768px) {
-    .card-columns {
-        column-count: 3;
+@media screen and (min-width: 40em) {
+    .card {
+       max-width: calc(50% -  1em);
     }
 }
 
-@media (min-width: 992px) {
-    .card-columns {
-        column-count: 4;
+@media screen and (min-width: 60em) {
+    .card {
+        max-width: calc(25% - 1em);
     }
+}
+
+@media screen and (min-width: 90em) {
+    .card {
+        max-width: calc(20% - 1em);
+    }
+}
+
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 52em;
+    }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+/* PRISM CODE SYNTAX HIGHLIGHTING */
+.token.comment {
+	color: green;
+}
+
+.token.commentbold {
+	color: green;
+	font-weight: bold
+}
+
+.token.opcode {
+	color: blue;
+}
+
+.token.codelabel {
+	color: black;
+	font-weight: bold
 }
