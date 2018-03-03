@@ -1,8 +1,6 @@
 <svg width="100%" height="100%" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <g>
   <title>Logo</title>
-  <rect stroke="#e5e5e5" x="0" y="0" fill="none" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" width="180" height="40" id="svg_3" rx="4" ry="4"/>
-  <!-- <rect id="svg_3" height="60" width="60" y="0" x="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none" stroke="#cccccc"/> -->
   <line id="svg_11" y2="8" x2="50" y1="8" x1="10" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" stroke="#ffffff"/>
   <line id="svg_12" y2="20" x2="20" y1="8" x1="20" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#ffffff" fill="none"/>
   <line id="svg_15" y2="20" x2="40" y1="8" x1="40" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#ffffff" fill="none"/>
@@ -20,6 +18,6 @@
   <line stroke="#4c4c4c" transform="rotate(-45 39.999999999999986,19.999999999999993) " y2="20" x2="44" y1="20" x1="36" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_24"/>
   <line transform="rotate(90 30.000000000000004,32) " stroke="#4c4c4c" y2="32" x2="34" y1="32" x1="26" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_8"/>
   <line stroke="#4c4c4c" y2="32" x2="34" y1="32" x1="26" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_14"/>
-  <text fill="#5fbf00" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="101.61188" y="26.78676" id="svg_5" font-size="12" font-family="Sans-serif" text-anchor="middle" xml:space="preserve" transform="matrix(1.8188087915280704,0,0,2.163208936349619,-67.56421383983817,-27.83265640495535) " stroke="#00ffff">DFB Topics</text>
+  <text fill="#28a745" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="101.61188" y="26.78676" id="svg_5" font-size="12" font-family="Sans-serif" text-anchor="middle" xml:space="preserve" transform="matrix(1.8188087915280704,0,0,2.163208936349619,-67.56421383983817,-27.83265640495535) " stroke="#00ffff">DFB Topics</text>
  </g>
 </svg>

@@ -3,15 +3,18 @@ layout: default
 title: "Categories"
 ---
 
-{% for category in site.categories %}
-  <h3 id="{{ category[0] }}">{{ category[0] }}</h3>
+<h1>Categories</h1>
+<hr>
+{% assign sorted_cats = site.categories | sort %}
+{% for category in sorted_cats %}
+  <h2 id="{{ category[0] }}">{{ category[0] }}</h2>
   <ul>
     {% assign pages_list = category[1] %}
     {% for post in pages_list %}
       {% if post.title != null %}
-      {% if group == null or group == post.group %}
-      <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
-      {% endif %}
+		  {% if group == null or group == post.group %}
+			<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }} </a></li>
+		  {% endif %}
       {% endif %}
     {% endfor %}
     {% assign pages_list = nil %}
