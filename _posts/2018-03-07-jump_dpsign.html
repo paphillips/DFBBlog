@@ -1,0 +1,2060 @@
+---
+layout:        default
+title:         Datapath sign jump
+categories:    [Examples - jump conditions]
+image:         /assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-thumb.png
+summary:       Example of using datapath sign flag to branch (asserted when the ALU output is negative)
+author:        Paul Phillips
+---
+<div id="contentcontainer">
+  <h1>Datapath sign jump</h1>
+  <p>Example of using datapath sign flag to branch (asserted when the ALU output is negative)</p>
+  <a href="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign.dfbproj" class="btn btn-success btn-lg active" role="button">Download this project</a>
+  <h2>Program Listing </h2>
+  <pre id="code" class="language-asmcypressdfb line-numbers show">
+    <code>// [title] Datapath sign jump
+// [brief] Example of using datapath sign flag to branch (asserted when the ALU output is negative)
+// [categories] Examples - jump conditions
+
+init:
+    // ----------------------------------------
+    // Load the next Stage_A value and subtract
+    // [SUBTRACTION_VAL_1] in DataRam_A from it
+    // ----------------------------------------
+
+    // Initialize
+    // [acu]    Ensure we are positioned on [SUBTRACTION_VAL_1] at 0x00
+    acu(clear, clear) dmux(sa, sa) alu(hold) mac(hold)
+        
+    // [dmux].a     Set up to read bus Stage_A to ALU
+    // [dmux].b     Set up to read [SUBTRACTION_VAL_1] from DataRam_A to ALU
+    // [alu]        Set up to subtract b from a - 2 instruction pipeline delay
+    // [addr]       Select Bus in 1 (Stage_A) - 1 instruction pipeline delay
+    acu(hold, hold) addr(1) dmux(ba, sra) alu(subb) mac(hold)
+
+    // Pipeline delay
+    // [alu]        Data values are loaded off the datapath
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // Conditional jump: Is dpsign asserted?
+    //              [true]  Jump to [sign_is_negative]
+    //              [false] Fall through to [sign_is_positive]
+    // [alu]        ALU output is put on the datapath
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(dpsign, sign_is_negative)
+
+sign_is_positive:
+    // --------------------------------------------------
+    // This branch is entered when [alu].a - [alu].b &gt;= 0
+    // --------------------------------------------------
+
+    // Unconditional jump: return to [init]
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, init)
+
+sign_is_negative:
+    // --------------------------------------------------
+    // This branch is entered when [alu].a - [alu].b &lt; 0
+    // --------------------------------------------------
+
+    // Unconditional jump: return to [init]
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, init)
+
+area data_b
+org 0
+dw 0x000004    // [SUBTRACTION_VAL_1]
+</code>
+  </pre>
+  <p style="page-break-after: always;" />
+  <h2>State Diagrams</h2>
+  <figure class="figure figure-xl">
+    <div id="carousel" class="carousel slide" data-interval="false">
+      <ol class="carousel-indicators carousel-indicators-numbers">
+        <li data-target="#carousel" data-slide-to="0" class="active">0</li>
+        <li data-target="#carousel" data-slide-to="1">1</li>
+        <li data-target="#carousel" data-slide-to="2">2</li>
+        <li data-target="#carousel" data-slide-to="3">3</li>
+        <li data-target="#carousel" data-slide-to="4">4</li>
+        <li data-target="#carousel" data-slide-to="5">5</li>
+        <li data-target="#carousel" data-slide-to="6">6</li>
+        <li data-target="#carousel" data-slide-to="7">7</li>
+        <li data-target="#carousel" data-slide-to="8">8</li>
+        <li data-target="#carousel" data-slide-to="9">9</li>
+        <li data-target="#carousel" data-slide-to="10">10</li>
+        <li data-target="#carousel" data-slide-to="11">11</li>
+        <li data-target="#carousel" data-slide-to="12">12</li>
+        <li data-target="#carousel" data-slide-to="13">13</li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle0.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 0</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="13">
+                <code>acu(clear, clear) dmux(sa, sa) alu(hold) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">clear</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Sets reg to 0, put 0 on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">clear</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Sets reg to 0, put 0 on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle1.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 1</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="19">
+                <code>acu(hold, hold) addr(1) dmux(ba, sra) alu(subb) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">addr</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">1</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>In 1 (Stage A) selected for read</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">ba</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Bus to ALU. </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to read bus Stage_A to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">sra</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to RAM, RAM to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to read [SUBTRACTION_VAL_1] from DataRam_A to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">subb</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Puts A – B on the ALU output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to subtract b from a - 2 instruction pipeline delay</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle2.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 2</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="23">
+                <code>acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Data values are loaded off the datapath</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle3.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 3</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="29">
+                <code>acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(dpsign, sign_is_negative)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> ALU output is put on the datapath</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">jmp</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">jmp</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Similar to goto. Conditions are true: jump to the target routine. Conditions are false: fall through to next state numerically.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1">
+                      <span class="badge badge-primary">Jump Conditions</span>
+                    </td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td>
+                      <span class="badge badge-dark">dpsign</span>
+                      <span> A jump based on the MSB of the ALU output. Asserted when the ALU output is negative.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">Jump Branching</span>
+                    </td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td>
+                      <span class="badge badge-dark">Conditions not met (false):</span>
+                      <span> go to sign_is_positive</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-dark">Conditions met (true):</span>
+                      <span> go to sign_is_negative</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle4.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 4</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> sign_is_positive</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="37">
+                <code>acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, init)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">jmp</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">jmp</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Similar to goto. Conditions are true: jump to the target routine. Conditions are false: fall through to next state numerically.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1">
+                      <span class="badge badge-primary">Jump Conditions</span>
+                    </td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td>
+                      <span class="badge badge-dark">eob</span>
+                      <span> End Of Block. A condition for a jump, which is always met because a jump instruction signifies the end of the block.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">Jump Branching</span>
+                    </td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td>
+                      <span class="badge badge-dark">Conditions not met (false):</span>
+                      <span> go to sign_is_negative</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-dark">Conditions met (true):</span>
+                      <span> go to init</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle5.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 5</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="13">
+                <code>acu(clear, clear) dmux(sa, sa) alu(hold) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">clear</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Sets reg to 0, put 0 on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">clear</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Sets reg to 0, put 0 on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle6.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 6</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="19">
+                <code>acu(hold, hold) addr(1) dmux(ba, sra) alu(subb) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">addr</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">1</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>In 1 (Stage A) selected for read</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">ba</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Bus to ALU. </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to read bus Stage_A to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">sra</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to RAM, RAM to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to read [SUBTRACTION_VAL_1] from DataRam_A to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">subb</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Puts A – B on the ALU output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to subtract b from a - 2 instruction pipeline delay</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle7.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 7</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="23">
+                <code>acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Data values are loaded off the datapath</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle8.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 8</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="29">
+                <code>acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(dpsign, sign_is_negative)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> ALU output is put on the datapath</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">jmp</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">jmp</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Similar to goto. Conditions are true: jump to the target routine. Conditions are false: fall through to next state numerically.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1">
+                      <span class="badge badge-primary">Jump Conditions</span>
+                    </td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td>
+                      <span class="badge badge-dark">dpsign</span>
+                      <span> A jump based on the MSB of the ALU output. Asserted when the ALU output is negative.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">Jump Branching</span>
+                    </td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td>
+                      <span class="badge badge-dark">Conditions not met (false):</span>
+                      <span> go to sign_is_positive</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-dark">Conditions met (true):</span>
+                      <span> go to sign_is_negative</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle9.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 9</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> sign_is_positive</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="37">
+                <code>acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, init)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">jmp</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">jmp</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Similar to goto. Conditions are true: jump to the target routine. Conditions are false: fall through to next state numerically.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1">
+                      <span class="badge badge-primary">Jump Conditions</span>
+                    </td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td>
+                      <span class="badge badge-dark">eob</span>
+                      <span> End Of Block. A condition for a jump, which is always met because a jump instruction signifies the end of the block.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">Jump Branching</span>
+                    </td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td>
+                      <span class="badge badge-dark">Conditions not met (false):</span>
+                      <span> go to sign_is_negative</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-dark">Conditions met (true):</span>
+                      <span> go to init</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle10.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 10</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="13">
+                <code>acu(clear, clear) dmux(sa, sa) alu(hold) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">clear</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Sets reg to 0, put 0 on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">clear</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Sets reg to 0, put 0 on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle11.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 11</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="19">
+                <code>acu(hold, hold) addr(1) dmux(ba, sra) alu(subb) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">addr</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">1</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>In 1 (Stage A) selected for read</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">ba</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Bus to ALU. </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to read bus Stage_A to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">sra</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to RAM, RAM to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to read [SUBTRACTION_VAL_1] from DataRam_A to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">subb</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Puts A – B on the ALU output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Set up to subtract b from a - 2 instruction pipeline delay</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle12.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 12</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="23">
+                <code>acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> Data values are loaded off the datapath</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="margin-top: 50px;">
+          <div class="h-100">
+            <object class="diagram-examples" type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-StateDiag-Cycle13.svg">Diagram can't be displayed: your browser does not support SVG</object>
+          </div>
+          <h3>Instruction for Cycle 13</h3>
+          <hr />
+          <p>
+            <span class="badge badge-warning">Under label:</span> init</p>
+          <div>
+            <div>
+              <pre class="language-asmcypressdfb line-numbers" data-start="29">
+                <code>acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(dpsign, sign_is_negative)</code>
+              </pre>
+            </div>
+            <div>
+              <table class="table table-sm table-hover dfb">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">Bank</th>
+                    <th scope="col">Instr</th>
+                    <th scope="col">Delay</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">acu</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">hold</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Puts reg on the output</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">A</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">dmux</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary">B</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-secondary">sa</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">1</span>
+                    </td>
+                    <td>Shifter to ALU</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">alu</span>
+                    </td>
+                    <td rowspan="2" />
+                    <td rowspan="2">
+                      <span class="badge badge-secondary">holdalu</span>
+                    </td>
+                    <td rowspan="2">
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the ALU output from the previous cycle.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">User comment</span> ALU output is put on the datapath</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">mac</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">holdmac</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">2</span>
+                    </td>
+                    <td>Holds the accumulator, no multiply (no power in mult)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-primary">jmp</span>
+                    </td>
+                    <td />
+                    <td>
+                      <span class="badge badge-secondary">jmp</span>
+                    </td>
+                    <td>
+                      <span class="badge badge-danger">0</span>
+                    </td>
+                    <td>Similar to goto. Conditions are true: jump to the target routine. Conditions are false: fall through to next state numerically.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="1">
+                      <span class="badge badge-primary">Jump Conditions</span>
+                    </td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td rowspan="1"></td>
+                    <td>
+                      <span class="badge badge-dark">dpsign</span>
+                      <span> A jump based on the MSB of the ALU output. Asserted when the ALU output is negative.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <span class="badge badge-primary">Jump Branching</span>
+                    </td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                    <td>
+                      <span class="badge badge-dark">Conditions not met (false):</span>
+                      <span> go to sign_is_positive</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-dark">Conditions met (true):</span>
+                      <span> go to sign_is_negative</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" />
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" />
+      </a>
+    </div>
+  </figure>
+  <p style="page-break-after: always;" />
+  <h2>Jump Diagram</h2>
+  <figure class="figure">
+    <object type="image/svg+xml" data="/assets/posts/2018-03-07-jump_dpsign/2018-03-07-jump_dpsign-JumpDiagram.svg">Your browser does not support SVG</object>
+    <figcaption class="figure-caption">Call Diagram for this program from the DFB Assembler Mini IDE</figcaption>
+  </figure>
+</div>

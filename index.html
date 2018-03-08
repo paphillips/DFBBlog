@@ -37,25 +37,18 @@ title: "PSoC DFB Topics and Tools"
 	{% for post in paginator.posts %}
 	<article class="card">
 		<div class="card-header">
-			<object class="card-header-cornersvg" type="image/svg+xml" data="/assets/svg/header_waveform.svg"></object>
-			{{ post.title | strip_html | truncate: 28}}
+			<object class="card-header-cornersvg" type="image/svg+xml" data="/assets/img/header_waveform.svg"></object>
+			{{ post.title | strip_html | truncate: 40}}
 		</div>
 		<div class="card-content">
-			<!-- Thumbnail -->
-			{% if post.thumb %}
-				{% assign truncLen = 200 %}
-				<img src="{{ post.thumb }}" class="card-thumbnail">
-				<hr>
-			{% endif %}
-			{% if post.summary %}
-				{{ post.summary | strip}}
-			{% endif %}
+			<div class="card-brief">
+				{% if post.summary %}{{ post.summary | strip | truncate: 120}}{% endif %}
+			</div>
+			<a href="{{ post.url }}"><img src="{{ post.image }}" class="card-thumbnail align-middle"></a>
 		</div>
-		<a href="{{ post.url }}">
 		<div class="card-footer">
-			Read more...
+			<a href="{{ post.url }}">Read more...</a>
 		</div>
-		</a>
 	</article>
 	{% endfor %}
 </section> 
