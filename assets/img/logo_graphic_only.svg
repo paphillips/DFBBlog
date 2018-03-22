@@ -1,0 +1,22 @@
+<svg width="50" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Logo</title>
+  <rect id="bg" height="60" width="60" y="0" x="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000"/>
+  <line id="svg_11" y2="18" x2="50" y1="18" x1="10" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" stroke="#ffffff"/>
+  <line id="svg_12" y2="30" x2="20" y1="18" x1="20" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#ffffff" fill="none"/>
+  <line id="svg_15" y2="30" x2="40" y1="18" x1="40" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#ffffff" fill="none"/>
+  <line id="svg_16" y2="46.0956" x2="30" y1="31.0956" x1="20" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#ffffff" fill="none"/>
+  <line id="svg_18" y2="46.0956" x2="30" y1="31.0956" x1="40" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#ffffff" fill="none"/>
+  <ellipse id="svg_10" ry="5" rx="5" cy="42" cx="30" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#ff0000" fill="#e5e5e5"/>
+  <ellipse id="svg_9" ry="5" rx="5" cy="30" cx="40" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#ffff00" fill="#e5e5e5"/>
+  <ellipse stroke="#ffff00" ry="5" rx="5" id="svg_1" cy="30" cx="20" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#e5e5e5"/>
+  <rect id="svg_7" height="10" width="10" y="13" x="45" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#007bff" fill="#e5e5e5"/>
+  <rect id="svg_4" height="10" width="10" y="13" x="25" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#007bff" fill="#e5e5e5"/>
+  <rect id="svg_2" height="10" width="10" y="13" x="5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#007bff" fill="#e5e5e5"/>
+  <line stroke="#4c4c4c" transform="rotate(-45 20,30)" y2="30" x2="24" y1="30" x1="16" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_17"/>
+  <line stroke="#4c4c4c" transform="rotate(+45 20,30)" y2="30" x2="24" y1="30" x1="16" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_21"/>
+  <line stroke="#4c4c4c" transform="rotate(-45 40,30)" y2="30" x2="44" y1="30" x1="36" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_23"/>
+  <line stroke="#4c4c4c" transform="rotate(+45 40,30)" y2="30" x2="44" y1="30" x1="36" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_24"/>
+  <line stroke="#4c4c4c" transform="rotate(-45 30,42)" y2="42" x2="34" y1="42" x1="26" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_8"/>
+  <line stroke="#4c4c4c" transform="rotate(+45 30,42)" y2="42" x2="34" y1="42" x1="26" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none" id="svg_14"/> </g>
+</svg>

@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.0.0.0</Version>
+  <ProjectFileName>C:\Users\Paul\Dropbox\DFBBlog\DFBBlog\assets\posts\2018-03-19-analog_poc4\2018-03-19-analog_poc4.dfbproj</ProjectFileName>
+  <Bus1Data>0x0000EB
+0x0000D3
+0x0001D0
+0x0001A1
+0x0002A9
+0x000265
+0x000372
+0x00031A
+0x000425
+0x0003BB
+0x0004BE
+0x000444
+0x000539
+0x0004B3
+0x000593
+0x000504
+0x0005CA
+0x000535
+0x0005DC
+0x000546
+0x0005CA
+0x000535
+0x000593
+0x000504
+0x000539
+0x0004B3
+0x0004BE
+0x000444
+0x000425
+0x0003BB
+0x000372
+0x00031A
+0x0002A9
+0x000265
+0x0001D0
+0x0001A1
+0x0000EB
+0x0000D3
+0x000000
+0x000000
+0xFFFF15
+0xFFFF2D
+0xFFFE30
+0xFFFE5F
+0xFFFD57
+0xFFFD9B
+0xFFFC8E
+0xFFFCE6</Bus1Data>
+  <Bus2Data />
+  <Code>// Paul Phillips
+// 2018-02-15
+// Summary
+
+// 1. Reads [CFG_NBR_CHANNELS] channels of interleaved data from STAGE_A
+// 2. Applies channel offset [CFG_PRE_OFFSET] and channel scaling [CFG_PRE_SCALE]
+// 3. Tests whether channel threshold [CFG_TRIG_THRESH] is met by current sample
+// 4. Once threshold is met, peak value is detected over the next [CFG_PEAK_DWNCNT] samples
+// 6. Peak is output on HOLD_A, Channel ID is output on HOLD_B
+// 7. After peak is output, channel waits [CFG_RELEASE_DWNCNT] cycles before checking threshold again
+
+// Setup:
+// ------
+// n = number of channels interleaved on Stage_A
+// 1. Set [acu_a][0x1] ([CHANNEL_LREG]) = DataRam_A channel 0 start address
+// 2. Set [acu_a][0x2] ([CHANNEL_MREG]) = DataRam_A channel n end address (n * 8 + 7)
+// 3. Set CFG variables for each channel:
+//      a. [CFG_CHANNEL_ID] (n+7 offset) = unique index for this channel that will be output on Hold_B with the peak, typically set to n
+
+
+wait_for_in1:
+    // -----------------------
+    // Wait for [Stage_A] data
+    // -----------------------
+    // Assert: [acu_a].reg == channel [n+0 offset]
+
+    // [lreg] defaults correctly to address 0x00
+    // Modulus arithmetic is on by default
+    
+    // [acu]    Load [mreg] from ACU_A[2]
+    acu(loadm, loadm) addr(2) dmux(sa, sa) alu(hold) mac(hold) 
+
+    // [dmux]       Set up for [Stage_A] input
+    acu(hold, hold) addr(1) dmux(ba, sa) alu(hold) mac(hold)
+
+    // [alu]    Set up load of [CAL_PRE_VALUE] from DataRam_A[ChanelOffset+0]
+    // [write]  Write [Stage_A] to [DataRam_A]
+    acu(hold, hold) dmux(sa, sa) alu(set0) mac(hold) write(da) jmpl(in1, release_met)
+
+release_met:
+    // ------------------------------------------------
+    // Store sample
+    // Check if still in previous peak's release period
+    // ------------------------------------------------
+    // Assert [acu_a].reg == channel n [+0 offset]
+    
+    // [alu]    tsuba dummy instr to use dpeq jump condition
+    acu(incr, hold) dmux(sra, sa) alu(tsubb) mac(hold)
+
+    // Pipeline delay required for dpeq condition 
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // [CAL_RELEASE_DWNCNT] == 0?
+    //  [True]  Ready for threshold check - go to [thresh_met]
+    //  [False] Still releasing from last peak event - fall through to [release_cnt_decr]
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, dpeq, thresh_chk)
+
+release_cnt_decr:
+    // ---------------------------
+    // Decrement [CAL_RELEASE_DWNCNT]
+    // ---------------------------
+    // Assert [acu_a].reg == channel [n+1 offset]
+
+    // todo: safe to move tdeca and sra to release_met
+
+    // cycle 73
+    // [alu]    Set up to decrement [CAL_RELEASE_DWNCNT]
+    acu(hold, hold) dmux(sra, sa) alu(tdeca) mac(hold)
+
+    // Pipeline delay
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // [write]  Update [CAL_RELEASE_DWNCNT] with decremented value
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) write(da)
+
+    // [acu]  Move to start position for jump to [wait_for_in1]
+    acu(decr, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, wait_for_in1)
+
+thresh_chk:
+    // ---------------------------------------------
+    // Check the scaled signal against the threshold
+    // ---------------------------------------------
+    // Assert: [acu_a].reg == channel [n+1 offset]
+    // goal: &lt; 7 instructions
+
+    // Park the [CFG_TRIG_THRESH] in the MAC using PrevALU - Pattern: MAC as FIFO buffer for ALU
+    // [acu]    Move to [CFG_TRIG_THRESH] ram loc
+    // [alu]    Set up to pass ram value to MAC
+    acu(incr, hold) dmux(sra, sa) alu(seta) mac(hold)
+
+    // [acu]    Move to [CAL_PRE_VALUE] ram loc
+    acu(subf, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // [acu]    Finish move to [CAL_PRE_VALUE] ram loc
+    // [mac]    Set up loadalu to fifo buffer the CFG_TRIG_THRESH value
+    // [alu]    Set up for absa
+    acu(hold, hold) dmux(sra, sa) alu(absa) mac(loadalu)
+    
+    // [alu]    Set up for tsubb
+    acu(hold, hold) dmux(sa, sm) alu(tsubb) mac(hold)
+
+    // Pipeline delay
+    // [acu]    Set [freg_6] and increment
+    acu(loadf, hold) addr(7) dmux(sa, sra) alu(hold) mac(hold)
+    acu(addf, hold) dmux(sa, sm) alu(hold) mac(hold)
+
+    // [acu]    Set [freg_2]
+    // [alu].a  [CAL_PRE_VALUE]
+    // [alu].b  [CFG_TRIG_THRESH]
+    // JUMP:    Is value [negative]?
+    //          [True]   signal [below] threshold - go to [wait_for_in1]
+    //          [False]  signal [above] threshold - go to [peak_calc_met]
+    acu(loadf, hold) addr(5) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, dpsign, wait_for_in1)
+
+peak_calc_met:
+    // -------------------------------------------------------------------------------
+    // Check if the configured number of samples for peak detection have been captured
+    // -------------------------------------------------------------------------------
+    // Assert: [acu_a].reg == channel n+1 [+0 offset]
+
+    // [acu_a]      Start move to [CAL_PEAK_DWNCNT]
+    acu(subf, hold) dmux(sa, sa) alu(set0) mac(hold)
+
+    // [acu_a]      Finish move to [CAL_PEAK_DWNCNT]
+    acu(decr, hold) dmux(sra, sa) alu(tsubb) mac(hold)
+
+    // [acu_a]      Move to [CAL_PEAK_DWNCNT]
+    // [alu]        Pipeline delay
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // [alu]:   Set up for first instr in [peak_calc_chk]
+    // JUMP:
+    //  [CAL_PEAK_DWNCNT] == [Zero]?
+    //  [True]:  Sample count reached -  go to [output]
+    //  [False]: Sample count not yet reached - continue to [peak_calc_chk]
+    acu(hold, hold) dmux(sa, sa) alu(passrama) mac(hold) jmp(eob, dpeq, output)
+
+peak_calc_chk:
+    // ----------------------------------------
+    // Check if the latest sample is a new peak
+    // ----------------------------------------
+    // Assert [acu_a].reg == channel [n+3 offset]
+
+    // [acu_a]  Move to [CAL_PEAK]
+    // [alu].a  Load [CAL_PEAK] to put on Mux_B datapath
+    acu(incr, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // [acu_a]      Move to [CAL_PRE_VALUE]
+    // [alu].a      Load [CAL_PRE_VALUE] from RamA
+    acu(subf, hold) dmux(sa, sa) alu(hold) mac(hold)
+    
+    // [acu_a]      Put the [CAL_PEAK] value on the Mux_A datapath
+    // [alu]        Outputs [CAL_PRE_VALUE] onto Mux_B datapath
+    acu(subf, hold) dmux(sra, sa) alu(tsubb) mac(hold)
+
+    // Pipeline delay
+    // [alu].a      Loads [CAL_PRE_VALUE]
+    // [alu].b      Loads [CAL_PEAK]
+    // [alu]        Set up seta to output sample value if we jump to [peak_update]
+    acu(hold, hold) dmux(sra, sa) alu(seta) mac(hold)
+
+    // [acu_a]  Move back to [CAL_PEAK] in prep for [peak_update] / [peak_decr]
+    // JUMP:    [CAL_PRE_VALUE] &gt; [CAL_PEAK]?
+    //          [True]:  (neg) Not a new peak value - go to [peak_decr]
+    //          [False]: New peak value - go to [peak_update], then [peak_decr]
+    acu(addf, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, dpsign, peak_decr)
+
+peak_update:
+    // ---------------------------------------------------------
+    // Update the [CAL_PEAK] value with the current sample value
+    // ---------------------------------------------------------
+    // Assert [acu_a].reg == channel [n+2 offset]
+
+    // Move to [CAL_PEAK] and write the value
+    // Unconditional jump: fall through to [peak_decr]
+    acu(addf, hold) dmux(sa, sa) alu(hold) mac(hold) write(da) jmp(eob, peak_decr)
+
+peak_decr:
+    // ----------------------------
+    // Decrement the sample counter
+    // ----------------------------
+    // Assert [acu_a].reg == channel [n+4 offset]
+
+    // [acu_a]  Move to [CAL_PEAK_DWNCNT]
+    // [alu]    Set up for to decrement counter
+    acu(decr, hold) dmux(sra, sa) alu(tdeca) mac(hold)
+
+    // decrement [CAL_PEAK_DWNCNT]
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // [write]  Decremented [CAL_PEAK_DWNCNT] back to ram
+    acu(hold, hold) dmux(sa, sa) alu(hold) mac(hold) write(da)
+     
+    // [acu_a]  Start moving position forward to next channel start location [n+0 offset] in prep for [wait_for_in1]
+    acu(addf, hold) dmux(sa, sa) alu(hold) mac(hold)
+    
+    // Unconditional jump: to [wait_for_in1]
+    // [acu]    Move to next channel [+0 offset] in prep for wait_for_in1
+    acu(incr, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, wait_for_in1)
+
+output:
+    // ---------------------------------------
+    // Output the value onto the Hold register
+    // ---------------------------------------
+    // Assert [acu_a].reg == channel [n+3 offset]
+
+    // [acu_a]  Move to [CAL_PEAK]  
+    // [alu].a  Load [CAL_PEAK] (from passrama instr in peak_calc_met)
+    acu(incr, hold) dmux(sa, sa) alu(passrama) mac(hold)
+
+    // [acu_a]  Start move to [CFG_CHANNEL_ID]
+    // [alu]    Output [CAL_PEAK]
+    // [alu].a  Set up passrama for [CFG_CHANNEL_ID]
+    // [write]  Hold_A = [CAL_PEAK]
+    acu(incr, hold) addr(1) dmux(sa, sa) alu(hold) mac(hold) write(abus)
+    
+    // [write]  Hold_B = [CFG_CHANNEL_ID]
+    // JUMP: Unconditional to [channel_reset]
+    acu(hold, hold) addr(0) dmux(sa, sa) alu(hold) mac(hold) write(bbus) jmp(eob, channel_post)
+
+channel_post:
+    // --------------------------------------------------------------------------------
+    // Reset counters, variables, and thresholds to default starting values for channel
+    // --------------------------------------------------------------------------------
+    // Assert [acu_a].reg == channel [n+5 offset]
+    
+    // Pattern: we save the current address position and 
+    // grab two config values from the beginning of
+    // DataRam_A to save cycles. One is parked in the mac.
+    // After restoring the ram pointer we update the channel values
+    
+    // [acu]    Move to [CAL_RELEASE_DWNCNT]
+    acu(subf, hold) dmux(sa, sa) alu(hold) mac(hold)
+    acu(subf, hold) dmux(sa, sa) alu(hold) mac(hold)
+
+    // [acu]    Save current position to [REG_TEMP]
+    // [alu]    Set up to grab [CFG_PEAK_DWNCNT]
+    acu(write, hold) addr(0) dmux(sa, sa) alu(passrama) mac(hold)
+
+    // [acu]    Load [CFG_PEAK_DWNCNT]
+    // [mac]    Park [CFG_PEAK_DWNCNT] in the MAC to save for later
+    // [alu]    Set up to grab [CFG_RELEASE_DWNCNT]
+    acu(read, hold) addr(3) dmux(sa, sa) alu(passrama) mac(loadalu)
+
+    // [acu]    Load [CFG_RELEASE_DWNCNT]
+    // [alu]    Set up to grab [CFG_PEAK_DWNCNT] from [mac]
+    // [dmux]   Set up to transfer parked [CFG_PEAK_DWNCNT] from [mac] to [alu]
+    acu(read, hold) addr(4) dmux(sm, sa) alu(seta) mac(hold)
+
+    // [acu]    Restore prior position from [REG_TEMP]
+    // [write]  Update [CAL_RELEASE_DWNCNT]
+    // [alu]    Set up to output zero to overwrite [CAL_PEAK_DWNCNT]
+    acu(read, hold) addr(0) dmux(sa, sa) alu(set0) mac(hold) write(da)
+
+    // [acu]    Move to [CAL_PEAK_DWNCNT]
+    acu(addf, hold) dmux(sa, sa) alu(hold) mac(hold) write(da)
+    
+    // [acu]    Move to [CAL_PEAK]
+    // [write]  Write zero to [CAL_PEAK]
+    acu(incr, hold) dmux(sa, sa) alu(hold) mac(hold) write(da)
+
+    // [acu_a]  Move to offset n+0 in prep for jump
+    // Jump: Unconditional to [thresh_cnt_reset]
+    acu(addf, hold) dmux(sa, sa) alu(hold) mac(hold) jmp(eob, wait_for_in1)
+
+area acu
+org 0
+dw 0x0000   // [REG_TEMP]                    | [REG_TEMP]
+dw 0x0001   // [CHANNEL_LREG]                | [COEFF_PTR_LREG] 0x02
+dw 0x0B19   // [CHANNEL_MREG]                | [COEFF_PTR_MREG] 0x19
+dw 0x7E00   // [CFG_PEAK_DWNCNT_PTR]         | [CONST_ONE_PTR]
+dw 0x7F00   // [CFG_RELEASE_DWNCNT_PTR]      | 
+dw 0x0200   // [freg_2]                      | 
+dw 0x0300   // [freg_3]                      | 
+dw 0x0600   // [freg_6]                      | 
+
+// Pattern: by putting config values at the end and channel data at the beginning,
+// one lreg and one clear instruction can be avoided because they default correctly
+area data_a
+org 0       // Chan 0
+dw 0x000000 // Chan 0+0 [CAL_PRE_VALUE] sample input storage
+dw 0x000000 // Chan 0+1 [CAL_RELEASE_DWNCNT] downcounter of samples after peak until next measurement (init to zero)
+dw 0x00012C // Chan 0+2 [CFG_TRIG_THRESH] = 300 int
+dw 0x000001 // Chan 0+3 [CAL_PEAK_DWNCNT] downcounter of remaining samples to check: init to [CFG_PEAK_DWNCNT]
+dw 0x000000 // Chan 0+4 [CAL_PEAK] max value captured after threshold was passed
+dw 0x000000 // Chan 0+5 [CFG_CHANNEL_ID]
+
+org 6       // Chan 1
+dw 0x000000 // Chan 1+0 [CAL_PRE_VALUE] sample input storage
+dw 0x000000 // Chan 1+1 [CAL_RELEASE_DWNCNT] downcounter of samples after peak until next measurement (init to zero)
+dw 0x00012C // Chan 1+2 [CFG_TRIG_THRESH] = 300 int
+dw 0x000001 // Chan 1+3 [CAL_PEAK_DWNCNT] downcounter of remaining samples to check: init to [CFG_PEAK_DWNCNT]
+dw 0x000000 // Chan 1+4 [CAL_PEAK] max value captured after threshold was passed
+dw 0x000001 // Chan 1+5 [CFG_CHANNEL_ID]
+
+org 126
+dw 0x000001 // [CFG_PEAK_DWNCNT] nbr of samples to capture after threshold has been met
+dw 0x000002 // [CFG_RELEASE_DWNCNT] nbr of channel cycles to wait after peak detection before starting next measurement
+
+area data_b
+org 0
+dw 0xFEB852 // [CFG_SLOPE24_BETA_00]
+dw 0x000000 // [CAL_SAMP1_CH09]
+dw 0x000000 // [CAL_SAMP1_CH10]
+dw 0x000000 // [CAL_SAMP1_CH11]
+dw 0x000000 // [CAL_SAMP1_CH12]
+dw 0xFED4D1 // [CFG_SLOPE24_BETA_01]
+dw 0xFEF14F // [CFG_SLOPE24_BETA_02]
+dw 0xFF0DCD // [CFG_SLOPE24_BETA_03]
+dw 0xFF2A4C // [CFG_SLOPE24_BETA_04]
+dw 0xFF46CA // [CFG_SLOPE24_BETA_05]
+dw 0xFF6349 // [CFG_SLOPE24_BETA_06]
+dw 0xFF7FC7 // [CFG_SLOPE24_BETA_07]
+dw 0xFF9C45 // [CFG_SLOPE24_BETA_08]
+dw 0xFFB8C4 // [CFG_SLOPE24_BETA_09]
+dw 0xFFD543 // [CFG_SLOPE24_BETA_10]
+dw 0xFFF1C1 // [CFG_SLOPE24_BETA_11]
+dw 0x000E3F // [CFG_SLOPE24_BETA_12]
+dw 0x002ABD // [CFG_SLOPE24_BETA_13]
+dw 0x00473C // [CFG_SLOPE24_BETA_14]
+dw 0x0063BB // [CFG_SLOPE24_BETA_15]
+dw 0x008039 // [CFG_SLOPE24_BETA_16]
+dw 0x009CB7 // [CFG_SLOPE24_BETA_17]
+dw 0x00B936 // [CFG_SLOPE24_BETA_18]
+dw 0x00D5B4 // [CFG_SLOPE24_BETA_19]
+dw 0x00F233 // [CFG_SLOPE24_BETA_20]
+dw 0x010EB1 // [CFG_SLOPE24_BETA_21]
+dw 0x012B2F // [CFG_SLOPE24_BETA_22]
+dw 0x0147AE // [CFG_SLOPE24_BETA_23]</Code>
+  <CyclesToRun>150</CyclesToRun>
+  <InputSequence />
+</Project>
