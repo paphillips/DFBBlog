@@ -154,7 +154,7 @@ object.diagram-examples {
 .card-thumbnail {
 	max-height: 360px;
 	max-width: 100%;
-	width: 100%;
+	/* width: 100%; */
 	padding: 10px;
 	margin-top: 1rem;
 	margin-left: auto;
