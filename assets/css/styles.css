@@ -220,6 +220,14 @@ object.diagram-examples {
 	display: inline-block;
 }
 
+.table.filtered {
+	font-size: 0.75rem;
+}
+
+#smartTable th:hover{
+	cursor: pointer;
+}
+
 /* PRISM CODE SYNTAX HIGHLIGHTING */
 pre {
 	display: inline-block;

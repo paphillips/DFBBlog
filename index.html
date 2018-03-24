@@ -4,7 +4,6 @@ title: "PSoC DFB Topics and Tools"
 ---
 <h1>Articles</h1>
 <hr>
-<!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
 	<div class="pagination">
 		{% if paginator.previous_page %}
@@ -31,7 +30,6 @@ title: "PSoC DFB Topics and Tools"
 	</div>
 {% endif %}
 
-<!-- This loops through the paginated posts -->
 <section class="cards">
 	{% assign truncLen = 300 %}
 	{% for post in paginator.posts %}
