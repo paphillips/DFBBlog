@@ -1,0 +1,1042 @@
+﻿<svg width="100%" height="100%" viewBox="0.00 0.00 1813.90 1224.24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(856.336 594.236)">
+		<title>dfb</title>
+		<polygon fill="white" stroke="none" points="-856.336,630 -856.336,-594.236 957.564,-594.236 957.564,630 -856.336,630" />
+		<!-- Legend -->
+		<g id="node1" class="node">
+			<title>Legend</title>
+			<polygon fill="none" stroke="black" points="-803.836,-559.236 -803.836,-585.236 -753.836,-585.236 -753.836,-559.236 -803.836,-559.236" />
+			<text text-anchor="start" x="-800.836" y="-567.836" font-family="Arial" font-size="18.00" fill="Blue">Data</text>
+			<polygon fill="none" stroke="black" points="-753.836,-559.236 -753.836,-585.236 -653.836,-585.236 -653.836,-559.236 -753.836,-559.236" />
+			<text text-anchor="start" x="-750.836" y="-567.836" font-family="Arial" font-size="18.00" fill="DarkGreen">Address</text>
+		</g>
+		<!-- Stage_A -->
+		<g id="node2" class="node">
+			<title>Stage_A</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-814.836,-259.236 -814.836,-285.236 -642.836,-285.236 -642.836,-259.236 -814.836,-259.236" />
+			<polygon fill="none" stroke="black" points="-814.836,-259.236 -814.836,-285.236 -642.836,-285.236 -642.836,-259.236 -814.836,-259.236" />
+			<text text-anchor="start" x="-764.836" y="-268.836" font-family="Arial" font-weight="bold" font-size="18.00">Stage_A</text>
+			<polygon fill="AliceBlue" stroke="none" points="-814.836,-238.236 -814.836,-259.236 -742.836,-259.236 -742.836,-238.236 -814.836,-238.236" />
+			<polygon fill="none" stroke="black" points="-814.836,-238.236 -814.836,-259.236 -742.836,-259.236 -742.836,-238.236 -814.836,-238.236" />
+			<text text-anchor="start" x="-811.836" y="-245.036" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-742.836,-238.236 -742.836,-259.236 -642.836,-259.236 -642.836,-238.236 -742.836,-238.236" />
+			<text text-anchor="start" x="-739.836" y="-245.036" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="AliceBlue" stroke="none" points="-814.836,-217.236 -814.836,-238.236 -742.836,-238.236 -742.836,-217.236 -814.836,-217.236" />
+			<polygon fill="none" stroke="black" points="-814.836,-217.236 -814.836,-238.236 -742.836,-238.236 -742.836,-217.236 -814.836,-217.236" />
+			<text text-anchor="start" x="-811.836" y="-224.036" font-family="Arial" font-size="14.00">Val (hex):</text>
+			<polygon fill="none" stroke="black" points="-742.836,-217.236 -742.836,-238.236 -642.836,-238.236 -642.836,-217.236 -742.836,-217.236" />
+			<polygon fill="AliceBlue" stroke="none" points="-814.836,-196.236 -814.836,-217.236 -742.836,-217.236 -742.836,-196.236 -814.836,-196.236" />
+			<polygon fill="none" stroke="black" points="-814.836,-196.236 -814.836,-217.236 -742.836,-217.236 -742.836,-196.236 -814.836,-196.236" />
+			<text text-anchor="start" x="-811.836" y="-203.036" font-family="Arial" font-size="14.00">Val (int):</text>
+			<polygon fill="none" stroke="black" points="-742.836,-196.236 -742.836,-217.236 -642.836,-217.236 -642.836,-196.236 -742.836,-196.236" />
+			<polygon fill="AliceBlue" stroke="none" points="-814.836,-175.236 -814.836,-196.236 -742.836,-196.236 -742.836,-175.236 -814.836,-175.236" />
+			<polygon fill="none" stroke="black" points="-814.836,-175.236 -814.836,-196.236 -742.836,-196.236 -742.836,-175.236 -814.836,-175.236" />
+			<text text-anchor="start" x="-811.836" y="-182.036" font-family="Arial" font-size="14.00">Val (q.23):</text>
+			<polygon fill="none" stroke="black" points="-742.836,-175.236 -742.836,-196.236 -642.836,-196.236 -642.836,-175.236 -742.836,-175.236" />
+		</g>
+		<!-- Mux_0 -->
+		<g id="node3" class="node">
+			<title>Mux_0</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-843.836,-35.2364 -843.836,-61.2364 -612.836,-61.2364 -612.836,-35.2364 -843.836,-35.2364" />
+			<polygon fill="none" stroke="black" points="-843.836,-35.2364 -843.836,-61.2364 -612.836,-61.2364 -612.836,-35.2364 -843.836,-35.2364" />
+			<text text-anchor="start" x="-756.836" y="-44.8364" font-family="Arial" font-weight="bold" font-size="18.00">Mux_0</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-843.836,-14.2364 -843.836,-35.2364 -782.836,-35.2364 -782.836,-14.2364 -843.836,-14.2364" />
+			<polygon fill="none" stroke="black" points="-843.836,-14.2364 -843.836,-35.2364 -782.836,-35.2364 -782.836,-14.2364 -843.836,-14.2364" />
+			<text text-anchor="start" x="-840.836" y="-21.0364" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-782.836,-14.2364 -782.836,-35.2364 -702.836,-35.2364 -702.836,-14.2364 -782.836,-14.2364" />
+			<polygon fill="none" stroke="black" points="-782.836,-14.2364 -782.836,-35.2364 -702.836,-35.2364 -702.836,-14.2364 -782.836,-14.2364" />
+			<text text-anchor="start" x="-755.336" y="-21.0364" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-702.836,-14.2364 -702.836,-35.2364 -612.836,-35.2364 -612.836,-14.2364 -702.836,-14.2364" />
+			<polygon fill="none" stroke="black" points="-702.836,-14.2364 -702.836,-35.2364 -612.836,-35.2364 -612.836,-14.2364 -702.836,-14.2364" />
+			<text text-anchor="start" x="-676.336" y="-21.0364" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="-843.836,6.76364 -843.836,-14.2364 -782.836,-14.2364 -782.836,6.76364 -843.836,6.76364" />
+			<polygon fill="none" stroke="black" points="-843.836,6.76364 -843.836,-14.2364 -782.836,-14.2364 -782.836,6.76364 -843.836,6.76364" />
+			<text text-anchor="start" x="-840.836" y="-0.0363637" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-782.836,6.76364 -782.836,-14.2364 -702.836,-14.2364 -702.836,6.76364 -782.836,6.76364" />
+			<text text-anchor="start" x="-779.836" y="-0.0363637" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="-702.836,6.76364 -702.836,-14.2364 -612.836,-14.2364 -612.836,6.76364 -702.836,6.76364" />
+			<text text-anchor="start" x="-699.836" y="-0.0363637" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="AliceBlue" stroke="none" points="-843.836,27.7636 -843.836,6.76364 -782.836,6.76364 -782.836,27.7636 -843.836,27.7636" />
+			<polygon fill="none" stroke="black" points="-843.836,27.7636 -843.836,6.76364 -782.836,6.76364 -782.836,27.7636 -843.836,27.7636" />
+			<text text-anchor="start" x="-840.836" y="20.9636" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="-782.836,27.7636 -782.836,6.76364 -702.836,6.76364 -702.836,27.7636 -782.836,27.7636" />
+			<text text-anchor="start" x="-779.836" y="20.9636" font-family="Arial" font-size="14.00">(sa,sa)</text>
+			<polygon fill="none" stroke="black" points="-702.836,27.7636 -702.836,6.76364 -612.836,6.76364 -612.836,27.7636 -702.836,27.7636" />
+			<text text-anchor="start" x="-699.836" y="20.9636" font-family="Arial" font-size="14.00">(sa,sa)</text>
+			<polygon fill="AliceBlue" stroke="none" points="-843.836,48.7636 -843.836,27.7636 -782.836,27.7636 -782.836,48.7636 -843.836,48.7636" />
+			<polygon fill="none" stroke="black" points="-843.836,48.7636 -843.836,27.7636 -782.836,27.7636 -782.836,48.7636 -843.836,48.7636" />
+			<text text-anchor="start" x="-840.836" y="41.9636" font-family="Arial" font-size="14.00">Addr:</text>
+			<polygon fill="none" stroke="black" points="-782.836,48.7636 -782.836,27.7636 -702.836,27.7636 -702.836,48.7636 -782.836,48.7636" />
+			<text text-anchor="start" x="-779.836" y="41.9636" font-family="Arial" font-size="14.00">addr(1)</text>
+			<polygon fill="none" stroke="black" points="-702.836,48.7636 -702.836,27.7636 -612.836,27.7636 -612.836,48.7636 -702.836,48.7636" />
+			<text text-anchor="start" x="-699.836" y="41.9636" font-family="Arial" font-size="14.00">addr(0)</text>
+			<polygon fill="AliceBlue" stroke="none" points="-843.836,69.7636 -843.836,48.7636 -782.836,48.7636 -782.836,69.7636 -843.836,69.7636" />
+			<polygon fill="none" stroke="black" points="-843.836,69.7636 -843.836,48.7636 -782.836,48.7636 -782.836,69.7636 -843.836,69.7636" />
+			<text text-anchor="start" x="-840.836" y="62.9636" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-782.836,69.7636 -782.836,48.7636 -702.836,48.7636 -702.836,69.7636 -782.836,69.7636" />
+			<polygon fill="none" stroke="black" points="-782.836,69.7636 -782.836,48.7636 -702.836,48.7636 -702.836,69.7636 -782.836,69.7636" />
+			<polygon fill="none" stroke="black" points="-702.836,69.7636 -702.836,48.7636 -612.836,48.7636 -612.836,69.7636 -702.836,69.7636" />
+		</g>
+		<!-- Stage_A&#45;&gt;Mux_0 -->
+		<g id="edge3" class="edge">
+			<title>Stage_A-&gt;Mux_0</title>
+			<path fill="none" stroke="Gray" d="M-728.836,-171.188C-728.836,-171.188 -728.836,-76.0875 -728.836,-76.0875" />
+			<polygon fill="Gray" stroke="Gray" points="-725.336,-76.0875 -728.836,-66.0875 -732.336,-76.0876 -725.336,-76.0875" />
+		</g>
+		<!-- Mux_1A -->
+		<g id="node5" class="node">
+			<title>Mux_1A</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-583.836,-259.236 -583.836,-285.236 -368.836,-285.236 -368.836,-259.236 -583.836,-259.236" />
+			<polygon fill="none" stroke="black" points="-583.836,-259.236 -583.836,-285.236 -368.836,-285.236 -368.836,-259.236 -583.836,-259.236" />
+			<text text-anchor="start" x="-511.336" y="-268.836" font-family="Arial" font-weight="bold" font-size="18.00">Mux_1A</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-583.836,-238.236 -583.836,-259.236 -522.836,-259.236 -522.836,-238.236 -583.836,-238.236" />
+			<polygon fill="none" stroke="black" points="-583.836,-238.236 -583.836,-259.236 -522.836,-259.236 -522.836,-238.236 -583.836,-238.236" />
+			<text text-anchor="start" x="-580.836" y="-245.036" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-522.836,-238.236 -522.836,-259.236 -452.836,-259.236 -452.836,-238.236 -522.836,-238.236" />
+			<polygon fill="none" stroke="black" points="-522.836,-238.236 -522.836,-259.236 -452.836,-259.236 -452.836,-238.236 -522.836,-238.236" />
+			<text text-anchor="start" x="-500.336" y="-245.036" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-452.836,-238.236 -452.836,-259.236 -368.836,-259.236 -368.836,-238.236 -452.836,-238.236" />
+			<polygon fill="none" stroke="black" points="-452.836,-238.236 -452.836,-259.236 -368.836,-259.236 -368.836,-238.236 -452.836,-238.236" />
+			<text text-anchor="start" x="-429.336" y="-245.036" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="-583.836,-217.236 -583.836,-238.236 -522.836,-238.236 -522.836,-217.236 -583.836,-217.236" />
+			<polygon fill="none" stroke="black" points="-583.836,-217.236 -583.836,-238.236 -522.836,-238.236 -522.836,-217.236 -583.836,-217.236" />
+			<text text-anchor="start" x="-580.836" y="-224.036" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-522.836,-217.236 -522.836,-238.236 -452.836,-238.236 -452.836,-217.236 -522.836,-217.236" />
+			<text text-anchor="start" x="-519.836" y="-224.036" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="-452.836,-217.236 -452.836,-238.236 -368.836,-238.236 -368.836,-217.236 -452.836,-217.236" />
+			<text text-anchor="start" x="-449.836" y="-224.036" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="AliceBlue" stroke="none" points="-583.836,-196.236 -583.836,-217.236 -522.836,-217.236 -522.836,-196.236 -583.836,-196.236" />
+			<polygon fill="none" stroke="black" points="-583.836,-196.236 -583.836,-217.236 -522.836,-217.236 -522.836,-196.236 -583.836,-196.236" />
+			<text text-anchor="start" x="-580.836" y="-203.036" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="-522.836,-196.236 -522.836,-217.236 -452.836,-217.236 -452.836,-196.236 -522.836,-196.236" />
+			<text text-anchor="start" x="-519.836" y="-203.036" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="none" stroke="black" points="-452.836,-196.236 -452.836,-217.236 -368.836,-217.236 -368.836,-196.236 -452.836,-196.236" />
+			<text text-anchor="start" x="-449.836" y="-203.036" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="AliceBlue" stroke="none" points="-583.836,-175.236 -583.836,-196.236 -522.836,-196.236 -522.836,-175.236 -583.836,-175.236" />
+			<polygon fill="none" stroke="black" points="-583.836,-175.236 -583.836,-196.236 -522.836,-196.236 -522.836,-175.236 -583.836,-175.236" />
+			<text text-anchor="start" x="-580.836" y="-182.036" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-522.836,-175.236 -522.836,-196.236 -452.836,-196.236 -452.836,-175.236 -522.836,-175.236" />
+			<polygon fill="none" stroke="black" points="-522.836,-175.236 -522.836,-196.236 -452.836,-196.236 -452.836,-175.236 -522.836,-175.236" />
+			<polygon fill="none" stroke="black" points="-452.836,-175.236 -452.836,-196.236 -368.836,-196.236 -368.836,-175.236 -452.836,-175.236" />
+			<text text-anchor="start" x="-449.836" y="-182.036" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_0&#45;&gt;Mux_1A -->
+		<g id="edge5" class="edge">
+			<title>Mux_0-&gt;Mux_1A</title>
+			<path fill="none" stroke="Gray" d="M-620.086,-65.7402C-620.086,-134.647 -620.086,-230 -620.086,-230 -620.086,-230 -602.466,-230 -602.466,-230" />
+			<polygon fill="Gray" stroke="Gray" points="-602.466,-233.5 -592.466,-230 -602.466,-226.5 -602.466,-233.5" />
+		</g>
+		<!-- Mux_1B -->
+		<g id="node6" class="node">
+			<title>Mux_1B</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-583.836,208.764 -583.836,182.764 -368.836,182.764 -368.836,208.764 -583.836,208.764" />
+			<polygon fill="none" stroke="black" points="-583.836,208.764 -583.836,182.764 -368.836,182.764 -368.836,208.764 -583.836,208.764" />
+			<text text-anchor="start" x="-511.336" y="199.164" font-family="Arial" font-weight="bold" font-size="18.00">Mux_1B</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-583.836,229.764 -583.836,208.764 -522.836,208.764 -522.836,229.764 -583.836,229.764" />
+			<polygon fill="none" stroke="black" points="-583.836,229.764 -583.836,208.764 -522.836,208.764 -522.836,229.764 -583.836,229.764" />
+			<text text-anchor="start" x="-580.836" y="222.964" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-522.836,229.764 -522.836,208.764 -452.836,208.764 -452.836,229.764 -522.836,229.764" />
+			<polygon fill="none" stroke="black" points="-522.836,229.764 -522.836,208.764 -452.836,208.764 -452.836,229.764 -522.836,229.764" />
+			<text text-anchor="start" x="-500.336" y="222.964" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-452.836,229.764 -452.836,208.764 -368.836,208.764 -368.836,229.764 -452.836,229.764" />
+			<polygon fill="none" stroke="black" points="-452.836,229.764 -452.836,208.764 -368.836,208.764 -368.836,229.764 -452.836,229.764" />
+			<text text-anchor="start" x="-429.336" y="222.964" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="-583.836,250.764 -583.836,229.764 -522.836,229.764 -522.836,250.764 -583.836,250.764" />
+			<polygon fill="none" stroke="black" points="-583.836,250.764 -583.836,229.764 -522.836,229.764 -522.836,250.764 -583.836,250.764" />
+			<text text-anchor="start" x="-580.836" y="243.964" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-522.836,250.764 -522.836,229.764 -452.836,229.764 -452.836,250.764 -522.836,250.764" />
+			<text text-anchor="start" x="-519.836" y="243.964" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="-452.836,250.764 -452.836,229.764 -368.836,229.764 -368.836,250.764 -452.836,250.764" />
+			<text text-anchor="start" x="-449.836" y="243.964" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="AliceBlue" stroke="none" points="-583.836,271.764 -583.836,250.764 -522.836,250.764 -522.836,271.764 -583.836,271.764" />
+			<polygon fill="none" stroke="black" points="-583.836,271.764 -583.836,250.764 -522.836,250.764 -522.836,271.764 -583.836,271.764" />
+			<text text-anchor="start" x="-580.836" y="264.964" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="-522.836,271.764 -522.836,250.764 -452.836,250.764 -452.836,271.764 -522.836,271.764" />
+			<text text-anchor="start" x="-519.836" y="264.964" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="none" stroke="black" points="-452.836,271.764 -452.836,250.764 -368.836,250.764 -368.836,271.764 -452.836,271.764" />
+			<text text-anchor="start" x="-449.836" y="264.964" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="AliceBlue" stroke="none" points="-583.836,292.764 -583.836,271.764 -522.836,271.764 -522.836,292.764 -583.836,292.764" />
+			<polygon fill="none" stroke="black" points="-583.836,292.764 -583.836,271.764 -522.836,271.764 -522.836,292.764 -583.836,292.764" />
+			<text text-anchor="start" x="-580.836" y="285.964" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-522.836,292.764 -522.836,271.764 -452.836,271.764 -452.836,292.764 -522.836,292.764" />
+			<polygon fill="none" stroke="black" points="-522.836,292.764 -522.836,271.764 -452.836,271.764 -452.836,292.764 -522.836,292.764" />
+			<polygon fill="none" stroke="black" points="-452.836,292.764 -452.836,271.764 -368.836,271.764 -368.836,292.764 -452.836,292.764" />
+			<text text-anchor="start" x="-449.836" y="285.964" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_0&#45;&gt;Mux_1B -->
+		<g id="edge7" class="edge">
+			<title>Mux_0-&gt;Mux_1B</title>
+			<path fill="none" stroke="Gray" d="M-620.086,73.4263C-620.086,142.153 -620.086,237 -620.086,237 -620.086,237 -602.466,237 -602.466,237" />
+			<polygon fill="Gray" stroke="Gray" points="-602.466,233.5 -592.466,237 -602.466,240.5 -602.466,233.5" />
+		</g>
+		<!-- Stage_B -->
+		<g id="node4" class="node">
+			<title>Stage_B</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-814.836,208.764 -814.836,182.764 -642.836,182.764 -642.836,208.764 -814.836,208.764" />
+			<polygon fill="none" stroke="black" points="-814.836,208.764 -814.836,182.764 -642.836,182.764 -642.836,208.764 -814.836,208.764" />
+			<text text-anchor="start" x="-764.836" y="199.164" font-family="Arial" font-weight="bold" font-size="18.00">Stage_B</text>
+			<polygon fill="AliceBlue" stroke="none" points="-814.836,229.764 -814.836,208.764 -742.836,208.764 -742.836,229.764 -814.836,229.764" />
+			<polygon fill="none" stroke="black" points="-814.836,229.764 -814.836,208.764 -742.836,208.764 -742.836,229.764 -814.836,229.764" />
+			<text text-anchor="start" x="-811.836" y="222.964" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-742.836,229.764 -742.836,208.764 -642.836,208.764 -642.836,229.764 -742.836,229.764" />
+			<text text-anchor="start" x="-739.836" y="222.964" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="AliceBlue" stroke="none" points="-814.836,250.764 -814.836,229.764 -742.836,229.764 -742.836,250.764 -814.836,250.764" />
+			<polygon fill="none" stroke="black" points="-814.836,250.764 -814.836,229.764 -742.836,229.764 -742.836,250.764 -814.836,250.764" />
+			<text text-anchor="start" x="-811.836" y="243.964" font-family="Arial" font-size="14.00">Val (hex):</text>
+			<polygon fill="none" stroke="black" points="-742.836,250.764 -742.836,229.764 -642.836,229.764 -642.836,250.764 -742.836,250.764" />
+			<polygon fill="AliceBlue" stroke="none" points="-814.836,271.764 -814.836,250.764 -742.836,250.764 -742.836,271.764 -814.836,271.764" />
+			<polygon fill="none" stroke="black" points="-814.836,271.764 -814.836,250.764 -742.836,250.764 -742.836,271.764 -814.836,271.764" />
+			<text text-anchor="start" x="-811.836" y="264.964" font-family="Arial" font-size="14.00">Val (int):</text>
+			<polygon fill="none" stroke="black" points="-742.836,271.764 -742.836,250.764 -642.836,250.764 -642.836,271.764 -742.836,271.764" />
+			<polygon fill="AliceBlue" stroke="none" points="-814.836,292.764 -814.836,271.764 -742.836,271.764 -742.836,292.764 -814.836,292.764" />
+			<polygon fill="none" stroke="black" points="-814.836,292.764 -814.836,271.764 -742.836,271.764 -742.836,292.764 -814.836,292.764" />
+			<text text-anchor="start" x="-811.836" y="285.964" font-family="Arial" font-size="14.00">Val (q.23):</text>
+			<polygon fill="none" stroke="black" points="-742.836,292.764 -742.836,271.764 -642.836,271.764 -642.836,292.764 -742.836,292.764" />
+		</g>
+		<!-- Stage_B&#45;&gt;Mux_0 -->
+		<g id="edge4" class="edge">
+			<title>Stage_B-&gt;Mux_0</title>
+			<path fill="none" stroke="Gray" d="M-728.836,178.716C-728.836,178.716 -728.836,83.6148 -728.836,83.6148" />
+			<polygon fill="Gray" stroke="Gray" points="-732.336,83.6148 -728.836,73.6148 -725.336,83.6148 -732.336,83.6148" />
+		</g>
+		<!-- DataRam_A -->
+		<g id="node9" class="node">
+			<title>DataRam_A</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-226.436,-496.236 -226.436,-522.236 -85.4364,-522.236 -85.4364,-496.236 -226.436,-496.236" />
+			<polygon fill="none" stroke="black" points="-226.436,-496.236 -226.436,-522.236 -85.4364,-522.236 -85.4364,-496.236 -226.436,-496.236" />
+			<text text-anchor="start" x="-205.936" y="-505.836" font-family="Arial" font-weight="bold" font-size="18.00">DataRam_A</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-226.436,-475.236 -226.436,-496.236 -165.436,-496.236 -165.436,-475.236 -226.436,-475.236" />
+			<polygon fill="none" stroke="black" points="-226.436,-475.236 -226.436,-496.236 -165.436,-496.236 -165.436,-475.236 -226.436,-475.236" />
+			<text text-anchor="start" x="-223.436" y="-482.036" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-165.436,-475.236 -165.436,-496.236 -85.4364,-496.236 -85.4364,-475.236 -165.436,-475.236" />
+			<polygon fill="none" stroke="black" points="-165.436,-475.236 -165.436,-496.236 -85.4364,-496.236 -85.4364,-475.236 -165.436,-475.236" />
+			<text text-anchor="start" x="-143.936" y="-482.036" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,-454.236 -226.436,-475.236 -165.436,-475.236 -165.436,-454.236 -226.436,-454.236" />
+			<polygon fill="none" stroke="black" points="-226.436,-454.236 -226.436,-475.236 -165.436,-475.236 -165.436,-454.236 -226.436,-454.236" />
+			<text text-anchor="start" x="-223.436" y="-461.036" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-165.436,-454.236 -165.436,-475.236 -85.4364,-475.236 -85.4364,-454.236 -165.436,-454.236" />
+			<text text-anchor="start" x="-162.436" y="-461.036" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,-433.236 -226.436,-454.236 -165.436,-454.236 -165.436,-433.236 -226.436,-433.236" />
+			<polygon fill="none" stroke="black" points="-226.436,-433.236 -226.436,-454.236 -165.436,-454.236 -165.436,-433.236 -226.436,-433.236" />
+			<text text-anchor="start" x="-223.436" y="-440.036" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="-165.436,-433.236 -165.436,-454.236 -85.4364,-454.236 -85.4364,-433.236 -165.436,-433.236" />
+			<text text-anchor="start" x="-162.436" y="-440.036" font-family="Arial" font-size="14.00">write(db)</text>
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,-412.236 -226.436,-433.236 -165.436,-433.236 -165.436,-412.236 -226.436,-412.236" />
+			<polygon fill="none" stroke="black" points="-226.436,-412.236 -226.436,-433.236 -165.436,-433.236 -165.436,-412.236 -226.436,-412.236" />
+			<text text-anchor="start" x="-223.436" y="-419.036" font-family="Arial" font-size="14.00">Written:</text>
+			<polygon fill="none" stroke="black" points="-165.436,-412.236 -165.436,-433.236 -85.4364,-433.236 -85.4364,-412.236 -165.436,-412.236" />
+			<text text-anchor="start" x="-162.436" y="-419.036" font-family="Arial" font-size="14.00">0.0000072</text>
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,-391.236 -226.436,-412.236 -165.436,-412.236 -165.436,-391.236 -226.436,-391.236" />
+			<polygon fill="none" stroke="black" points="-226.436,-391.236 -226.436,-412.236 -165.436,-412.236 -165.436,-391.236 -226.436,-391.236" />
+			<text text-anchor="start" x="-223.436" y="-398.036" font-family="Arial" font-size="14.00">Addr:</text>
+			<polygon fill="none" stroke="black" points="-165.436,-391.236 -165.436,-412.236 -85.4364,-412.236 -85.4364,-391.236 -165.436,-391.236" />
+			<text text-anchor="start" x="-162.436" y="-398.036" font-family="Arial" font-size="14.00">0x02</text>
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,-370.236 -226.436,-391.236 -165.436,-391.236 -165.436,-370.236 -226.436,-370.236" />
+			<polygon fill="none" stroke="black" points="-226.436,-370.236 -226.436,-391.236 -165.436,-391.236 -165.436,-370.236 -226.436,-370.236" />
+			<text text-anchor="start" x="-223.436" y="-377.036" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="none" stroke="black" points="-165.436,-370.236 -165.436,-391.236 -85.4364,-391.236 -85.4364,-370.236 -165.436,-370.236" />
+			<text text-anchor="start" x="-162.436" y="-377.036" font-family="Arial" font-size="14.00">0.0000000</text>
+		</g>
+		<!-- Mux_1A&#45;&gt;DataRam_A -->
+		<g id="edge10" class="edge">
+			<title>Mux_1A-&gt;DataRam_A</title>
+			<path fill="none" stroke="Blue" d="M-407.986,-289.354C-407.986,-334.493 -407.986,-389 -407.986,-389 -407.986,-389 -244.994,-389 -244.994,-389" />
+			<polygon fill="Blue" stroke="Blue" points="-244.994,-392.5 -234.994,-389 -244.994,-385.5 -244.994,-392.5" />
+			<text text-anchor="middle" x="-411.313" y="-392.8" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_2A -->
+		<g id="node10" class="node">
+			<title>Mux_2A</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-272.436,-280.236 -272.436,-306.236 -39.4364,-306.236 -39.4364,-280.236 -272.436,-280.236" />
+			<polygon fill="none" stroke="black" points="-272.436,-280.236 -272.436,-306.236 -39.4364,-306.236 -39.4364,-280.236 -272.436,-280.236" />
+			<text text-anchor="start" x="-190.936" y="-289.836" font-family="Arial" font-weight="bold" font-size="18.00">Mux_2A</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-272.436,-259.236 -272.436,-280.236 -211.436,-280.236 -211.436,-259.236 -272.436,-259.236" />
+			<polygon fill="none" stroke="black" points="-272.436,-259.236 -272.436,-280.236 -211.436,-280.236 -211.436,-259.236 -272.436,-259.236" />
+			<text text-anchor="start" x="-269.436" y="-266.036" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-211.436,-259.236 -211.436,-280.236 -125.436,-280.236 -125.436,-259.236 -211.436,-259.236" />
+			<polygon fill="none" stroke="black" points="-211.436,-259.236 -211.436,-280.236 -125.436,-280.236 -125.436,-259.236 -211.436,-259.236" />
+			<text text-anchor="start" x="-180.936" y="-266.036" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-125.436,-259.236 -125.436,-280.236 -39.4364,-280.236 -39.4364,-259.236 -125.436,-259.236" />
+			<polygon fill="none" stroke="black" points="-125.436,-259.236 -125.436,-280.236 -39.4364,-280.236 -39.4364,-259.236 -125.436,-259.236" />
+			<text text-anchor="start" x="-100.936" y="-266.036" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,-238.236 -272.436,-259.236 -211.436,-259.236 -211.436,-238.236 -272.436,-238.236" />
+			<polygon fill="none" stroke="black" points="-272.436,-238.236 -272.436,-259.236 -211.436,-259.236 -211.436,-238.236 -272.436,-238.236" />
+			<text text-anchor="start" x="-269.436" y="-245.036" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-211.436,-238.236 -211.436,-259.236 -125.436,-259.236 -125.436,-238.236 -211.436,-238.236" />
+			<text text-anchor="start" x="-208.436" y="-245.036" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="-125.436,-238.236 -125.436,-259.236 -39.4364,-259.236 -39.4364,-238.236 -125.436,-238.236" />
+			<text text-anchor="start" x="-122.436" y="-245.036" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,-217.236 -272.436,-238.236 -211.436,-238.236 -211.436,-217.236 -272.436,-217.236" />
+			<polygon fill="none" stroke="black" points="-272.436,-217.236 -272.436,-238.236 -211.436,-238.236 -211.436,-217.236 -272.436,-217.236" />
+			<text text-anchor="start" x="-269.436" y="-224.036" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="-211.436,-217.236 -211.436,-238.236 -125.436,-238.236 -125.436,-217.236 -211.436,-217.236" />
+			<text text-anchor="start" x="-208.436" y="-224.036" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="none" stroke="black" points="-125.436,-217.236 -125.436,-238.236 -39.4364,-238.236 -39.4364,-217.236 -125.436,-217.236" />
+			<text text-anchor="start" x="-122.436" y="-224.036" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,-196.236 -272.436,-217.236 -211.436,-217.236 -211.436,-196.236 -272.436,-196.236" />
+			<polygon fill="none" stroke="black" points="-272.436,-196.236 -272.436,-217.236 -211.436,-217.236 -211.436,-196.236 -272.436,-196.236" />
+			<text text-anchor="start" x="-269.436" y="-203.036" font-family="Arial" font-size="14.00">In:</text>
+			<polygon fill="none" stroke="black" points="-211.436,-196.236 -211.436,-217.236 -125.436,-217.236 -125.436,-196.236 -211.436,-196.236" />
+			<polygon fill="none" stroke="black" points="-125.436,-196.236 -125.436,-217.236 -39.4364,-217.236 -39.4364,-196.236 -125.436,-196.236" />
+			<text text-anchor="start" x="-122.436" y="-203.036" font-family="Arial" font-size="14.00">0.0000072</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,-175.236 -272.436,-196.236 -211.436,-196.236 -211.436,-175.236 -272.436,-175.236" />
+			<polygon fill="none" stroke="black" points="-272.436,-175.236 -272.436,-196.236 -211.436,-196.236 -211.436,-175.236 -272.436,-175.236" />
+			<text text-anchor="start" x="-269.436" y="-182.036" font-family="Arial" font-size="14.00">Src:</text>
+			<polygon fill="none" stroke="black" points="-211.436,-175.236 -211.436,-196.236 -125.436,-196.236 -125.436,-175.236 -211.436,-175.236" />
+			<polygon fill="none" stroke="black" points="-125.436,-175.236 -125.436,-196.236 -39.4364,-196.236 -39.4364,-175.236 -125.436,-175.236" />
+			<text text-anchor="start" x="-122.436" y="-182.036" font-family="Arial" font-size="14.00">Mux_1A</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,-154.236 -272.436,-175.236 -211.436,-175.236 -211.436,-154.236 -272.436,-154.236" />
+			<polygon fill="none" stroke="black" points="-272.436,-154.236 -272.436,-175.236 -211.436,-175.236 -211.436,-154.236 -272.436,-154.236" />
+			<text text-anchor="start" x="-269.436" y="-161.036" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-211.436,-154.236 -211.436,-175.236 -125.436,-175.236 -125.436,-154.236 -211.436,-154.236" />
+			<polygon fill="none" stroke="black" points="-211.436,-154.236 -211.436,-175.236 -125.436,-175.236 -125.436,-154.236 -211.436,-154.236" />
+			<polygon fill="none" stroke="black" points="-125.436,-154.236 -125.436,-175.236 -39.4364,-175.236 -39.4364,-154.236 -125.436,-154.236" />
+			<text text-anchor="start" x="-122.436" y="-161.036" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_1A&#45;&gt;Mux_2A -->
+		<g id="edge13" class="edge">
+			<title>Mux_1A-&gt;Mux_2A</title>
+			<path fill="none" stroke="Blue" stroke-width="3" d="M-361.165,-230C-361.165,-230 -291.143,-230 -291.143,-230" />
+			<polygon fill="Blue" stroke="Blue" stroke-width="3" points="-291.143,-233.5 -281.143,-230 -291.143,-226.5 -291.143,-233.5" />
+			<text text-anchor="middle" x="-326.154" y="-218.8" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_2B -->
+		<g id="node11" class="node">
+			<title>Mux_2B</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-272.436,187.764 -272.436,161.764 -39.4364,161.764 -39.4364,187.764 -272.436,187.764" />
+			<polygon fill="none" stroke="black" points="-272.436,187.764 -272.436,161.764 -39.4364,161.764 -39.4364,187.764 -272.436,187.764" />
+			<text text-anchor="start" x="-190.936" y="178.164" font-family="Arial" font-weight="bold" font-size="18.00">Mux_2B</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-272.436,208.764 -272.436,187.764 -211.436,187.764 -211.436,208.764 -272.436,208.764" />
+			<polygon fill="none" stroke="black" points="-272.436,208.764 -272.436,187.764 -211.436,187.764 -211.436,208.764 -272.436,208.764" />
+			<text text-anchor="start" x="-269.436" y="201.964" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-211.436,208.764 -211.436,187.764 -125.436,187.764 -125.436,208.764 -211.436,208.764" />
+			<polygon fill="none" stroke="black" points="-211.436,208.764 -211.436,187.764 -125.436,187.764 -125.436,208.764 -211.436,208.764" />
+			<text text-anchor="start" x="-180.936" y="201.964" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-125.436,208.764 -125.436,187.764 -39.4364,187.764 -39.4364,208.764 -125.436,208.764" />
+			<polygon fill="none" stroke="black" points="-125.436,208.764 -125.436,187.764 -39.4364,187.764 -39.4364,208.764 -125.436,208.764" />
+			<text text-anchor="start" x="-100.936" y="201.964" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,229.764 -272.436,208.764 -211.436,208.764 -211.436,229.764 -272.436,229.764" />
+			<polygon fill="none" stroke="black" points="-272.436,229.764 -272.436,208.764 -211.436,208.764 -211.436,229.764 -272.436,229.764" />
+			<text text-anchor="start" x="-269.436" y="222.964" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-211.436,229.764 -211.436,208.764 -125.436,208.764 -125.436,229.764 -211.436,229.764" />
+			<text text-anchor="start" x="-208.436" y="222.964" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="-125.436,229.764 -125.436,208.764 -39.4364,208.764 -39.4364,229.764 -125.436,229.764" />
+			<text text-anchor="start" x="-122.436" y="222.964" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,250.764 -272.436,229.764 -211.436,229.764 -211.436,250.764 -272.436,250.764" />
+			<polygon fill="none" stroke="black" points="-272.436,250.764 -272.436,229.764 -211.436,229.764 -211.436,250.764 -272.436,250.764" />
+			<text text-anchor="start" x="-269.436" y="243.964" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="-211.436,250.764 -211.436,229.764 -125.436,229.764 -125.436,250.764 -211.436,250.764" />
+			<text text-anchor="start" x="-208.436" y="243.964" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="none" stroke="black" points="-125.436,250.764 -125.436,229.764 -39.4364,229.764 -39.4364,250.764 -125.436,250.764" />
+			<text text-anchor="start" x="-122.436" y="243.964" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,271.764 -272.436,250.764 -211.436,250.764 -211.436,271.764 -272.436,271.764" />
+			<polygon fill="none" stroke="black" points="-272.436,271.764 -272.436,250.764 -211.436,250.764 -211.436,271.764 -272.436,271.764" />
+			<text text-anchor="start" x="-269.436" y="264.964" font-family="Arial" font-size="14.00">In:</text>
+			<polygon fill="none" stroke="black" points="-211.436,271.764 -211.436,250.764 -125.436,250.764 -125.436,271.764 -211.436,271.764" />
+			<polygon fill="none" stroke="black" points="-125.436,271.764 -125.436,250.764 -39.4364,250.764 -39.4364,271.764 -125.436,271.764" />
+			<text text-anchor="start" x="-122.436" y="264.964" font-family="Arial" font-size="14.00">0.0000072</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,292.764 -272.436,271.764 -211.436,271.764 -211.436,292.764 -272.436,292.764" />
+			<polygon fill="none" stroke="black" points="-272.436,292.764 -272.436,271.764 -211.436,271.764 -211.436,292.764 -272.436,292.764" />
+			<text text-anchor="start" x="-269.436" y="285.964" font-family="Arial" font-size="14.00">Src:</text>
+			<polygon fill="none" stroke="black" points="-211.436,292.764 -211.436,271.764 -125.436,271.764 -125.436,292.764 -211.436,292.764" />
+			<polygon fill="none" stroke="black" points="-125.436,292.764 -125.436,271.764 -39.4364,271.764 -39.4364,292.764 -125.436,292.764" />
+			<text text-anchor="start" x="-122.436" y="285.964" font-family="Arial" font-size="14.00">Mux_1B</text>
+			<polygon fill="AliceBlue" stroke="none" points="-272.436,313.764 -272.436,292.764 -211.436,292.764 -211.436,313.764 -272.436,313.764" />
+			<polygon fill="none" stroke="black" points="-272.436,313.764 -272.436,292.764 -211.436,292.764 -211.436,313.764 -272.436,313.764" />
+			<text text-anchor="start" x="-269.436" y="306.964" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-211.436,313.764 -211.436,292.764 -125.436,292.764 -125.436,313.764 -211.436,313.764" />
+			<polygon fill="none" stroke="black" points="-211.436,313.764 -211.436,292.764 -125.436,292.764 -125.436,313.764 -211.436,313.764" />
+			<polygon fill="none" stroke="black" points="-125.436,313.764 -125.436,292.764 -39.4364,292.764 -39.4364,313.764 -125.436,313.764" />
+			<text text-anchor="start" x="-122.436" y="306.964" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_1B&#45;&gt;Mux_2B -->
+		<g id="edge15" class="edge">
+			<title>Mux_1B-&gt;Mux_2B</title>
+			<path fill="none" stroke="Blue" stroke-width="3" d="M-361.165,237C-361.165,237 -291.143,237 -291.143,237" />
+			<polygon fill="Blue" stroke="Blue" stroke-width="3" points="-291.143,233.5 -281.143,237 -291.143,240.5 -291.143,233.5" />
+			<text text-anchor="middle" x="-326.154" y="248.2" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- DataRam_B -->
+		<g id="node12" class="node">
+			<title>DataRam_B</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-226.436,403.764 -226.436,377.764 -85.4364,377.764 -85.4364,403.764 -226.436,403.764" />
+			<polygon fill="none" stroke="black" points="-226.436,403.764 -226.436,377.764 -85.4364,377.764 -85.4364,403.764 -226.436,403.764" />
+			<text text-anchor="start" x="-205.936" y="394.164" font-family="Arial" font-weight="bold" font-size="18.00">DataRam_B</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-226.436,424.764 -226.436,403.764 -165.436,403.764 -165.436,424.764 -226.436,424.764" />
+			<polygon fill="none" stroke="black" points="-226.436,424.764 -226.436,403.764 -165.436,403.764 -165.436,424.764 -226.436,424.764" />
+			<text text-anchor="start" x="-223.436" y="417.964" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-165.436,424.764 -165.436,403.764 -85.4364,403.764 -85.4364,424.764 -165.436,424.764" />
+			<polygon fill="none" stroke="black" points="-165.436,424.764 -165.436,403.764 -85.4364,403.764 -85.4364,424.764 -165.436,424.764" />
+			<text text-anchor="start" x="-143.936" y="417.964" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,445.764 -226.436,424.764 -165.436,424.764 -165.436,445.764 -226.436,445.764" />
+			<polygon fill="none" stroke="black" points="-226.436,445.764 -226.436,424.764 -165.436,424.764 -165.436,445.764 -226.436,445.764" />
+			<text text-anchor="start" x="-223.436" y="438.964" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-165.436,445.764 -165.436,424.764 -85.4364,424.764 -85.4364,445.764 -165.436,445.764" />
+			<text text-anchor="start" x="-162.436" y="438.964" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,466.764 -226.436,445.764 -165.436,445.764 -165.436,466.764 -226.436,466.764" />
+			<polygon fill="none" stroke="black" points="-226.436,466.764 -226.436,445.764 -165.436,445.764 -165.436,466.764 -226.436,466.764" />
+			<text text-anchor="start" x="-223.436" y="459.964" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="-165.436,466.764 -165.436,445.764 -85.4364,445.764 -85.4364,466.764 -165.436,466.764" />
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,487.764 -226.436,466.764 -165.436,466.764 -165.436,487.764 -226.436,487.764" />
+			<polygon fill="none" stroke="black" points="-226.436,487.764 -226.436,466.764 -165.436,466.764 -165.436,487.764 -226.436,487.764" />
+			<text text-anchor="start" x="-223.436" y="480.964" font-family="Arial" font-size="14.00">Written:</text>
+			<polygon fill="none" stroke="black" points="-165.436,487.764 -165.436,466.764 -85.4364,466.764 -85.4364,487.764 -165.436,487.764" />
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,508.764 -226.436,487.764 -165.436,487.764 -165.436,508.764 -226.436,508.764" />
+			<polygon fill="none" stroke="black" points="-226.436,508.764 -226.436,487.764 -165.436,487.764 -165.436,508.764 -226.436,508.764" />
+			<text text-anchor="start" x="-223.436" y="501.964" font-family="Arial" font-size="14.00">Addr:</text>
+			<polygon fill="none" stroke="black" points="-165.436,508.764 -165.436,487.764 -85.4364,487.764 -85.4364,508.764 -165.436,508.764" />
+			<text text-anchor="start" x="-162.436" y="501.964" font-family="Arial" font-size="14.00">0x02</text>
+			<polygon fill="AliceBlue" stroke="none" points="-226.436,529.764 -226.436,508.764 -165.436,508.764 -165.436,529.764 -226.436,529.764" />
+			<polygon fill="none" stroke="black" points="-226.436,529.764 -226.436,508.764 -165.436,508.764 -165.436,529.764 -226.436,529.764" />
+			<text text-anchor="start" x="-223.436" y="522.964" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="none" stroke="black" points="-165.436,529.764 -165.436,508.764 -85.4364,508.764 -85.4364,529.764 -165.436,529.764" />
+			<text text-anchor="start" x="-162.436" y="522.964" font-family="Arial" font-size="14.00">0.0000024</text>
+		</g>
+		<!-- Mux_1B&#45;&gt;DataRam_B -->
+		<g id="edge12" class="edge">
+			<title>Mux_1B-&gt;DataRam_B</title>
+			<path fill="none" stroke="Blue" stroke-width="3" d="M-407.986,297.057C-407.986,342.331 -407.986,397 -407.986,397 -407.986,397 -244.994,397 -244.994,397" />
+			<polygon fill="Blue" stroke="Blue" stroke-width="3" points="-244.994,393.5 -234.994,397 -244.994,400.5 -244.994,393.5" />
+			<text text-anchor="middle" x="-411.461" y="393.2" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- ACU_A -->
+		<g id="node7" class="node">
+			<title>ACU_A</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-446.636,-521.236 -446.636,-547.236 -276.636,-547.236 -276.636,-521.236 -446.636,-521.236" />
+			<polygon fill="none" stroke="black" points="-446.636,-521.236 -446.636,-547.236 -276.636,-547.236 -276.636,-521.236 -446.636,-521.236" />
+			<text text-anchor="start" x="-392.136" y="-530.836" font-family="Arial" font-weight="bold" font-size="18.00">ACU_A</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,-500.236 -446.636,-521.236 -376.636,-521.236 -376.636,-500.236 -446.636,-500.236" />
+			<polygon fill="none" stroke="black" points="-446.636,-500.236 -446.636,-521.236 -376.636,-521.236 -376.636,-500.236 -446.636,-500.236" />
+			<text text-anchor="start" x="-443.636" y="-507.036" font-family="Arial" font-size="14.00">reg:</text>
+			<polygon fill="none" stroke="black" points="-376.636,-500.236 -376.636,-521.236 -276.636,-521.236 -276.636,-500.236 -376.636,-500.236" />
+			<text text-anchor="start" x="-373.636" y="-507.036" font-family="Arial" font-size="14.00">0x02</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,-479.236 -446.636,-500.236 -376.636,-500.236 -376.636,-479.236 -446.636,-479.236" />
+			<polygon fill="none" stroke="black" points="-446.636,-479.236 -446.636,-500.236 -376.636,-500.236 -376.636,-479.236 -446.636,-479.236" />
+			<text text-anchor="start" x="-443.636" y="-486.036" font-family="Arial" font-size="14.00">freg:</text>
+			<polygon fill="none" stroke="black" points="-376.636,-479.236 -376.636,-500.236 -276.636,-500.236 -276.636,-479.236 -376.636,-479.236" />
+			<text text-anchor="start" x="-373.636" y="-486.036" font-family="Arial" font-size="14.00">2</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,-458.236 -446.636,-479.236 -376.636,-479.236 -376.636,-458.236 -446.636,-458.236" />
+			<polygon fill="none" stroke="black" points="-446.636,-458.236 -446.636,-479.236 -376.636,-479.236 -376.636,-458.236 -446.636,-458.236" />
+			<text text-anchor="start" x="-443.636" y="-465.036" font-family="Arial" font-size="14.00">lreg:</text>
+			<polygon fill="none" stroke="black" points="-376.636,-458.236 -376.636,-479.236 -276.636,-479.236 -276.636,-458.236 -376.636,-458.236" />
+			<text text-anchor="start" x="-373.636" y="-465.036" font-family="Arial" font-size="14.00">0x00</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,-437.236 -446.636,-458.236 -376.636,-458.236 -376.636,-437.236 -446.636,-437.236" />
+			<polygon fill="none" stroke="black" points="-446.636,-437.236 -446.636,-458.236 -376.636,-458.236 -376.636,-437.236 -446.636,-437.236" />
+			<text text-anchor="start" x="-443.636" y="-444.036" font-family="Arial" font-size="14.00">mreg:</text>
+			<polygon fill="none" stroke="black" points="-376.636,-437.236 -376.636,-458.236 -276.636,-458.236 -276.636,-437.236 -376.636,-437.236" />
+			<text text-anchor="start" x="-373.636" y="-444.036" font-family="Arial" font-size="14.00">0x05</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,-416.236 -446.636,-437.236 -376.636,-437.236 -376.636,-416.236 -446.636,-416.236" />
+			<polygon fill="none" stroke="black" points="-446.636,-416.236 -446.636,-437.236 -376.636,-437.236 -376.636,-416.236 -446.636,-416.236" />
+			<text text-anchor="start" x="-443.636" y="-423.036" font-family="Arial" font-size="14.00">flag_mod:</text>
+			<polygon fill="none" stroke="black" points="-376.636,-416.236 -376.636,-437.236 -276.636,-437.236 -276.636,-416.236 -376.636,-416.236" />
+			<text text-anchor="start" x="-373.636" y="-423.036" font-family="Arial" font-size="14.00">True</text>
+		</g>
+		<!-- ACU_A&#45;&gt;DataRam_A -->
+		<g id="edge9" class="edge">
+			<title>ACU_A-&gt;DataRam_A</title>
+			<path fill="none" stroke="DarkGreen" stroke-width="3" d="M-268.343,-469C-268.343,-469 -245.08,-469 -245.08,-469" />
+			<polygon fill="DarkGreen" stroke="DarkGreen" stroke-width="3" points="-245.08,-472.5 -235.08,-469 -245.08,-465.5 -245.08,-472.5" />
+			<text text-anchor="middle" x="-248.712" y="-457.8" font-family="Arial" font-size="14.00">0x02</text>
+		</g>
+		<!-- ACU_B -->
+		<g id="node8" class="node">
+			<title>ACU_B</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-446.636,450.764 -446.636,424.764 -276.636,424.764 -276.636,450.764 -446.636,450.764" />
+			<polygon fill="none" stroke="black" points="-446.636,450.764 -446.636,424.764 -276.636,424.764 -276.636,450.764 -446.636,450.764" />
+			<text text-anchor="start" x="-392.136" y="441.164" font-family="Arial" font-weight="bold" font-size="18.00">ACU_B</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,471.764 -446.636,450.764 -376.636,450.764 -376.636,471.764 -446.636,471.764" />
+			<polygon fill="none" stroke="black" points="-446.636,471.764 -446.636,450.764 -376.636,450.764 -376.636,471.764 -446.636,471.764" />
+			<text text-anchor="start" x="-443.636" y="464.964" font-family="Arial" font-size="14.00">reg:</text>
+			<polygon fill="none" stroke="black" points="-376.636,471.764 -376.636,450.764 -276.636,450.764 -276.636,471.764 -376.636,471.764" />
+			<text text-anchor="start" x="-373.636" y="464.964" font-family="Arial" font-size="14.00">0x02</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,492.764 -446.636,471.764 -376.636,471.764 -376.636,492.764 -446.636,492.764" />
+			<polygon fill="none" stroke="black" points="-446.636,492.764 -446.636,471.764 -376.636,471.764 -376.636,492.764 -446.636,492.764" />
+			<text text-anchor="start" x="-443.636" y="485.964" font-family="Arial" font-size="14.00">freg:</text>
+			<polygon fill="none" stroke="black" points="-376.636,492.764 -376.636,471.764 -276.636,471.764 -276.636,492.764 -376.636,492.764" />
+			<text text-anchor="start" x="-373.636" y="485.964" font-family="Arial" font-size="14.00">2</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,513.764 -446.636,492.764 -376.636,492.764 -376.636,513.764 -446.636,513.764" />
+			<polygon fill="none" stroke="black" points="-446.636,513.764 -446.636,492.764 -376.636,492.764 -376.636,513.764 -446.636,513.764" />
+			<text text-anchor="start" x="-443.636" y="506.964" font-family="Arial" font-size="14.00">lreg:</text>
+			<polygon fill="none" stroke="black" points="-376.636,513.764 -376.636,492.764 -276.636,492.764 -276.636,513.764 -376.636,513.764" />
+			<text text-anchor="start" x="-373.636" y="506.964" font-family="Arial" font-size="14.00">0x00</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,534.764 -446.636,513.764 -376.636,513.764 -376.636,534.764 -446.636,534.764" />
+			<polygon fill="none" stroke="black" points="-446.636,534.764 -446.636,513.764 -376.636,513.764 -376.636,534.764 -446.636,534.764" />
+			<text text-anchor="start" x="-443.636" y="527.964" font-family="Arial" font-size="14.00">mreg:</text>
+			<polygon fill="none" stroke="black" points="-376.636,534.764 -376.636,513.764 -276.636,513.764 -276.636,534.764 -376.636,534.764" />
+			<text text-anchor="start" x="-373.636" y="527.964" font-family="Arial" font-size="14.00">0x7F</text>
+			<polygon fill="AliceBlue" stroke="none" points="-446.636,555.764 -446.636,534.764 -376.636,534.764 -376.636,555.764 -446.636,555.764" />
+			<polygon fill="none" stroke="black" points="-446.636,555.764 -446.636,534.764 -376.636,534.764 -376.636,555.764 -446.636,555.764" />
+			<text text-anchor="start" x="-443.636" y="548.964" font-family="Arial" font-size="14.00">flag_mod:</text>
+			<polygon fill="none" stroke="black" points="-376.636,555.764 -376.636,534.764 -276.636,534.764 -276.636,555.764 -376.636,555.764" />
+			<text text-anchor="start" x="-373.636" y="548.964" font-family="Arial" font-size="14.00">True</text>
+		</g>
+		<!-- ACU_B&#45;&gt;DataRam_B -->
+		<g id="edge11" class="edge">
+			<title>ACU_B-&gt;DataRam_B</title>
+			<path fill="none" stroke="DarkGreen" stroke-width="3" d="M-268.343,477C-268.343,477 -245.08,477 -245.08,477" />
+			<polygon fill="DarkGreen" stroke="DarkGreen" stroke-width="3" points="-245.08,473.5 -235.08,477 -245.08,480.5 -245.08,473.5" />
+			<text text-anchor="middle" x="-248.712" y="488.2" font-family="Arial" font-size="14.00">0x02</text>
+		</g>
+		<!-- DataRam_A&#45;&gt;Mux_2A -->
+		<g id="edge14" class="edge">
+			<title>DataRam_A-&gt;Mux_2A</title>
+			<path fill="none" stroke="Gray" d="M-156.436,-366.113C-156.436,-366.113 -156.436,-320.591 -156.436,-320.591" />
+			<polygon fill="Gray" stroke="Gray" points="-152.936,-320.591 -156.436,-310.591 -159.936,-320.591 -152.936,-320.591" />
+		</g>
+		<!-- ALU -->
+		<g id="node18" class="node">
+			<title>ALU</title>
+			<polygon fill="LemonChiffon" stroke="none" points="252.564,-77.2364 252.564,-103.236 622.564,-103.236 622.564,-77.2364 252.564,-77.2364" />
+			<polygon fill="none" stroke="black" points="252.564,-77.2364 252.564,-103.236 622.564,-103.236 622.564,-77.2364 252.564,-77.2364" />
+			<text text-anchor="start" x="419.064" y="-86.8364" font-family="Arial" font-weight="bold" font-size="18.00">ALU</text>
+			<polygon fill="LemonChiffon" stroke="none" points="252.564,-56.2364 252.564,-77.2364 352.564,-77.2364 352.564,-56.2364 252.564,-56.2364" />
+			<polygon fill="none" stroke="black" points="252.564,-56.2364 252.564,-77.2364 352.564,-77.2364 352.564,-56.2364 252.564,-56.2364" />
+			<text text-anchor="start" x="275.064" y="-63.0364" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="352.564,-56.2364 352.564,-77.2364 442.564,-77.2364 442.564,-56.2364 352.564,-56.2364" />
+			<polygon fill="none" stroke="black" points="352.564,-56.2364 352.564,-77.2364 442.564,-77.2364 442.564,-56.2364 352.564,-56.2364" />
+			<text text-anchor="start" x="385.064" y="-63.0364" font-family="Arial" font-size="14.00">[t-2]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="442.564,-56.2364 442.564,-77.2364 532.564,-77.2364 532.564,-56.2364 442.564,-56.2364" />
+			<polygon fill="none" stroke="black" points="442.564,-56.2364 442.564,-77.2364 532.564,-77.2364 532.564,-56.2364 442.564,-56.2364" />
+			<text text-anchor="start" x="475.064" y="-63.0364" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="532.564,-56.2364 532.564,-77.2364 622.564,-77.2364 622.564,-56.2364 532.564,-56.2364" />
+			<polygon fill="none" stroke="black" points="532.564,-56.2364 532.564,-77.2364 622.564,-77.2364 622.564,-56.2364 532.564,-56.2364" />
+			<text text-anchor="start" x="559.064" y="-63.0364" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="252.564,-35.2364 252.564,-56.2364 352.564,-56.2364 352.564,-35.2364 252.564,-35.2364" />
+			<polygon fill="none" stroke="black" points="252.564,-35.2364 252.564,-56.2364 352.564,-56.2364 352.564,-35.2364 252.564,-35.2364" />
+			<text text-anchor="start" x="255.564" y="-42.0364" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="352.564,-35.2364 352.564,-56.2364 442.564,-56.2364 442.564,-35.2364 352.564,-35.2364" />
+			<text text-anchor="start" x="355.564" y="-42.0364" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="442.564,-35.2364 442.564,-56.2364 532.564,-56.2364 532.564,-35.2364 442.564,-35.2364" />
+			<text text-anchor="start" x="445.564" y="-42.0364" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="none" stroke="black" points="532.564,-35.2364 532.564,-56.2364 622.564,-56.2364 622.564,-35.2364 532.564,-35.2364" />
+			<text text-anchor="start" x="535.564" y="-42.0364" font-family="Arial" font-size="14.00">12</text>
+			<polygon fill="AliceBlue" stroke="none" points="252.564,-14.2364 252.564,-35.2364 352.564,-35.2364 352.564,-14.2364 252.564,-14.2364" />
+			<polygon fill="none" stroke="black" points="252.564,-14.2364 252.564,-35.2364 352.564,-35.2364 352.564,-14.2364 252.564,-14.2364" />
+			<text text-anchor="start" x="255.564" y="-21.0364" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="352.564,-14.2364 352.564,-35.2364 442.564,-35.2364 442.564,-14.2364 352.564,-14.2364" />
+			<text text-anchor="start" x="355.564" y="-21.0364" font-family="Arial" font-size="14.00">holdalu</text>
+			<polygon fill="none" stroke="black" points="442.564,-14.2364 442.564,-35.2364 532.564,-35.2364 532.564,-14.2364 442.564,-14.2364" />
+			<text text-anchor="start" x="445.564" y="-21.0364" font-family="Arial" font-size="14.00">holdalu</text>
+			<polygon fill="none" stroke="black" points="532.564,-14.2364 532.564,-35.2364 622.564,-35.2364 622.564,-14.2364 532.564,-14.2364" />
+			<text text-anchor="start" x="535.564" y="-21.0364" font-family="Arial" font-size="14.00">add</text>
+			<polygon fill="AliceBlue" stroke="none" points="252.564,6.76364 252.564,-14.2364 352.564,-14.2364 352.564,6.76364 252.564,6.76364" />
+			<polygon fill="none" stroke="black" points="252.564,6.76364 252.564,-14.2364 352.564,-14.2364 352.564,6.76364 252.564,6.76364" />
+			<text text-anchor="start" x="255.564" y="-0.0363637" font-family="Arial" font-size="14.00">In A:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="352.564,6.76364 352.564,-14.2364 442.564,-14.2364 442.564,6.76364 352.564,6.76364" />
+			<polygon fill="none" stroke="black" points="352.564,6.76364 352.564,-14.2364 442.564,-14.2364 442.564,6.76364 352.564,6.76364" />
+			<polygon fill="none" stroke="black" points="442.564,6.76364 442.564,-14.2364 532.564,-14.2364 532.564,6.76364 442.564,6.76364" />
+			<polygon fill="none" stroke="black" points="532.564,6.76364 532.564,-14.2364 622.564,-14.2364 622.564,6.76364 532.564,6.76364" />
+			<text text-anchor="start" x="535.564" y="-0.0363637" font-family="Arial" font-size="14.00">0.0000048</text>
+			<polygon fill="AliceBlue" stroke="none" points="252.564,27.7636 252.564,6.76364 352.564,6.76364 352.564,27.7636 252.564,27.7636" />
+			<polygon fill="none" stroke="black" points="252.564,27.7636 252.564,6.76364 352.564,6.76364 352.564,27.7636 252.564,27.7636" />
+			<text text-anchor="start" x="255.564" y="20.9636" font-family="Arial" font-size="14.00">Src A:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="352.564,27.7636 352.564,6.76364 442.564,6.76364 442.564,27.7636 352.564,27.7636" />
+			<polygon fill="none" stroke="black" points="352.564,27.7636 352.564,6.76364 442.564,6.76364 442.564,27.7636 352.564,27.7636" />
+			<polygon fill="none" stroke="black" points="442.564,27.7636 442.564,6.76364 532.564,6.76364 532.564,27.7636 442.564,27.7636" />
+			<polygon fill="none" stroke="black" points="532.564,27.7636 532.564,6.76364 622.564,6.76364 622.564,27.7636 532.564,27.7636" />
+			<text text-anchor="start" x="535.564" y="20.9636" font-family="Arial" font-size="14.00">Mux_3A</text>
+			<polygon fill="AliceBlue" stroke="none" points="252.564,48.7636 252.564,27.7636 352.564,27.7636 352.564,48.7636 252.564,48.7636" />
+			<polygon fill="none" stroke="black" points="252.564,48.7636 252.564,27.7636 352.564,27.7636 352.564,48.7636 252.564,48.7636" />
+			<text text-anchor="start" x="255.564" y="41.9636" font-family="Arial" font-size="14.00">In B:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="352.564,48.7636 352.564,27.7636 442.564,27.7636 442.564,48.7636 352.564,48.7636" />
+			<polygon fill="none" stroke="black" points="352.564,48.7636 352.564,27.7636 442.564,27.7636 442.564,48.7636 352.564,48.7636" />
+			<polygon fill="none" stroke="black" points="442.564,48.7636 442.564,27.7636 532.564,27.7636 532.564,48.7636 442.564,48.7636" />
+			<polygon fill="none" stroke="black" points="532.564,48.7636 532.564,27.7636 622.564,27.7636 622.564,48.7636 532.564,48.7636" />
+			<text text-anchor="start" x="535.564" y="41.9636" font-family="Arial" font-size="14.00">0.0000024</text>
+			<polygon fill="AliceBlue" stroke="none" points="252.564,69.7636 252.564,48.7636 352.564,48.7636 352.564,69.7636 252.564,69.7636" />
+			<polygon fill="none" stroke="black" points="252.564,69.7636 252.564,48.7636 352.564,48.7636 352.564,69.7636 252.564,69.7636" />
+			<text text-anchor="start" x="255.564" y="62.9636" font-family="Arial" font-size="14.00">Src B:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="352.564,69.7636 352.564,48.7636 442.564,48.7636 442.564,69.7636 352.564,69.7636" />
+			<polygon fill="none" stroke="black" points="352.564,69.7636 352.564,48.7636 442.564,48.7636 442.564,69.7636 352.564,69.7636" />
+			<polygon fill="none" stroke="black" points="442.564,69.7636 442.564,48.7636 532.564,48.7636 532.564,69.7636 442.564,69.7636" />
+			<polygon fill="none" stroke="black" points="532.564,69.7636 532.564,48.7636 622.564,48.7636 622.564,69.7636 532.564,69.7636" />
+			<text text-anchor="start" x="535.564" y="62.9636" font-family="Arial" font-size="14.00">Mux_3B</text>
+			<polygon fill="AliceBlue" stroke="none" points="252.564,90.7636 252.564,69.7636 352.564,69.7636 352.564,90.7636 252.564,90.7636" />
+			<polygon fill="none" stroke="black" points="252.564,90.7636 252.564,69.7636 352.564,69.7636 352.564,90.7636 252.564,90.7636" />
+			<text text-anchor="start" x="255.564" y="83.9636" font-family="Arial" font-size="14.00">Equation:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="352.564,90.7636 352.564,69.7636 442.564,69.7636 442.564,90.7636 352.564,90.7636" />
+			<polygon fill="none" stroke="black" points="352.564,90.7636 352.564,69.7636 442.564,69.7636 442.564,90.7636 352.564,90.7636" />
+			<polygon fill="none" stroke="black" points="442.564,90.7636 442.564,69.7636 532.564,69.7636 532.564,90.7636 442.564,90.7636" />
+			<polygon fill="none" stroke="black" points="532.564,90.7636 532.564,69.7636 622.564,69.7636 622.564,90.7636 532.564,90.7636" />
+			<text text-anchor="start" x="535.564" y="83.9636" font-family="Arial" font-size="14.00">A+B</text>
+			<polygon fill="AliceBlue" stroke="none" points="252.564,111.764 252.564,90.7636 352.564,90.7636 352.564,111.764 252.564,111.764" />
+			<polygon fill="none" stroke="black" points="252.564,111.764 252.564,90.7636 352.564,90.7636 352.564,111.764 252.564,111.764" />
+			<text text-anchor="start" x="255.564" y="104.964" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="352.564,111.764 352.564,90.7636 442.564,90.7636 442.564,111.764 352.564,111.764" />
+			<polygon fill="none" stroke="black" points="352.564,111.764 352.564,90.7636 442.564,90.7636 442.564,111.764 352.564,111.764" />
+			<polygon fill="WhiteSmoke" stroke="none" points="442.564,111.764 442.564,90.7636 532.564,90.7636 532.564,111.764 442.564,111.764" />
+			<polygon fill="none" stroke="black" points="442.564,111.764 442.564,90.7636 532.564,90.7636 532.564,111.764 442.564,111.764" />
+			<polygon fill="none" stroke="black" points="532.564,111.764 532.564,90.7636 622.564,90.7636 622.564,111.764 532.564,111.764" />
+			<text text-anchor="start" x="535.564" y="104.964" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- DataRam_A&#45;&gt;ALU -->
+		<g id="edge26" class="edge">
+			<title>DataRam_A-&gt;ALU</title>
+			<path fill="none" stroke="Blue" d="M-77.8961,-370C91.5606,-370 476.314,-370 476.314,-370 476.314,-370 476.314,-117.872 476.314,-117.872" />
+			<polygon fill="Blue" stroke="Blue" points="479.814,-117.871 476.314,-107.872 472.814,-117.872 479.814,-117.871" />
+			<text text-anchor="middle" x="290.273" y="-373.8" font-family="Arial" font-size="14.00">0.0000000</text>
+		</g>
+		<!-- MAC -->
+		<g id="node13" class="node">
+			<title>MAC</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-171.436,-77.2364 -171.436,-103.236 218.564,-103.236 218.564,-77.2364 -171.436,-77.2364" />
+			<polygon fill="none" stroke="black" points="-171.436,-77.2364 -171.436,-103.236 218.564,-103.236 218.564,-77.2364 -171.436,-77.2364" />
+			<text text-anchor="start" x="2.56364" y="-86.8364" font-family="Arial" font-weight="bold" font-size="18.00">MAC</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-171.436,-56.2364 -171.436,-77.2364 -91.4364,-77.2364 -91.4364,-56.2364 -171.436,-56.2364" />
+			<polygon fill="none" stroke="black" points="-171.436,-56.2364 -171.436,-77.2364 -91.4364,-77.2364 -91.4364,-56.2364 -171.436,-56.2364" />
+			<text text-anchor="start" x="-158.936" y="-63.0364" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-91.4364,-56.2364 -91.4364,-77.2364 -11.4364,-77.2364 -11.4364,-56.2364 -91.4364,-56.2364" />
+			<polygon fill="none" stroke="black" points="-91.4364,-56.2364 -91.4364,-77.2364 -11.4364,-77.2364 -11.4364,-56.2364 -91.4364,-56.2364" />
+			<text text-anchor="start" x="-63.9364" y="-63.0364" font-family="Arial" font-size="14.00">[t-2]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="-11.4364,-56.2364 -11.4364,-77.2364 98.5636,-77.2364 98.5636,-56.2364 -11.4364,-56.2364" />
+			<polygon fill="none" stroke="black" points="-11.4364,-56.2364 -11.4364,-77.2364 98.5636,-77.2364 98.5636,-56.2364 -11.4364,-56.2364" />
+			<text text-anchor="start" x="31.0636" y="-63.0364" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="98.5636,-56.2364 98.5636,-77.2364 218.564,-77.2364 218.564,-56.2364 98.5636,-56.2364" />
+			<polygon fill="none" stroke="black" points="98.5636,-56.2364 98.5636,-77.2364 218.564,-77.2364 218.564,-56.2364 98.5636,-56.2364" />
+			<text text-anchor="start" x="140.064" y="-63.0364" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="-171.436,-35.2364 -171.436,-56.2364 -91.4364,-56.2364 -91.4364,-35.2364 -171.436,-35.2364" />
+			<polygon fill="none" stroke="black" points="-171.436,-35.2364 -171.436,-56.2364 -91.4364,-56.2364 -91.4364,-35.2364 -171.436,-35.2364" />
+			<text text-anchor="start" x="-168.436" y="-42.0364" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-91.4364,-35.2364 -91.4364,-56.2364 -11.4364,-56.2364 -11.4364,-35.2364 -91.4364,-35.2364" />
+			<text text-anchor="start" x="-88.4364" y="-42.0364" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="-11.4364,-35.2364 -11.4364,-56.2364 98.5636,-56.2364 98.5636,-35.2364 -11.4364,-35.2364" />
+			<text text-anchor="start" x="-8.43636" y="-42.0364" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="none" stroke="black" points="98.5636,-35.2364 98.5636,-56.2364 218.564,-56.2364 218.564,-35.2364 98.5636,-35.2364" />
+			<text text-anchor="start" x="101.564" y="-42.0364" font-family="Arial" font-size="14.00">12</text>
+			<polygon fill="AliceBlue" stroke="none" points="-171.436,-14.2364 -171.436,-35.2364 -91.4364,-35.2364 -91.4364,-14.2364 -171.436,-14.2364" />
+			<polygon fill="none" stroke="black" points="-171.436,-14.2364 -171.436,-35.2364 -91.4364,-35.2364 -91.4364,-14.2364 -171.436,-14.2364" />
+			<text text-anchor="start" x="-168.436" y="-21.0364" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="-91.4364,-14.2364 -91.4364,-35.2364 -11.4364,-35.2364 -11.4364,-14.2364 -91.4364,-14.2364" />
+			<text text-anchor="start" x="-88.4364" y="-21.0364" font-family="Arial" font-size="14.00">hold</text>
+			<polygon fill="none" stroke="black" points="-11.4364,-14.2364 -11.4364,-35.2364 98.5636,-35.2364 98.5636,-14.2364 -11.4364,-14.2364" />
+			<text text-anchor="start" x="-8.43636" y="-21.0364" font-family="Arial" font-size="14.00">hold</text>
+			<polygon fill="none" stroke="black" points="98.5636,-14.2364 98.5636,-35.2364 218.564,-35.2364 218.564,-14.2364 98.5636,-14.2364" />
+			<text text-anchor="start" x="101.564" y="-21.0364" font-family="Arial" font-size="14.00">hold</text>
+			<polygon fill="AliceBlue" stroke="none" points="-171.436,6.76364 -171.436,-14.2364 -91.4364,-14.2364 -91.4364,6.76364 -171.436,6.76364" />
+			<polygon fill="none" stroke="black" points="-171.436,6.76364 -171.436,-14.2364 -91.4364,-14.2364 -91.4364,6.76364 -171.436,6.76364" />
+			<text text-anchor="start" x="-168.436" y="-0.0363637" font-family="Arial" font-size="14.00">a:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-91.4364,6.76364 -91.4364,-14.2364 -11.4364,-14.2364 -11.4364,6.76364 -91.4364,6.76364" />
+			<polygon fill="none" stroke="black" points="-91.4364,6.76364 -91.4364,-14.2364 -11.4364,-14.2364 -11.4364,6.76364 -91.4364,6.76364" />
+			<polygon fill="none" stroke="black" points="-11.4364,6.76364 -11.4364,-14.2364 98.5636,-14.2364 98.5636,6.76364 -11.4364,6.76364" />
+			<polygon fill="none" stroke="black" points="98.5636,6.76364 98.5636,-14.2364 218.564,-14.2364 218.564,6.76364 98.5636,6.76364" />
+			<polygon fill="AliceBlue" stroke="none" points="-171.436,27.7636 -171.436,6.76364 -91.4364,6.76364 -91.4364,27.7636 -171.436,27.7636" />
+			<polygon fill="none" stroke="black" points="-171.436,27.7636 -171.436,6.76364 -91.4364,6.76364 -91.4364,27.7636 -171.436,27.7636" />
+			<text text-anchor="start" x="-168.436" y="20.9636" font-family="Arial" font-size="14.00">b:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-91.4364,27.7636 -91.4364,6.76364 -11.4364,6.76364 -11.4364,27.7636 -91.4364,27.7636" />
+			<polygon fill="none" stroke="black" points="-91.4364,27.7636 -91.4364,6.76364 -11.4364,6.76364 -11.4364,27.7636 -91.4364,27.7636" />
+			<polygon fill="none" stroke="black" points="-11.4364,27.7636 -11.4364,6.76364 98.5636,6.76364 98.5636,27.7636 -11.4364,27.7636" />
+			<polygon fill="none" stroke="black" points="98.5636,27.7636 98.5636,6.76364 218.564,6.76364 218.564,27.7636 98.5636,27.7636" />
+			<polygon fill="AliceBlue" stroke="none" points="-171.436,48.7636 -171.436,27.7636 -91.4364,27.7636 -91.4364,48.7636 -171.436,48.7636" />
+			<polygon fill="none" stroke="black" points="-171.436,48.7636 -171.436,27.7636 -91.4364,27.7636 -91.4364,48.7636 -171.436,48.7636" />
+			<text text-anchor="start" x="-168.436" y="41.9636" font-family="Arial" font-size="14.00">Accum:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-91.4364,48.7636 -91.4364,27.7636 -11.4364,27.7636 -11.4364,48.7636 -91.4364,48.7636" />
+			<polygon fill="none" stroke="black" points="-91.4364,48.7636 -91.4364,27.7636 -11.4364,27.7636 -11.4364,48.7636 -91.4364,48.7636" />
+			<polygon fill="WhiteSmoke" stroke="none" points="-11.4364,48.7636 -11.4364,27.7636 98.5636,27.7636 98.5636,48.7636 -11.4364,48.7636" />
+			<polygon fill="none" stroke="black" points="-11.4364,48.7636 -11.4364,27.7636 98.5636,27.7636 98.5636,48.7636 -11.4364,48.7636" />
+			<polygon fill="none" stroke="black" points="98.5636,48.7636 98.5636,27.7636 218.564,27.7636 218.564,48.7636 98.5636,48.7636" />
+			<text text-anchor="start" x="101.564" y="41.9636" font-family="Arial" font-size="14.00">0.0000048</text>
+			<polygon fill="AliceBlue" stroke="none" points="-171.436,69.7636 -171.436,48.7636 -91.4364,48.7636 -91.4364,69.7636 -171.436,69.7636" />
+			<polygon fill="none" stroke="black" points="-171.436,69.7636 -171.436,48.7636 -91.4364,48.7636 -91.4364,69.7636 -171.436,69.7636" />
+			<text text-anchor="start" x="-168.436" y="62.9636" font-family="Arial" font-size="14.00">Prev ALU:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-91.4364,69.7636 -91.4364,48.7636 -11.4364,48.7636 -11.4364,69.7636 -91.4364,69.7636" />
+			<polygon fill="none" stroke="black" points="-91.4364,69.7636 -91.4364,48.7636 -11.4364,48.7636 -11.4364,69.7636 -91.4364,69.7636" />
+			<polygon fill="none" stroke="black" points="-11.4364,69.7636 -11.4364,48.7636 98.5636,48.7636 98.5636,69.7636 -11.4364,69.7636" />
+			<polygon fill="none" stroke="black" points="98.5636,69.7636 98.5636,48.7636 218.564,48.7636 218.564,69.7636 98.5636,69.7636" />
+			<polygon fill="AliceBlue" stroke="none" points="-171.436,90.7636 -171.436,69.7636 -91.4364,69.7636 -91.4364,90.7636 -171.436,90.7636" />
+			<polygon fill="none" stroke="black" points="-171.436,90.7636 -171.436,69.7636 -91.4364,69.7636 -91.4364,90.7636 -171.436,90.7636" />
+			<text text-anchor="start" x="-168.436" y="83.9636" font-family="Arial" font-size="14.00">Formula:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-91.4364,90.7636 -91.4364,69.7636 -11.4364,69.7636 -11.4364,90.7636 -91.4364,90.7636" />
+			<polygon fill="none" stroke="black" points="-91.4364,90.7636 -91.4364,69.7636 -11.4364,69.7636 -11.4364,90.7636 -91.4364,90.7636" />
+			<polygon fill="WhiteSmoke" stroke="none" points="-11.4364,90.7636 -11.4364,69.7636 98.5636,69.7636 98.5636,90.7636 -11.4364,90.7636" />
+			<polygon fill="none" stroke="black" points="-11.4364,90.7636 -11.4364,69.7636 98.5636,69.7636 98.5636,90.7636 -11.4364,90.7636" />
+			<polygon fill="none" stroke="black" points="98.5636,90.7636 98.5636,69.7636 218.564,69.7636 218.564,90.7636 98.5636,90.7636" />
+			<text text-anchor="start" x="101.564" y="83.9636" font-family="Arial" font-size="14.00">Accum</text>
+			<polygon fill="AliceBlue" stroke="none" points="-171.436,111.764 -171.436,90.7636 -91.4364,90.7636 -91.4364,111.764 -171.436,111.764" />
+			<polygon fill="none" stroke="black" points="-171.436,111.764 -171.436,90.7636 -91.4364,90.7636 -91.4364,111.764 -171.436,111.764" />
+			<text text-anchor="start" x="-168.436" y="104.964" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="-91.4364,111.764 -91.4364,90.7636 -11.4364,90.7636 -11.4364,111.764 -91.4364,111.764" />
+			<polygon fill="none" stroke="black" points="-91.4364,111.764 -91.4364,90.7636 -11.4364,90.7636 -11.4364,111.764 -91.4364,111.764" />
+			<polygon fill="WhiteSmoke" stroke="none" points="-11.4364,111.764 -11.4364,90.7636 98.5636,90.7636 98.5636,111.764 -11.4364,111.764" />
+			<polygon fill="none" stroke="black" points="-11.4364,111.764 -11.4364,90.7636 98.5636,90.7636 98.5636,111.764 -11.4364,111.764" />
+			<polygon fill="none" stroke="black" points="98.5636,111.764 98.5636,90.7636 218.564,90.7636 218.564,111.764 98.5636,111.764" />
+			<text text-anchor="start" x="101.564" y="104.964" font-family="Arial" font-size="14.00">0.0000048</text>
+		</g>
+		<!-- Mux_2A&#45;&gt;MAC -->
+		<g id="edge17" class="edge">
+			<title>Mux_2A-&gt;MAC</title>
+			<path fill="none" stroke="Blue" d="M-105.686,-150.034C-105.686,-150.034 -105.686,-117.779 -105.686,-117.779" />
+			<polygon fill="Blue" stroke="Blue" points="-102.186,-117.778 -105.686,-107.779 -109.186,-117.779 -102.186,-117.778" />
+			<text text-anchor="middle" x="-140.686" y="-137.706" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_3A -->
+		<g id="node14" class="node">
+			<title>Mux_3A</title>
+			<polygon fill="LemonChiffon" stroke="none" points="93.5636,-259.236 93.5636,-285.236 314.564,-285.236 314.564,-259.236 93.5636,-259.236" />
+			<polygon fill="none" stroke="black" points="93.5636,-259.236 93.5636,-285.236 314.564,-285.236 314.564,-259.236 93.5636,-259.236" />
+			<text text-anchor="start" x="169.064" y="-268.836" font-family="Arial" font-weight="bold" font-size="18.00">Mux_3A</text>
+			<polygon fill="LemonChiffon" stroke="none" points="93.5636,-238.236 93.5636,-259.236 154.564,-259.236 154.564,-238.236 93.5636,-238.236" />
+			<polygon fill="none" stroke="black" points="93.5636,-238.236 93.5636,-259.236 154.564,-259.236 154.564,-238.236 93.5636,-238.236" />
+			<text text-anchor="start" x="96.5636" y="-245.036" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="154.564,-238.236 154.564,-259.236 224.564,-259.236 224.564,-238.236 154.564,-238.236" />
+			<polygon fill="none" stroke="black" points="154.564,-238.236 154.564,-259.236 224.564,-259.236 224.564,-238.236 154.564,-238.236" />
+			<text text-anchor="start" x="177.064" y="-245.036" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="224.564,-238.236 224.564,-259.236 314.564,-259.236 314.564,-238.236 224.564,-238.236" />
+			<polygon fill="none" stroke="black" points="224.564,-238.236 224.564,-259.236 314.564,-259.236 314.564,-238.236 224.564,-238.236" />
+			<text text-anchor="start" x="251.064" y="-245.036" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="93.5636,-217.236 93.5636,-238.236 154.564,-238.236 154.564,-217.236 93.5636,-217.236" />
+			<polygon fill="none" stroke="black" points="93.5636,-217.236 93.5636,-238.236 154.564,-238.236 154.564,-217.236 93.5636,-217.236" />
+			<text text-anchor="start" x="96.5636" y="-224.036" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="154.564,-217.236 154.564,-238.236 224.564,-238.236 224.564,-217.236 154.564,-217.236" />
+			<text text-anchor="start" x="157.564" y="-224.036" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="224.564,-217.236 224.564,-238.236 314.564,-238.236 314.564,-217.236 224.564,-217.236" />
+			<text text-anchor="start" x="227.564" y="-224.036" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="AliceBlue" stroke="none" points="93.5636,-196.236 93.5636,-217.236 154.564,-217.236 154.564,-196.236 93.5636,-196.236" />
+			<polygon fill="none" stroke="black" points="93.5636,-196.236 93.5636,-217.236 154.564,-217.236 154.564,-196.236 93.5636,-196.236" />
+			<text text-anchor="start" x="96.5636" y="-203.036" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="154.564,-196.236 154.564,-217.236 224.564,-217.236 224.564,-196.236 154.564,-196.236" />
+			<text text-anchor="start" x="157.564" y="-203.036" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="none" stroke="black" points="224.564,-196.236 224.564,-217.236 314.564,-217.236 314.564,-196.236 224.564,-196.236" />
+			<text text-anchor="start" x="227.564" y="-203.036" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="AliceBlue" stroke="none" points="93.5636,-175.236 93.5636,-196.236 154.564,-196.236 154.564,-175.236 93.5636,-175.236" />
+			<polygon fill="none" stroke="black" points="93.5636,-175.236 93.5636,-196.236 154.564,-196.236 154.564,-175.236 93.5636,-175.236" />
+			<text text-anchor="start" x="96.5636" y="-182.036" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="154.564,-175.236 154.564,-196.236 224.564,-196.236 224.564,-175.236 154.564,-175.236" />
+			<polygon fill="none" stroke="black" points="154.564,-175.236 154.564,-196.236 224.564,-196.236 224.564,-175.236 154.564,-175.236" />
+			<polygon fill="none" stroke="black" points="224.564,-175.236 224.564,-196.236 314.564,-196.236 314.564,-175.236 224.564,-175.236" />
+			<text text-anchor="start" x="227.564" y="-182.036" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_2A&#45;&gt;Mux_3A -->
+		<g id="edge20" class="edge">
+			<title>Mux_2A-&gt;Mux_3A</title>
+			<path fill="none" stroke="Blue" stroke-width="3" d="M-31.7885,-230C-31.7885,-230 74.783,-230 74.783,-230" />
+			<polygon fill="Blue" stroke="Blue" stroke-width="3" points="74.7831,-233.5 84.783,-230 74.783,-226.5 74.7831,-233.5" />
+			<text text-anchor="middle" x="38.9973" y="-218.8" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_2B&#45;&gt;MAC -->
+		<g id="edge18" class="edge">
+			<title>Mux_2B-&gt;MAC</title>
+			<path fill="none" stroke="Blue" d="M-105.686,157.561C-105.686,157.561 -105.686,125.306 -105.686,125.306" />
+			<polygon fill="Blue" stroke="Blue" points="-109.186,125.306 -105.686,115.306 -102.186,125.306 -109.186,125.306" />
+			<text text-anchor="middle" x="-140.686" y="137.634" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_3B -->
+		<g id="node15" class="node">
+			<title>Mux_3B</title>
+			<polygon fill="LemonChiffon" stroke="none" points="93.5636,208.764 93.5636,182.764 314.564,182.764 314.564,208.764 93.5636,208.764" />
+			<polygon fill="none" stroke="black" points="93.5636,208.764 93.5636,182.764 314.564,182.764 314.564,208.764 93.5636,208.764" />
+			<text text-anchor="start" x="169.064" y="199.164" font-family="Arial" font-weight="bold" font-size="18.00">Mux_3B</text>
+			<polygon fill="LemonChiffon" stroke="none" points="93.5636,229.764 93.5636,208.764 154.564,208.764 154.564,229.764 93.5636,229.764" />
+			<polygon fill="none" stroke="black" points="93.5636,229.764 93.5636,208.764 154.564,208.764 154.564,229.764 93.5636,229.764" />
+			<text text-anchor="start" x="96.5636" y="222.964" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="154.564,229.764 154.564,208.764 224.564,208.764 224.564,229.764 154.564,229.764" />
+			<polygon fill="none" stroke="black" points="154.564,229.764 154.564,208.764 224.564,208.764 224.564,229.764 154.564,229.764" />
+			<text text-anchor="start" x="177.064" y="222.964" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="224.564,229.764 224.564,208.764 314.564,208.764 314.564,229.764 224.564,229.764" />
+			<polygon fill="none" stroke="black" points="224.564,229.764 224.564,208.764 314.564,208.764 314.564,229.764 224.564,229.764" />
+			<text text-anchor="start" x="251.064" y="222.964" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="93.5636,250.764 93.5636,229.764 154.564,229.764 154.564,250.764 93.5636,250.764" />
+			<polygon fill="none" stroke="black" points="93.5636,250.764 93.5636,229.764 154.564,229.764 154.564,250.764 93.5636,250.764" />
+			<text text-anchor="start" x="96.5636" y="243.964" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="154.564,250.764 154.564,229.764 224.564,229.764 224.564,250.764 154.564,250.764" />
+			<text text-anchor="start" x="157.564" y="243.964" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="224.564,250.764 224.564,229.764 314.564,229.764 314.564,250.764 224.564,250.764" />
+			<text text-anchor="start" x="227.564" y="243.964" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="AliceBlue" stroke="none" points="93.5636,271.764 93.5636,250.764 154.564,250.764 154.564,271.764 93.5636,271.764" />
+			<polygon fill="none" stroke="black" points="93.5636,271.764 93.5636,250.764 154.564,250.764 154.564,271.764 93.5636,271.764" />
+			<text text-anchor="start" x="96.5636" y="264.964" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="154.564,271.764 154.564,250.764 224.564,250.764 224.564,271.764 154.564,271.764" />
+			<text text-anchor="start" x="157.564" y="264.964" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="none" stroke="black" points="224.564,271.764 224.564,250.764 314.564,250.764 314.564,271.764 224.564,271.764" />
+			<text text-anchor="start" x="227.564" y="264.964" font-family="Arial" font-size="14.00">sa</text>
+			<polygon fill="AliceBlue" stroke="none" points="93.5636,292.764 93.5636,271.764 154.564,271.764 154.564,292.764 93.5636,292.764" />
+			<polygon fill="none" stroke="black" points="93.5636,292.764 93.5636,271.764 154.564,271.764 154.564,292.764 93.5636,292.764" />
+			<text text-anchor="start" x="96.5636" y="285.964" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="154.564,292.764 154.564,271.764 224.564,271.764 224.564,292.764 154.564,292.764" />
+			<polygon fill="none" stroke="black" points="154.564,292.764 154.564,271.764 224.564,271.764 224.564,292.764 154.564,292.764" />
+			<polygon fill="none" stroke="black" points="224.564,292.764 224.564,271.764 314.564,271.764 314.564,292.764 224.564,292.764" />
+			<text text-anchor="start" x="227.564" y="285.964" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_2B&#45;&gt;Mux_3B -->
+		<g id="edge22" class="edge">
+			<title>Mux_2B-&gt;Mux_3B</title>
+			<path fill="none" stroke="Blue" stroke-width="3" d="M-31.7885,237C-31.7885,237 74.783,237 74.783,237" />
+			<polygon fill="Blue" stroke="Blue" stroke-width="3" points="74.7831,233.5 84.783,237 74.783,240.5 74.7831,233.5" />
+			<text text-anchor="middle" x="38.9973" y="248.2" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- DataRam_B&#45;&gt;Mux_2B -->
+		<g id="edge16" class="edge">
+			<title>DataRam_B-&gt;Mux_2B</title>
+			<path fill="none" stroke="Gray" d="M-156.436,373.64C-156.436,373.64 -156.436,328.118 -156.436,328.118" />
+			<polygon fill="Gray" stroke="Gray" points="-159.936,328.118 -156.436,318.118 -152.936,328.118 -159.936,328.118" />
+		</g>
+		<!-- DataRam_B&#45;&gt;ALU -->
+		<g id="edge27" class="edge">
+			<title>DataRam_B-&gt;ALU</title>
+			<path fill="none" stroke="Blue" d="M-77.7329,377C81.0807,377 424.897,377 424.897,377 424.897,377 424.897,125.494 424.897,125.494" />
+			<polygon fill="Blue" stroke="Blue" points="421.397,125.494 424.897,115.494 428.397,125.494 421.397,125.494" />
+			<text text-anchor="middle" x="264.335" y="373.2" font-family="Arial" font-size="14.00">0.0000024</text>
+		</g>
+		<!-- MAC&#45;&gt;Mux_3A -->
+		<g id="edge21" class="edge">
+			<title>MAC-&gt;Mux_3A</title>
+			<path fill="none" stroke="Gray" d="M155.814,-107.754C155.814,-107.754 155.814,-161.132 155.814,-161.132" />
+			<polygon fill="Gray" stroke="Gray" points="152.314,-161.132 155.814,-171.132 159.314,-161.132 152.314,-161.132" />
+		</g>
+		<!-- MAC&#45;&gt;Mux_3B -->
+		<g id="edge23" class="edge">
+			<title>MAC-&gt;Mux_3B</title>
+			<path fill="none" stroke="Gray" d="M155.814,115.281C155.814,115.281 155.814,168.659 155.814,168.659" />
+			<polygon fill="Gray" stroke="Gray" points="159.314,168.659 155.814,178.659 152.314,168.659 159.314,168.659" />
+		</g>
+		<!-- Mux_3A&#45;&gt;ALU -->
+		<g id="edge24" class="edge">
+			<title>Mux_3A-&gt;ALU</title>
+			<path fill="none" stroke="Blue" d="M283.314,-171.188C283.314,-171.188 283.314,-118.16 283.314,-118.16" />
+			<polygon fill="Blue" stroke="Blue" points="286.814,-118.16 283.314,-108.16 279.814,-118.16 286.814,-118.16" />
+			<text text-anchor="middle" x="248.314" y="-148.474" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Mux_3B&#45;&gt;ALU -->
+		<g id="edge25" class="edge">
+			<title>Mux_3B-&gt;ALU</title>
+			<path fill="none" stroke="Blue" d="M283.314,178.716C283.314,178.716 283.314,125.688 283.314,125.688" />
+			<polygon fill="Blue" stroke="Blue" points="279.814,125.688 283.314,115.688 286.814,125.688 279.814,125.688" />
+			<text text-anchor="middle" x="248.314" y="148.402" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- shftAbuffer -->
+		<!-- shftAbuffer&#45;&gt;Mux_3A -->
+		<!-- shftBbuffer -->
+		<!-- shftBbuffer&#45;&gt;Mux_3B -->
+		<!-- Shifter -->
+		<g id="node19" class="node">
+			<title>Shifter</title>
+			<polygon fill="LemonChiffon" stroke="none" points="700.564,-35.2364 700.564,-61.2364 931.564,-61.2364 931.564,-35.2364 700.564,-35.2364" />
+			<polygon fill="none" stroke="black" points="700.564,-35.2364 700.564,-61.2364 931.564,-61.2364 931.564,-35.2364 700.564,-35.2364" />
+			<text text-anchor="start" x="787.064" y="-44.8364" font-family="Arial" font-weight="bold" font-size="18.00">Shifter</text>
+			<polygon fill="LemonChiffon" stroke="none" points="700.564,-14.2364 700.564,-35.2364 761.564,-35.2364 761.564,-14.2364 700.564,-14.2364" />
+			<polygon fill="none" stroke="black" points="700.564,-14.2364 700.564,-35.2364 761.564,-35.2364 761.564,-14.2364 700.564,-14.2364" />
+			<text text-anchor="start" x="703.564" y="-21.0364" font-family="Arial" font-size="14.00">Pipeline:</text>
+			<polygon fill="LemonChiffon" stroke="none" points="761.564,-14.2364 761.564,-35.2364 841.564,-35.2364 841.564,-14.2364 761.564,-14.2364" />
+			<polygon fill="none" stroke="black" points="761.564,-14.2364 761.564,-35.2364 841.564,-35.2364 841.564,-14.2364 761.564,-14.2364" />
+			<text text-anchor="start" x="789.064" y="-21.0364" font-family="Arial" font-size="14.00">[t-1]</text>
+			<polygon fill="LemonChiffon" stroke="none" points="841.564,-14.2364 841.564,-35.2364 931.564,-35.2364 931.564,-14.2364 841.564,-14.2364" />
+			<polygon fill="none" stroke="black" points="841.564,-14.2364 841.564,-35.2364 931.564,-35.2364 931.564,-14.2364 841.564,-14.2364" />
+			<text text-anchor="start" x="868.064" y="-21.0364" font-family="Arial" font-size="14.00">[now]:</text>
+			<polygon fill="AliceBlue" stroke="none" points="700.564,6.76364 700.564,-14.2364 761.564,-14.2364 761.564,6.76364 700.564,6.76364" />
+			<polygon fill="none" stroke="black" points="700.564,6.76364 700.564,-14.2364 761.564,-14.2364 761.564,6.76364 700.564,6.76364" />
+			<text text-anchor="start" x="703.564" y="-0.0363637" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="761.564,6.76364 761.564,-14.2364 841.564,-14.2364 841.564,6.76364 761.564,6.76364" />
+			<text text-anchor="start" x="764.564" y="-0.0363637" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="none" stroke="black" points="841.564,6.76364 841.564,-14.2364 931.564,-14.2364 931.564,6.76364 841.564,6.76364" />
+			<text text-anchor="start" x="844.564" y="-0.0363637" font-family="Arial" font-size="14.00">13</text>
+			<polygon fill="AliceBlue" stroke="none" points="700.564,27.7636 700.564,6.76364 761.564,6.76364 761.564,27.7636 700.564,27.7636" />
+			<polygon fill="none" stroke="black" points="700.564,27.7636 700.564,6.76364 761.564,6.76364 761.564,27.7636 700.564,27.7636" />
+			<text text-anchor="start" x="703.564" y="20.9636" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="761.564,27.7636 761.564,6.76364 841.564,6.76364 841.564,27.7636 761.564,27.7636" />
+			<polygon fill="none" stroke="black" points="841.564,27.7636 841.564,6.76364 931.564,6.76364 931.564,27.7636 841.564,27.7636" />
+			<polygon fill="AliceBlue" stroke="none" points="700.564,48.7636 700.564,27.7636 761.564,27.7636 761.564,48.7636 700.564,48.7636" />
+			<polygon fill="none" stroke="black" points="700.564,48.7636 700.564,27.7636 761.564,27.7636 761.564,48.7636 700.564,48.7636" />
+			<text text-anchor="start" x="703.564" y="41.9636" font-family="Arial" font-size="14.00">In:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="761.564,48.7636 761.564,27.7636 841.564,27.7636 841.564,48.7636 761.564,48.7636" />
+			<polygon fill="none" stroke="black" points="761.564,48.7636 761.564,27.7636 841.564,27.7636 841.564,48.7636 761.564,48.7636" />
+			<polygon fill="none" stroke="black" points="841.564,48.7636 841.564,27.7636 931.564,27.7636 931.564,48.7636 841.564,48.7636" />
+			<text text-anchor="start" x="844.564" y="41.9636" font-family="Arial" font-size="14.00">0.0000072</text>
+			<polygon fill="AliceBlue" stroke="none" points="700.564,69.7636 700.564,48.7636 761.564,48.7636 761.564,69.7636 700.564,69.7636" />
+			<polygon fill="none" stroke="black" points="700.564,69.7636 700.564,48.7636 761.564,48.7636 761.564,69.7636 700.564,69.7636" />
+			<text text-anchor="start" x="703.564" y="62.9636" font-family="Arial" font-size="14.00">Out:</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="761.564,69.7636 761.564,48.7636 841.564,48.7636 841.564,69.7636 761.564,69.7636" />
+			<polygon fill="none" stroke="black" points="761.564,69.7636 761.564,48.7636 841.564,48.7636 841.564,69.7636 761.564,69.7636" />
+			<polygon fill="none" stroke="black" points="841.564,69.7636 841.564,48.7636 931.564,48.7636 931.564,69.7636 841.564,69.7636" />
+			<text text-anchor="start" x="844.564" y="62.9636" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- ALU&#45;&gt;Shifter -->
+		<g id="edge28" class="edge">
+			<title>ALU-&gt;Shifter</title>
+			<path fill="none" stroke="Blue" stroke-width="3" d="M630.716,3C630.716,3 681.961,3 681.961,3" />
+			<polygon fill="Blue" stroke="Blue" stroke-width="3" points="681.961,-0.5001 691.961,3 681.961,6.4999 681.961,-0.5001" />
+			<text text-anchor="middle" x="656.339" y="14.2" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Global -->
+		<g id="node22" class="node">
+			<title>Global</title>
+			<polygon fill="LemonChiffon" stroke="none" points="244.564,415.964 244.564,389.964 631.564,389.964 631.564,415.964 244.564,415.964" />
+			<polygon fill="none" stroke="black" points="244.564,415.964 244.564,389.964 631.564,389.964 631.564,415.964 244.564,415.964" />
+			<text text-anchor="start" x="409.064" y="406.364" font-family="Arial" font-weight="bold" font-size="18.00">Global</text>
+			<polygon fill="AliceBlue" stroke="none" points="244.564,436.964 244.564,415.964 365.564,415.964 365.564,436.964 244.564,436.964" />
+			<polygon fill="none" stroke="black" points="244.564,436.964 244.564,415.964 365.564,415.964 365.564,436.964 244.564,436.964" />
+			<text text-anchor="start" x="247.564" y="430.164" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="365.564,436.964 365.564,415.964 631.564,415.964 631.564,436.964 365.564,436.964" />
+			<polygon fill="AliceBlue" stroke="none" points="244.564,457.964 244.564,436.964 365.564,436.964 365.564,457.964 244.564,457.964" />
+			<polygon fill="none" stroke="black" points="244.564,457.964 244.564,436.964 365.564,436.964 365.564,457.964 244.564,457.964" />
+			<text text-anchor="start" x="247.564" y="451.164" font-family="Arial" font-size="14.00">Glob Enab 0:</text>
+			<polygon fill="none" stroke="black" points="365.564,457.964 365.564,436.964 445.564,436.964 445.564,457.964 365.564,457.964" />
+			<text text-anchor="start" x="368.564" y="451.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="445.564,457.964 445.564,436.964 551.564,436.964 551.564,457.964 445.564,457.964" />
+			<polygon fill="none" stroke="black" points="445.564,457.964 445.564,436.964 551.564,436.964 551.564,457.964 445.564,457.964" />
+			<text text-anchor="start" x="448.564" y="451.164" font-family="Arial" font-size="14.00">Sem Enable 0:</text>
+			<polygon fill="none" stroke="black" points="551.564,457.964 551.564,436.964 631.564,436.964 631.564,457.964 551.564,457.964" />
+			<text text-anchor="start" x="554.564" y="451.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="244.564,478.964 244.564,457.964 365.564,457.964 365.564,478.964 244.564,478.964" />
+			<polygon fill="none" stroke="black" points="244.564,478.964 244.564,457.964 365.564,457.964 365.564,478.964 244.564,478.964" />
+			<text text-anchor="start" x="247.564" y="472.164" font-family="Arial" font-size="14.00">Glob Enab 1:</text>
+			<polygon fill="none" stroke="black" points="365.564,478.964 365.564,457.964 445.564,457.964 445.564,478.964 365.564,478.964" />
+			<text text-anchor="start" x="368.564" y="472.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="445.564,478.964 445.564,457.964 551.564,457.964 551.564,478.964 445.564,478.964" />
+			<polygon fill="none" stroke="black" points="445.564,478.964 445.564,457.964 551.564,457.964 551.564,478.964 445.564,478.964" />
+			<text text-anchor="start" x="448.564" y="472.164" font-family="Arial" font-size="14.00">Sem Enable 1:</text>
+			<polygon fill="none" stroke="black" points="551.564,478.964 551.564,457.964 631.564,457.964 631.564,478.964 551.564,478.964" />
+			<text text-anchor="start" x="554.564" y="472.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="244.564,499.964 244.564,478.964 365.564,478.964 365.564,499.964 244.564,499.964" />
+			<polygon fill="none" stroke="black" points="244.564,499.964 244.564,478.964 365.564,478.964 365.564,499.964 244.564,499.964" />
+			<text text-anchor="start" x="247.564" y="493.164" font-family="Arial" font-size="14.00">Glob Enab 2:</text>
+			<polygon fill="none" stroke="black" points="365.564,499.964 365.564,478.964 445.564,478.964 445.564,499.964 365.564,499.964" />
+			<text text-anchor="start" x="368.564" y="493.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="445.564,499.964 445.564,478.964 551.564,478.964 551.564,499.964 445.564,499.964" />
+			<polygon fill="none" stroke="black" points="445.564,499.964 445.564,478.964 551.564,478.964 551.564,499.964 445.564,499.964" />
+			<text text-anchor="start" x="448.564" y="493.164" font-family="Arial" font-size="14.00">Sem Enable 2:</text>
+			<polygon fill="none" stroke="black" points="551.564,499.964 551.564,478.964 631.564,478.964 631.564,499.964 551.564,499.964" />
+			<text text-anchor="start" x="554.564" y="493.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="244.564,520.964 244.564,499.964 365.564,499.964 365.564,520.964 244.564,520.964" />
+			<polygon fill="none" stroke="black" points="244.564,520.964 244.564,499.964 365.564,499.964 365.564,520.964 244.564,520.964" />
+			<text text-anchor="start" x="247.564" y="514.164" font-family="Arial" font-size="14.00">Squelch Comp:</text>
+			<polygon fill="none" stroke="black" points="365.564,520.964 365.564,499.964 445.564,499.964 445.564,520.964 365.564,520.964" />
+			<text text-anchor="start" x="368.564" y="514.164" font-family="Arial" font-size="14.00">0.0000000</text>
+			<polygon fill="AliceBlue" stroke="none" points="445.564,520.964 445.564,499.964 551.564,499.964 551.564,520.964 445.564,520.964" />
+			<polygon fill="none" stroke="black" points="445.564,520.964 445.564,499.964 551.564,499.964 551.564,520.964 445.564,520.964" />
+			<text text-anchor="start" x="448.564" y="514.164" font-family="Arial" font-size="14.00">Rounding Flag:</text>
+			<polygon fill="none" stroke="black" points="551.564,520.964 551.564,499.964 631.564,499.964 631.564,520.964 551.564,520.964" />
+			<text text-anchor="start" x="554.564" y="514.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="244.564,541.964 244.564,520.964 365.564,520.964 365.564,541.964 244.564,541.964" />
+			<polygon fill="none" stroke="black" points="244.564,541.964 244.564,520.964 365.564,520.964 365.564,541.964 244.564,541.964" />
+			<text text-anchor="start" x="247.564" y="535.164" font-family="Arial" font-size="14.00">Squelch Count:</text>
+			<polygon fill="none" stroke="black" points="365.564,541.964 365.564,520.964 445.564,520.964 445.564,541.964 365.564,541.964" />
+			<text text-anchor="start" x="368.564" y="535.164" font-family="Arial" font-size="14.00">0</text>
+			<polygon fill="AliceBlue" stroke="none" points="445.564,541.964 445.564,520.964 551.564,520.964 551.564,541.964 445.564,541.964" />
+			<polygon fill="none" stroke="black" points="445.564,541.964 445.564,520.964 551.564,520.964 551.564,541.964 445.564,541.964" />
+			<text text-anchor="start" x="448.564" y="535.164" font-family="Arial" font-size="14.00">Datapath Sign:</text>
+			<polygon fill="none" stroke="black" points="551.564,541.964 551.564,520.964 631.564,520.964 631.564,541.964 551.564,541.964" />
+			<text text-anchor="start" x="554.564" y="535.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="244.564,562.964 244.564,541.964 365.564,541.964 365.564,562.964 244.564,562.964" />
+			<polygon fill="none" stroke="black" points="244.564,562.964 244.564,541.964 365.564,541.964 365.564,562.964 244.564,562.964" />
+			<text text-anchor="start" x="247.564" y="556.164" font-family="Arial" font-size="14.00">Saturation Enable:</text>
+			<polygon fill="none" stroke="black" points="365.564,562.964 365.564,541.964 445.564,541.964 445.564,562.964 365.564,562.964" />
+			<text text-anchor="start" x="368.564" y="556.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="445.564,562.964 445.564,541.964 551.564,541.964 551.564,562.964 445.564,562.964" />
+			<polygon fill="none" stroke="black" points="445.564,562.964 445.564,541.964 551.564,541.964 551.564,562.964 445.564,562.964" />
+			<text text-anchor="start" x="448.564" y="556.164" font-family="Arial" font-size="14.00">Thresh Det Flg:</text>
+			<polygon fill="none" stroke="black" points="551.564,562.964 551.564,541.964 631.564,541.964 631.564,562.964 551.564,562.964" />
+			<text text-anchor="start" x="554.564" y="556.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="244.564,583.964 244.564,562.964 365.564,562.964 365.564,583.964 244.564,583.964" />
+			<polygon fill="none" stroke="black" points="244.564,583.964 244.564,562.964 365.564,562.964 365.564,583.964 244.564,583.964" />
+			<text text-anchor="start" x="247.564" y="577.164" font-family="Arial" font-size="14.00">Saturation Flag:</text>
+			<polygon fill="none" stroke="black" points="365.564,583.964 365.564,562.964 445.564,562.964 445.564,583.964 365.564,583.964" />
+			<text text-anchor="start" x="368.564" y="577.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="AliceBlue" stroke="none" points="445.564,583.964 445.564,562.964 551.564,562.964 551.564,583.964 445.564,583.964" />
+			<polygon fill="none" stroke="black" points="445.564,583.964 445.564,562.964 551.564,562.964 551.564,583.964 445.564,583.964" />
+			<text text-anchor="start" x="448.564" y="577.164" font-family="Arial" font-size="14.00">Datapath Thrsh:</text>
+			<polygon fill="none" stroke="black" points="551.564,583.964 551.564,562.964 631.564,562.964 631.564,583.964 551.564,583.964" />
+			<text text-anchor="start" x="554.564" y="577.164" font-family="Arial" font-size="14.00">False</text>
+			<polygon fill="WhiteSmoke" stroke="none" points="244.564,604.964 244.564,583.964 445.564,583.964 445.564,604.964 244.564,604.964" />
+			<polygon fill="none" stroke="black" points="244.564,604.964 244.564,583.964 445.564,583.964 445.564,604.964 244.564,604.964" />
+			<polygon fill="AliceBlue" stroke="none" points="445.564,604.964 445.564,583.964 551.564,583.964 551.564,604.964 445.564,604.964" />
+			<polygon fill="none" stroke="black" points="445.564,604.964 445.564,583.964 551.564,583.964 551.564,604.964 445.564,604.964" />
+			<text text-anchor="start" x="448.564" y="598.164" font-family="Arial" font-size="14.00">Datapath Zero:</text>
+			<polygon fill="none" stroke="black" points="551.564,604.964 551.564,583.964 631.564,583.964 631.564,604.964 551.564,604.964" />
+			<text text-anchor="start" x="554.564" y="598.164" font-family="Arial" font-size="14.00">False</text>
+		</g>
+		<!-- ALU&#45;&gt;Global -->
+		<g id="edge31" class="edge">
+			<title>ALU-&gt;Global</title>
+			<path fill="none" stroke="Gray" d="M527.73,115.37C527.73,115.37 527.73,375.355 527.73,375.355" />
+			<polygon fill="Gray" stroke="Gray" points="531.23,375.355 527.73,385.355 524.23,375.355 531.23,375.355" />
+		</g>
+		<!-- Shifter&#45;&gt;Mux_1A -->
+		<g id="edge6" class="edge">
+			<title>Shifter-&gt;Mux_1A</title>
+			<path fill="none" stroke="Blue" stroke-width="3" d="M764.464,-65.9736C764.464,-219.263 764.464,-572 764.464,-572 764.464,-572 -523.486,-572 -523.486,-572 -523.486,-572 -523.486,-299.377 -523.486,-299.377" />
+			<polygon fill="Blue" stroke="Blue" stroke-width="3" points="-519.986,-299.377 -523.486,-289.377 -526.986,-299.377 -519.986,-299.377" />
+			<text text-anchor="middle" x="202.19" y="-575.8" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Shifter&#45;&gt;Mux_1B -->
+		<g id="edge8" class="edge">
+			<title>Shifter-&gt;Mux_1B</title>
+			<path fill="none" stroke="Blue" stroke-width="3" d="M753.914,73.3308C753.914,235.701 753.914,626 753.914,626 753.914,626 -523.486,626 -523.486,626 -523.486,626 -523.486,307.151 -523.486,307.151" />
+			<polygon fill="Blue" stroke="Blue" stroke-width="3" points="-526.986,307.151 -523.486,297.151 -519.986,307.151 -526.986,307.151" />
+			<text text-anchor="middle" x="197.124" y="622.2" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Shifter&#45;&gt;MAC -->
+		<g id="edge19" class="edge">
+			<title>Shifter-&gt;MAC</title>
+			<path fill="none" stroke="Blue" d="M743.364,-66.1425C743.364,-193.427 743.364,-450 743.364,-450 743.364,-450 26.5636,-450 26.5636,-450 26.5636,-450 26.5636,-117.821 26.5636,-117.821" />
+			<polygon fill="Blue" stroke="Blue" points="30.0637,-117.821 26.5636,-107.821 23.0637,-117.821 30.0637,-117.821" />
+			<text text-anchor="middle" x="375.803" y="-453.8" font-family="Arial" font-size="14.00">0.0000072</text>
+		</g>
+		<!-- Hold_A -->
+		<g id="node20" class="node">
+			<title>Hold_A</title>
+			<polygon fill="LemonChiffon" stroke="none" points="793.564,-269.236 793.564,-295.236 945.564,-295.236 945.564,-269.236 793.564,-269.236" />
+			<polygon fill="none" stroke="black" points="793.564,-269.236 793.564,-295.236 945.564,-295.236 945.564,-269.236 793.564,-269.236" />
+			<text text-anchor="start" x="837.564" y="-278.836" font-family="Arial" font-weight="bold" font-size="18.00">Hold_A</text>
+			<polygon fill="AliceBlue" stroke="none" points="793.564,-248.236 793.564,-269.236 865.564,-269.236 865.564,-248.236 793.564,-248.236" />
+			<polygon fill="none" stroke="black" points="793.564,-248.236 793.564,-269.236 865.564,-269.236 865.564,-248.236 793.564,-248.236" />
+			<text text-anchor="start" x="796.564" y="-255.036" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="865.564,-248.236 865.564,-269.236 945.564,-269.236 945.564,-248.236 865.564,-248.236" />
+			<text text-anchor="start" x="868.564" y="-255.036" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="AliceBlue" stroke="none" points="793.564,-227.236 793.564,-248.236 865.564,-248.236 865.564,-227.236 793.564,-227.236" />
+			<polygon fill="none" stroke="black" points="793.564,-227.236 793.564,-248.236 865.564,-248.236 865.564,-227.236 793.564,-227.236" />
+			<text text-anchor="start" x="796.564" y="-234.036" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="865.564,-227.236 865.564,-248.236 945.564,-248.236 945.564,-227.236 865.564,-227.236" />
+			<polygon fill="AliceBlue" stroke="none" points="793.564,-206.236 793.564,-227.236 865.564,-227.236 865.564,-206.236 793.564,-206.236" />
+			<polygon fill="none" stroke="black" points="793.564,-206.236 793.564,-227.236 865.564,-227.236 865.564,-206.236 793.564,-206.236" />
+			<text text-anchor="start" x="796.564" y="-213.036" font-family="Arial" font-size="14.00">Val (hex):</text>
+			<polygon fill="none" stroke="black" points="865.564,-206.236 865.564,-227.236 945.564,-227.236 945.564,-206.236 865.564,-206.236" />
+			<polygon fill="AliceBlue" stroke="none" points="793.564,-185.236 793.564,-206.236 865.564,-206.236 865.564,-185.236 793.564,-185.236" />
+			<polygon fill="none" stroke="black" points="793.564,-185.236 793.564,-206.236 865.564,-206.236 865.564,-185.236 793.564,-185.236" />
+			<text text-anchor="start" x="796.564" y="-192.036" font-family="Arial" font-size="14.00">Val (int):</text>
+			<polygon fill="none" stroke="black" points="865.564,-185.236 865.564,-206.236 945.564,-206.236 945.564,-185.236 865.564,-185.236" />
+			<polygon fill="AliceBlue" stroke="none" points="793.564,-164.236 793.564,-185.236 865.564,-185.236 865.564,-164.236 793.564,-164.236" />
+			<polygon fill="none" stroke="black" points="793.564,-164.236 793.564,-185.236 865.564,-185.236 865.564,-164.236 793.564,-164.236" />
+			<text text-anchor="start" x="796.564" y="-171.036" font-family="Arial" font-size="14.00">Val (q.23):</text>
+			<polygon fill="none" stroke="black" points="865.564,-164.236 865.564,-185.236 945.564,-185.236 945.564,-164.236 865.564,-164.236" />
+		</g>
+		<!-- Shifter&#45;&gt;Hold_A -->
+		<g id="edge29" class="edge">
+			<title>Shifter-&gt;Hold_A</title>
+			<path fill="none" stroke="Gray" d="M862.314,-65.8105C862.314,-65.8105 862.314,-150.526 862.314,-150.526" />
+			<polygon fill="Gray" stroke="Gray" points="858.814,-150.526 862.314,-160.526 865.814,-150.526 858.814,-150.526" />
+		</g>
+		<!-- Hold_B -->
+		<g id="node21" class="node">
+			<title>Hold_B</title>
+			<polygon fill="LemonChiffon" stroke="none" points="793.564,198.764 793.564,172.764 945.564,172.764 945.564,198.764 793.564,198.764" />
+			<polygon fill="none" stroke="black" points="793.564,198.764 793.564,172.764 945.564,172.764 945.564,198.764 793.564,198.764" />
+			<text text-anchor="start" x="837.564" y="189.164" font-family="Arial" font-weight="bold" font-size="18.00">Hold_B</text>
+			<polygon fill="AliceBlue" stroke="none" points="793.564,219.764 793.564,198.764 865.564,198.764 865.564,219.764 793.564,219.764" />
+			<polygon fill="none" stroke="black" points="793.564,219.764 793.564,198.764 865.564,198.764 865.564,219.764 793.564,219.764" />
+			<text text-anchor="start" x="796.564" y="212.964" font-family="Arial" font-size="14.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="865.564,219.764 865.564,198.764 945.564,198.764 945.564,219.764 865.564,219.764" />
+			<text text-anchor="start" x="868.564" y="212.964" font-family="Arial" font-size="14.00">14</text>
+			<polygon fill="AliceBlue" stroke="none" points="793.564,240.764 793.564,219.764 865.564,219.764 865.564,240.764 793.564,240.764" />
+			<polygon fill="none" stroke="black" points="793.564,240.764 793.564,219.764 865.564,219.764 865.564,240.764 793.564,240.764" />
+			<text text-anchor="start" x="796.564" y="233.964" font-family="Arial" font-size="14.00">Instr:</text>
+			<polygon fill="none" stroke="black" points="865.564,240.764 865.564,219.764 945.564,219.764 945.564,240.764 865.564,240.764" />
+			<polygon fill="AliceBlue" stroke="none" points="793.564,261.764 793.564,240.764 865.564,240.764 865.564,261.764 793.564,261.764" />
+			<polygon fill="none" stroke="black" points="793.564,261.764 793.564,240.764 865.564,240.764 865.564,261.764 793.564,261.764" />
+			<text text-anchor="start" x="796.564" y="254.964" font-family="Arial" font-size="14.00">Val (hex):</text>
+			<polygon fill="none" stroke="black" points="865.564,261.764 865.564,240.764 945.564,240.764 945.564,261.764 865.564,261.764" />
+			<polygon fill="AliceBlue" stroke="none" points="793.564,282.764 793.564,261.764 865.564,261.764 865.564,282.764 793.564,282.764" />
+			<polygon fill="none" stroke="black" points="793.564,282.764 793.564,261.764 865.564,261.764 865.564,282.764 793.564,282.764" />
+			<text text-anchor="start" x="796.564" y="275.964" font-family="Arial" font-size="14.00">Val (int):</text>
+			<polygon fill="none" stroke="black" points="865.564,282.764 865.564,261.764 945.564,261.764 945.564,282.764 865.564,282.764" />
+			<polygon fill="AliceBlue" stroke="none" points="793.564,303.764 793.564,282.764 865.564,282.764 865.564,303.764 793.564,303.764" />
+			<polygon fill="none" stroke="black" points="793.564,303.764 793.564,282.764 865.564,282.764 865.564,303.764 793.564,303.764" />
+			<text text-anchor="start" x="796.564" y="296.964" font-family="Arial" font-size="14.00">Val (q.23):</text>
+			<polygon fill="none" stroke="black" points="865.564,303.764 865.564,282.764 945.564,282.764 945.564,303.764 865.564,303.764" />
+		</g>
+		<!-- Shifter&#45;&gt;Hold_B -->
+		<g id="edge30" class="edge">
+			<title>Shifter-&gt;Hold_B</title>
+			<path fill="none" stroke="Gray" d="M862.314,73.3378C862.314,73.3378 862.314,158.053 862.314,158.053" />
+			<polygon fill="Gray" stroke="Gray" points="865.814,158.054 862.314,168.053 858.814,158.053 865.814,158.054" />
+		</g>
+	</g>
+</svg>

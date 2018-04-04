@@ -1,0 +1,402 @@
+﻿<svg width="100%" height="100%" viewBox="0.00 0.00 600.50 957.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(363 478.5)">
+		<title>dfb_call</title>
+		<polygon fill="white" stroke="none" points="-363,478.5 -363,-478.5 237.5,-478.5 237.5,478.5 -363,478.5" />
+		<g id="clust1" class="cluster">
+			<title>cluster_initialize</title>
+			<polygon fill="WhiteSmoke" stroke="SteelBlue" points="-359,-389.5 -359,-474.5 -253,-474.5 -253,-389.5 -359,-389.5" />
+			<text text-anchor="middle" x="-306" y="-464.1" font-family="Arial" font-size="8.00">initialize</text>
+		</g>
+		<g id="clust4" class="cluster">
+			<title>cluster_moving_avg_loop</title>
+			<polygon fill="WhiteSmoke" stroke="SteelBlue" points="126.5,474.5 126.5,281.5 233.5,281.5 233.5,474.5 126.5,474.5" />
+			<text text-anchor="middle" x="180" y="291.9" font-family="Arial" font-size="8.00">moving_avg_loop</text>
+		</g>
+		<g id="clust2" class="cluster">
+			<title>cluster_wait_for_input</title>
+			<polygon fill="WhiteSmoke" stroke="SteelBlue" points="-197,-281.5 -197,-366.5 -91,-366.5 -91,-281.5 -197,-281.5" />
+			<text text-anchor="middle" x="-144" y="-356.1" font-family="Arial" font-size="8.00">wait_for_input</text>
+		</g>
+		<g id="clust3" class="cluster">
+			<title>cluster_moving_avg_init</title>
+			<polygon fill="WhiteSmoke" stroke="SteelBlue" points="-35,258.5 -35,-258.5 71,-258.5 71,258.5 -35,258.5" />
+			<text text-anchor="middle" x="18" y="-248.1" font-family="Arial" font-size="8.00">moving_avg_init</text>
+		</g>
+		<!-- initialize_1 -->
+		<g id="node1" class="node">
+			<title>initialize_1</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-351,-453 -351,-470 -261,-470 -261,-453 -351,-453" />
+			<polygon fill="none" stroke="black" points="-351,-453 -351,-470 -261,-470 -261,-453 -351,-453" />
+			<text text-anchor="start" x="-327" y="-460" font-family="Arial" font-weight="bold" font-size="10.00">initialize</text>
+			<polygon fill="AliceBlue" stroke="none" points="-351,-438 -351,-453 -321,-453 -321,-438 -351,-438" />
+			<polygon fill="none" stroke="black" points="-351,-438 -351,-453 -321,-453 -321,-438 -351,-438" />
+			<text text-anchor="start" x="-348" y="-443.6" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-321,-438 -321,-453 -261,-453 -261,-438 -321,-438" />
+			<text text-anchor="start" x="-318" y="-443.6" font-family="Arial" font-size="8.00">1</text>
+			<polygon fill="AliceBlue" stroke="none" points="-351,-423 -351,-438 -321,-438 -321,-423 -351,-423" />
+			<polygon fill="none" stroke="black" points="-351,-423 -351,-438 -321,-438 -321,-423 -351,-423" />
+			<text text-anchor="start" x="-348" y="-428.6" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="-321,-423 -321,-438 -291,-438 -291,-423 -321,-423" />
+			<text text-anchor="start" x="-318" y="-428.6" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="-291,-423 -291,-438 -261,-438 -261,-423 -291,-423" />
+			<text text-anchor="start" x="-288" y="-428.6" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="-351,-408 -351,-423 -321,-423 -321,-408 -351,-408" />
+			<polygon fill="none" stroke="black" points="-351,-408 -351,-423 -321,-423 -321,-408 -351,-408" />
+			<text text-anchor="start" x="-348" y="-413.6" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="-321,-408 -321,-423 -291,-423 -291,-408 -321,-408" />
+			<polygon fill="none" stroke="black" points="-291,-408 -291,-423 -261,-423 -261,-408 -291,-408" />
+			<text text-anchor="start" x="-288" y="-413.6" font-family="Arial" font-size="8.00">0x00</text>
+			<polygon fill="AliceBlue" stroke="none" points="-351,-393 -351,-408 -321,-408 -321,-393 -351,-393" />
+			<polygon fill="none" stroke="black" points="-351,-393 -351,-408 -321,-408 -321,-393 -351,-393" />
+			<text text-anchor="start" x="-348" y="-398.6" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="-321,-393 -321,-408 -291,-408 -291,-393 -321,-393" />
+			<polygon fill="none" stroke="black" points="-291,-393 -291,-408 -261,-408 -261,-393 -291,-393" />
+			<text text-anchor="start" x="-288" y="-398.6" font-family="Arial" font-size="8.00">0x00</text>
+		</g>
+		<!-- wait_for_input_2 -->
+		<g id="node2" class="node">
+			<title>wait_for_input_2</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-189,-345 -189,-362 -99,-362 -99,-345 -189,-345" />
+			<polygon fill="none" stroke="black" points="-189,-345 -189,-362 -99,-362 -99,-345 -189,-345" />
+			<text text-anchor="start" x="-178" y="-352" font-family="Arial" font-weight="bold" font-size="10.00">wait_for_input</text>
+			<polygon fill="AliceBlue" stroke="none" points="-189,-330 -189,-345 -159,-345 -159,-330 -189,-330" />
+			<polygon fill="none" stroke="black" points="-189,-330 -189,-345 -159,-345 -159,-330 -189,-330" />
+			<text text-anchor="start" x="-186" y="-335.6" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="-159,-330 -159,-345 -99,-345 -99,-330 -159,-330" />
+			<text text-anchor="start" x="-156" y="-335.6" font-family="Arial" font-size="8.00">2</text>
+			<polygon fill="AliceBlue" stroke="none" points="-189,-315 -189,-330 -159,-330 -159,-315 -189,-315" />
+			<polygon fill="none" stroke="black" points="-189,-315 -189,-330 -159,-330 -159,-315 -189,-315" />
+			<text text-anchor="start" x="-186" y="-320.6" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="-159,-315 -159,-330 -129,-330 -129,-315 -159,-315" />
+			<text text-anchor="start" x="-156" y="-320.6" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="-129,-315 -129,-330 -99,-330 -99,-315 -129,-315" />
+			<text text-anchor="start" x="-126" y="-320.6" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="-189,-300 -189,-315 -159,-315 -159,-300 -189,-300" />
+			<polygon fill="none" stroke="black" points="-189,-300 -189,-315 -159,-315 -159,-300 -189,-300" />
+			<text text-anchor="start" x="-186" y="-305.6" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="-159,-300 -159,-315 -129,-315 -129,-300 -159,-300" />
+			<text text-anchor="start" x="-156" y="-305.6" font-family="Arial" font-size="8.00">0x00</text>
+			<polygon fill="none" stroke="black" points="-129,-300 -129,-315 -99,-315 -99,-300 -129,-300" />
+			<text text-anchor="start" x="-126" y="-305.6" font-family="Arial" font-size="8.00">0x00</text>
+			<polygon fill="AliceBlue" stroke="none" points="-189,-285 -189,-300 -159,-300 -159,-285 -189,-285" />
+			<polygon fill="none" stroke="black" points="-189,-285 -189,-300 -159,-300 -159,-285 -189,-285" />
+			<text text-anchor="start" x="-186" y="-290.6" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="-159,-285 -159,-300 -129,-300 -129,-285 -159,-285" />
+			<text text-anchor="start" x="-156" y="-290.6" font-family="Arial" font-size="8.00">0x00</text>
+			<polygon fill="none" stroke="black" points="-129,-285 -129,-300 -99,-300 -99,-285 -129,-285" />
+			<text text-anchor="start" x="-126" y="-290.6" font-family="Arial" font-size="8.00">0x00</text>
+		</g>
+		<!-- initialize_1&#45;&gt;wait_for_input_2 -->
+		<g id="edge1" class="edge">
+			<title>initialize_1-&gt;wait_for_input_2</title>
+			<path fill="none" stroke="ForestGreen" d="M-252.955,-396.637C-237.85,-386.567 -221.268,-375.512 -205.695,-365.13" />
+			<polygon fill="ForestGreen" stroke="ForestGreen" points="-203.543,-367.902 -197.164,-359.443 -207.426,-362.078 -203.543,-367.902" />
+			<text text-anchor="middle" x="-238.825" y="-383.484" font-family="Arial" font-size="8.00">false</text>
+		</g>
+		<!-- moving_avg_init_8 -->
+		<g id="node3" class="node">
+			<title>moving_avg_init_8</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-27,-237 -27,-254 63,-254 63,-237 -27,-237" />
+			<polygon fill="none" stroke="black" points="-27,-237 -27,-254 63,-254 63,-237 -27,-237" />
+			<text text-anchor="start" x="-21.5" y="-244" font-family="Arial" font-weight="bold" font-size="10.00">moving_avg_init</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-222 -27,-237 3,-237 3,-222 -27,-222" />
+			<polygon fill="none" stroke="black" points="-27,-222 -27,-237 3,-237 3,-222 -27,-222" />
+			<text text-anchor="start" x="-24" y="-227.6" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="3,-222 3,-237 63,-237 63,-222 3,-222" />
+			<text text-anchor="start" x="6" y="-227.6" font-family="Arial" font-size="8.00">8</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-207 -27,-222 3,-222 3,-207 -27,-207" />
+			<polygon fill="none" stroke="black" points="-27,-207 -27,-222 3,-222 3,-207 -27,-207" />
+			<text text-anchor="start" x="-24" y="-212.6" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="3,-207 3,-222 33,-222 33,-207 3,-207" />
+			<text text-anchor="start" x="6" y="-212.6" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="33,-207 33,-222 63,-222 63,-207 33,-207" />
+			<text text-anchor="start" x="36" y="-212.6" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-192 -27,-207 3,-207 3,-192 -27,-192" />
+			<polygon fill="none" stroke="black" points="-27,-192 -27,-207 3,-207 3,-192 -27,-192" />
+			<text text-anchor="start" x="-24" y="-197.6" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="3,-192 3,-207 33,-207 33,-192 3,-192" />
+			<text text-anchor="start" x="6" y="-197.6" font-family="Arial" font-size="8.00">0x00</text>
+			<polygon fill="none" stroke="black" points="33,-192 33,-207 63,-207 63,-192 33,-192" />
+			<text text-anchor="start" x="36" y="-197.6" font-family="Arial" font-size="8.00">0x01</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-177 -27,-192 3,-192 3,-177 -27,-177" />
+			<polygon fill="none" stroke="black" points="-27,-177 -27,-192 3,-192 3,-177 -27,-177" />
+			<text text-anchor="start" x="-24" y="-182.6" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="3,-177 3,-192 33,-192 33,-177 3,-177" />
+			<text text-anchor="start" x="6" y="-182.6" font-family="Arial" font-size="8.00">0x00</text>
+			<polygon fill="none" stroke="black" points="33,-177 33,-192 63,-192 63,-177 33,-177" />
+			<text text-anchor="start" x="36" y="-182.6" font-family="Arial" font-size="8.00">0x02</text>
+		</g>
+		<!-- wait_for_input_2&#45;&gt;moving_avg_init_8 -->
+		<g id="edge2" class="edge">
+			<title>wait_for_input_2-&gt;moving_avg_init_8</title>
+			<path fill="none" stroke="ForestGreen" d="M-90.9551,-288.637C-75.8505,-278.567 -59.2676,-267.512 -43.6954,-257.13" />
+			<polygon fill="ForestGreen" stroke="ForestGreen" points="-41.5431,-259.902 -35.164,-251.443 -45.426,-254.078 -41.5431,-259.902" />
+			<text text-anchor="middle" x="-76.8253" y="-275.484" font-family="Arial" font-size="8.00">false</text>
+		</g>
+		<!-- moving_avg_init_14 -->
+		<g id="node4" class="node">
+			<title>moving_avg_init_14</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-27,-129 -27,-146 63,-146 63,-129 -27,-129" />
+			<polygon fill="none" stroke="black" points="-27,-129 -27,-146 63,-146 63,-129 -27,-129" />
+			<text text-anchor="start" x="-21.5" y="-136" font-family="Arial" font-weight="bold" font-size="10.00">moving_avg_init</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-114 -27,-129 3,-129 3,-114 -27,-114" />
+			<polygon fill="none" stroke="black" points="-27,-114 -27,-129 3,-129 3,-114 -27,-114" />
+			<text text-anchor="start" x="-24" y="-119.6" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="3,-114 3,-129 63,-129 63,-114 3,-114" />
+			<text text-anchor="start" x="6" y="-119.6" font-family="Arial" font-size="8.00">14</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-99 -27,-114 3,-114 3,-99 -27,-99" />
+			<polygon fill="none" stroke="black" points="-27,-99 -27,-114 3,-114 3,-99 -27,-99" />
+			<text text-anchor="start" x="-24" y="-104.6" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="3,-99 3,-114 33,-114 33,-99 3,-99" />
+			<text text-anchor="start" x="6" y="-104.6" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="33,-99 33,-114 63,-114 63,-99 33,-99" />
+			<text text-anchor="start" x="36" y="-104.6" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-84 -27,-99 3,-99 3,-84 -27,-84" />
+			<polygon fill="none" stroke="black" points="-27,-84 -27,-99 3,-99 3,-84 -27,-84" />
+			<text text-anchor="start" x="-24" y="-89.6" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="3,-84 3,-99 33,-99 33,-84 3,-84" />
+			<text text-anchor="start" x="6" y="-89.6" font-family="Arial" font-size="8.00">0x01</text>
+			<polygon fill="none" stroke="black" points="33,-84 33,-99 63,-99 63,-84 33,-84" />
+			<text text-anchor="start" x="36" y="-89.6" font-family="Arial" font-size="8.00">0x02</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-69 -27,-84 3,-84 3,-69 -27,-69" />
+			<polygon fill="none" stroke="black" points="-27,-69 -27,-84 3,-84 3,-69 -27,-69" />
+			<text text-anchor="start" x="-24" y="-74.6" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="3,-69 3,-84 33,-84 33,-69 3,-69" />
+			<text text-anchor="start" x="6" y="-74.6" font-family="Arial" font-size="8.00">0x02</text>
+			<polygon fill="none" stroke="black" points="33,-69 33,-84 63,-84 63,-69 33,-69" />
+			<text text-anchor="start" x="36" y="-74.6" font-family="Arial" font-size="8.00">0x02</text>
+		</g>
+		<!-- moving_avg_init_8&#45;&gt;moving_avg_init_14 -->
+		<g id="edge3" class="edge">
+			<title>moving_avg_init_8-&gt;moving_avg_init_14</title>
+			<path fill="none" stroke="ForestGreen" d="M24.6165,-173.316C24.7137,-169.253 24.7578,-165.101 24.7489,-160.957" />
+			<polygon fill="ForestGreen" stroke="ForestGreen" points="28.2457,-160.682 24.6176,-150.728 21.2463,-160.772 28.2457,-160.682" />
+			<text text-anchor="middle" x="34.1827" y="-160.736" font-family="Arial" font-size="8.00">false</text>
+		</g>
+		<!-- moving_avg_init_8&#45;&gt;moving_avg_init_14 -->
+		<g id="edge5" class="edge">
+			<title>moving_avg_init_8-&gt;moving_avg_init_14</title>
+			<path fill="none" stroke="Gray" stroke-dasharray="5,2" d="M11.3835,-173.316C11.2059,-165.886 11.2055,-158.158 11.3824,-150.728" />
+			<text text-anchor="middle" x="13.8015" y="-158.819" font-family="Arial" font-size="8.00">ACU_A Chg: +1</text>
+			<text text-anchor="middle" x="13.8015" y="-140.819" font-family="Arial" font-size="8.00">ACU_B Chg: +2</text>
+		</g>
+		<!-- moving_avg_init_20 -->
+		<g id="node5" class="node">
+			<title>moving_avg_init_20</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-27,-21 -27,-38 63,-38 63,-21 -27,-21" />
+			<polygon fill="none" stroke="black" points="-27,-21 -27,-38 63,-38 63,-21 -27,-21" />
+			<text text-anchor="start" x="-21.5" y="-28" font-family="Arial" font-weight="bold" font-size="10.00">moving_avg_init</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,-6 -27,-21 3,-21 3,-6 -27,-6" />
+			<polygon fill="none" stroke="black" points="-27,-6 -27,-21 3,-21 3,-6 -27,-6" />
+			<text text-anchor="start" x="-24" y="-11.6" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="3,-6 3,-21 63,-21 63,-6 3,-6" />
+			<text text-anchor="start" x="6" y="-11.6" font-family="Arial" font-size="8.00">20</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,9 -27,-6 3,-6 3,9 -27,9" />
+			<polygon fill="none" stroke="black" points="-27,9 -27,-6 3,-6 3,9 -27,9" />
+			<text text-anchor="start" x="-24" y="3.4" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="3,9 3,-6 33,-6 33,9 3,9" />
+			<text text-anchor="start" x="6" y="3.4" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="33,9 33,-6 63,-6 63,9 33,9" />
+			<text text-anchor="start" x="36" y="3.4" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,24 -27,9 3,9 3,24 -27,24" />
+			<polygon fill="none" stroke="black" points="-27,24 -27,9 3,9 3,24 -27,24" />
+			<text text-anchor="start" x="-24" y="18.4" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="3,24 3,9 33,9 33,24 3,24" />
+			<text text-anchor="start" x="6" y="18.4" font-family="Arial" font-size="8.00">0x02</text>
+			<polygon fill="none" stroke="black" points="33,24 33,9 63,9 63,24 33,24" />
+			<text text-anchor="start" x="36" y="18.4" font-family="Arial" font-size="8.00">0x03</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,39 -27,24 3,24 3,39 -27,39" />
+			<polygon fill="none" stroke="black" points="-27,39 -27,24 3,24 3,39 -27,39" />
+			<text text-anchor="start" x="-24" y="33.4" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="3,39 3,24 33,24 33,39 3,39" />
+			<text text-anchor="start" x="6" y="33.4" font-family="Arial" font-size="8.00">0x02</text>
+			<polygon fill="none" stroke="black" points="33,39 33,24 63,24 63,39 33,39" />
+			<text text-anchor="start" x="36" y="33.4" font-family="Arial" font-size="8.00">0x02</text>
+		</g>
+		<!-- moving_avg_init_14&#45;&gt;moving_avg_init_20 -->
+		<g id="edge4" class="edge">
+			<title>moving_avg_init_14-&gt;moving_avg_init_20</title>
+			<path fill="none" stroke="ForestGreen" d="M24.6165,-65.3155C24.7137,-61.2528 24.7578,-57.1006 24.7489,-52.9565" />
+			<polygon fill="ForestGreen" stroke="ForestGreen" points="28.2457,-52.6823 24.6176,-42.7281 21.2463,-52.7722 28.2457,-52.6823" />
+			<text text-anchor="middle" x="15.1827" y="-61.736" font-family="Arial" font-size="8.00">false</text>
+		</g>
+		<!-- moving_avg_init_14&#45;&gt;moving_avg_init_20 -->
+		<g id="edge7" class="edge">
+			<title>moving_avg_init_14-&gt;moving_avg_init_20</title>
+			<path fill="none" stroke="Gray" stroke-dasharray="5,2" d="M11.3835,-65.3155C11.2059,-57.8865 11.2055,-50.1583 11.3824,-42.7281" />
+			<text text-anchor="middle" x="13.8015" y="-41.8188" font-family="Arial" font-size="8.00">ACU_A Chg: +1</text>
+		</g>
+		<!-- moving_avg_init_26 -->
+		<g id="node6" class="node">
+			<title>moving_avg_init_26</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-27,87 -27,70 63,70 63,87 -27,87" />
+			<polygon fill="none" stroke="black" points="-27,87 -27,70 63,70 63,87 -27,87" />
+			<text text-anchor="start" x="-21.5" y="80" font-family="Arial" font-weight="bold" font-size="10.00">moving_avg_init</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,102 -27,87 3,87 3,102 -27,102" />
+			<polygon fill="none" stroke="black" points="-27,102 -27,87 3,87 3,102 -27,102" />
+			<text text-anchor="start" x="-24" y="96.4" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="3,102 3,87 63,87 63,102 3,102" />
+			<text text-anchor="start" x="6" y="96.4" font-family="Arial" font-size="8.00">26</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,117 -27,102 3,102 3,117 -27,117" />
+			<polygon fill="none" stroke="black" points="-27,117 -27,102 3,102 3,117 -27,117" />
+			<text text-anchor="start" x="-24" y="111.4" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="3,117 3,102 33,102 33,117 3,117" />
+			<text text-anchor="start" x="6" y="111.4" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="33,117 33,102 63,102 63,117 33,117" />
+			<text text-anchor="start" x="36" y="111.4" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,132 -27,117 3,117 3,132 -27,132" />
+			<polygon fill="none" stroke="black" points="-27,132 -27,117 3,117 3,132 -27,132" />
+			<text text-anchor="start" x="-24" y="126.4" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="3,132 3,117 33,117 33,132 3,132" />
+			<text text-anchor="start" x="6" y="126.4" font-family="Arial" font-size="8.00">0x03</text>
+			<polygon fill="none" stroke="black" points="33,132 33,117 63,117 63,132 33,132" />
+			<text text-anchor="start" x="36" y="126.4" font-family="Arial" font-size="8.00">0x04</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,147 -27,132 3,132 3,147 -27,147" />
+			<polygon fill="none" stroke="black" points="-27,147 -27,132 3,132 3,147 -27,147" />
+			<text text-anchor="start" x="-24" y="141.4" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="3,147 3,132 33,132 33,147 3,147" />
+			<text text-anchor="start" x="6" y="141.4" font-family="Arial" font-size="8.00">0x02</text>
+			<polygon fill="none" stroke="black" points="33,147 33,132 63,132 63,147 33,147" />
+			<text text-anchor="start" x="36" y="141.4" font-family="Arial" font-size="8.00">0x02</text>
+		</g>
+		<!-- moving_avg_init_20&#45;&gt;moving_avg_init_26 -->
+		<g id="edge6" class="edge">
+			<title>moving_avg_init_20-&gt;moving_avg_init_26</title>
+			<path fill="none" stroke="ForestGreen" d="M24.6165,42.6845C24.7137,46.7472 24.7578,50.8994 24.7489,55.0435" />
+			<polygon fill="ForestGreen" stroke="ForestGreen" points="28.2457,55.3177 24.6176,65.2719 21.2463,55.2278 28.2457,55.3177" />
+			<text text-anchor="middle" x="15.1827" y="46.264" font-family="Arial" font-size="8.00">false</text>
+		</g>
+		<!-- moving_avg_init_20&#45;&gt;moving_avg_init_26 -->
+		<g id="edge9" class="edge">
+			<title>moving_avg_init_20-&gt;moving_avg_init_26</title>
+			<path fill="none" stroke="Gray" stroke-dasharray="5,2" d="M11.3835,42.6845C11.2059,50.1135 11.2055,57.8417 11.3824,65.2719" />
+			<text text-anchor="middle" x="13.8015" y="66.1812" font-family="Arial" font-size="8.00">ACU_A Chg: +1</text>
+		</g>
+		<!-- moving_avg_init_32 -->
+		<g id="node7" class="node">
+			<title>moving_avg_init_32</title>
+			<polygon fill="LemonChiffon" stroke="none" points="-27,195 -27,178 63,178 63,195 -27,195" />
+			<polygon fill="none" stroke="black" points="-27,195 -27,178 63,178 63,195 -27,195" />
+			<text text-anchor="start" x="-21.5" y="188" font-family="Arial" font-weight="bold" font-size="10.00">moving_avg_init</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,210 -27,195 3,195 3,210 -27,210" />
+			<polygon fill="none" stroke="black" points="-27,210 -27,195 3,195 3,210 -27,210" />
+			<text text-anchor="start" x="-24" y="204.4" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="3,210 3,195 63,195 63,210 3,210" />
+			<text text-anchor="start" x="6" y="204.4" font-family="Arial" font-size="8.00">32</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,225 -27,210 3,210 3,225 -27,225" />
+			<polygon fill="none" stroke="black" points="-27,225 -27,210 3,210 3,225 -27,225" />
+			<text text-anchor="start" x="-24" y="219.4" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="3,225 3,210 33,210 33,225 3,225" />
+			<text text-anchor="start" x="6" y="219.4" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="33,225 33,210 63,210 63,225 33,225" />
+			<text text-anchor="start" x="36" y="219.4" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,240 -27,225 3,225 3,240 -27,240" />
+			<polygon fill="none" stroke="black" points="-27,240 -27,225 3,225 3,240 -27,240" />
+			<text text-anchor="start" x="-24" y="234.4" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="3,240 3,225 33,225 33,240 3,240" />
+			<text text-anchor="start" x="6" y="234.4" font-family="Arial" font-size="8.00">0x04</text>
+			<polygon fill="none" stroke="black" points="33,240 33,225 63,225 63,240 33,240" />
+			<text text-anchor="start" x="36" y="234.4" font-family="Arial" font-size="8.00">0x05</text>
+			<polygon fill="AliceBlue" stroke="none" points="-27,255 -27,240 3,240 3,255 -27,255" />
+			<polygon fill="none" stroke="black" points="-27,255 -27,240 3,240 3,255 -27,255" />
+			<text text-anchor="start" x="-24" y="249.4" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="3,255 3,240 33,240 33,255 3,255" />
+			<text text-anchor="start" x="6" y="249.4" font-family="Arial" font-size="8.00">0x02</text>
+			<polygon fill="none" stroke="black" points="33,255 33,240 63,240 63,255 33,255" />
+			<text text-anchor="start" x="36" y="249.4" font-family="Arial" font-size="8.00">0x02</text>
+		</g>
+		<!-- moving_avg_init_26&#45;&gt;moving_avg_init_32 -->
+		<g id="edge8" class="edge">
+			<title>moving_avg_init_26-&gt;moving_avg_init_32</title>
+			<path fill="none" stroke="ForestGreen" d="M24.6165,150.684C24.7137,154.747 24.7578,158.899 24.7489,163.043" />
+			<polygon fill="ForestGreen" stroke="ForestGreen" points="28.2457,163.318 24.6176,173.272 21.2463,163.228 28.2457,163.318" />
+			<text text-anchor="middle" x="15.1827" y="154.264" font-family="Arial" font-size="8.00">false</text>
+		</g>
+		<!-- moving_avg_init_26&#45;&gt;moving_avg_init_32 -->
+		<g id="edge11" class="edge">
+			<title>moving_avg_init_26-&gt;moving_avg_init_32</title>
+			<path fill="none" stroke="Gray" stroke-dasharray="5,2" d="M11.3835,150.684C11.2059,158.114 11.2055,165.842 11.3824,173.272" />
+			<text text-anchor="middle" x="13.8015" y="174.181" font-family="Arial" font-size="8.00">ACU_A Chg: +1</text>
+		</g>
+		<!-- moving_avg_loop_38 -->
+		<g id="node8" class="node">
+			<title>moving_avg_loop_38</title>
+			<polygon fill="LemonChiffon" stroke="none" points="135,303 135,286 226,286 226,303 135,303" />
+			<polygon fill="none" stroke="black" points="135,303 135,286 226,286 226,303 135,303" />
+			<text text-anchor="start" x="138" y="296" font-family="Arial" font-weight="bold" font-size="10.00">moving_avg_loop</text>
+			<polygon fill="AliceBlue" stroke="none" points="135,318 135,303 165,303 165,318 135,318" />
+			<polygon fill="none" stroke="black" points="135,318 135,303 165,303 165,318 135,318" />
+			<text text-anchor="start" x="138" y="312.4" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="165,318 165,303 226,303 226,318 165,318" />
+			<text text-anchor="start" x="168" y="312.4" font-family="Arial" font-size="8.00">38</text>
+			<polygon fill="AliceBlue" stroke="none" points="135,333 135,318 165,318 165,333 135,333" />
+			<polygon fill="none" stroke="black" points="135,333 135,318 165,318 165,333 135,333" />
+			<text text-anchor="start" x="138" y="327.4" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="165,333 165,318 195,318 195,333 165,333" />
+			<text text-anchor="start" x="168" y="327.4" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="195,333 195,318 226,318 226,333 195,333" />
+			<text text-anchor="start" x="198" y="327.4" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="135,348 135,333 165,333 165,348 135,348" />
+			<polygon fill="none" stroke="black" points="135,348 135,333 165,333 165,348 135,348" />
+			<text text-anchor="start" x="138" y="342.4" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="165,348 165,333 195,333 195,348 165,348" />
+			<text text-anchor="start" x="168" y="342.4" font-family="Arial" font-size="8.00">0x05</text>
+			<polygon fill="none" stroke="black" points="195,348 195,333 226,333 226,348 195,348" />
+			<text text-anchor="start" x="198" y="342.4" font-family="Arial" font-size="8.00">0x00</text>
+			<polygon fill="AliceBlue" stroke="none" points="135,363 135,348 165,348 165,363 135,363" />
+			<polygon fill="none" stroke="black" points="135,363 135,348 165,348 165,363 135,363" />
+			<text text-anchor="start" x="138" y="357.4" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="165,363 165,348 195,348 195,363 165,363" />
+			<text text-anchor="start" x="168" y="357.4" font-family="Arial" font-size="8.00">0x02</text>
+			<polygon fill="none" stroke="black" points="195,363 195,348 226,348 226,363 195,363" />
+			<text text-anchor="start" x="198" y="357.4" font-family="Arial" font-size="8.00">0x02</text>
+		</g>
+		<!-- moving_avg_init_32&#45;&gt;moving_avg_loop_38 -->
+		<g id="edge10" class="edge">
+			<title>moving_avg_init_32-&gt;moving_avg_loop_38</title>
+			<path fill="none" stroke="ForestGreen" d="M71.0449,251.363C85.9938,261.329 102.391,272.26 117.823,282.548" />
+			<polygon fill="ForestGreen" stroke="ForestGreen" points="119.902,279.728 126.281,288.188 116.019,285.553 119.902,279.728" />
+			<text text-anchor="middle" x="78.4338" y="273.356" font-family="Arial" font-size="8.00">AcuAEQ</text>
+		</g>
+		<!-- moving_avg_loop_44 -->
+		<g id="node9" class="node">
+			<title>moving_avg_loop_44</title>
+			<polygon fill="LemonChiffon" stroke="none" points="135,411 135,394 226,394 226,411 135,411" />
+			<polygon fill="none" stroke="black" points="135,411 135,394 226,394 226,411 135,411" />
+			<text text-anchor="start" x="138" y="404" font-family="Arial" font-weight="bold" font-size="10.00">moving_avg_loop</text>
+			<polygon fill="AliceBlue" stroke="none" points="135,426 135,411 165,411 165,426 135,426" />
+			<polygon fill="none" stroke="black" points="135,426 135,411 165,411 165,426 135,426" />
+			<text text-anchor="start" x="138" y="420.4" font-family="Arial" font-size="8.00">Cycle:</text>
+			<polygon fill="none" stroke="black" points="165,426 165,411 226,411 226,426 165,426" />
+			<text text-anchor="start" x="168" y="420.4" font-family="Arial" font-size="8.00">44</text>
+			<polygon fill="AliceBlue" stroke="none" points="135,441 135,426 165,426 165,441 135,441" />
+			<polygon fill="none" stroke="black" points="135,441 135,426 165,426 165,441 135,441" />
+			<text text-anchor="start" x="138" y="435.4" font-family="Arial" font-size="8.00">ACU</text>
+			<polygon fill="none" stroke="black" points="165,441 165,426 195,426 195,441 165,441" />
+			<text text-anchor="start" x="168" y="435.4" font-family="Arial" font-size="8.00">Beg</text>
+			<polygon fill="none" stroke="black" points="195,441 195,426 226,426 226,441 195,441" />
+			<text text-anchor="start" x="198" y="435.4" font-family="Arial" font-size="8.00">End</text>
+			<polygon fill="AliceBlue" stroke="none" points="135,456 135,441 165,441 165,456 135,456" />
+			<polygon fill="none" stroke="black" points="135,456 135,441 165,441 165,456 135,456" />
+			<text text-anchor="start" x="138" y="450.4" font-family="Arial" font-size="8.00">A.reg</text>
+			<polygon fill="none" stroke="black" points="165,456 165,441 195,441 195,456 165,456" />
+			<text text-anchor="start" x="168" y="450.4" font-family="Arial" font-size="8.00">0x00</text>
+			<polygon fill="none" stroke="black" points="195,456 195,441 226,441 226,456 195,456" />
+			<text text-anchor="start" x="198" y="450.4" font-family="Arial" font-size="8.00">0x01</text>
+			<polygon fill="AliceBlue" stroke="none" points="135,471 135,456 165,456 165,471 135,471" />
+			<polygon fill="none" stroke="black" points="135,471 135,456 165,456 165,471 135,471" />
+			<text text-anchor="start" x="138" y="465.4" font-family="Arial" font-size="8.00">B.reg</text>
+			<polygon fill="none" stroke="black" points="165,471 165,456 195,456 195,471 165,471" />
+			<text text-anchor="start" x="168" y="465.4" font-family="Arial" font-size="8.00">0x02</text>
+			<polygon fill="none" stroke="black" points="195,471 195,456 226,456 226,471 195,471" />
+			<text text-anchor="start" x="198" y="465.4" font-family="Arial" font-size="8.00">0x02</text>
+		</g>
+		<!-- moving_avg_loop_38&#45;&gt;moving_avg_loop_44 -->
+		<g id="edge12" class="edge">
+			<title>moving_avg_loop_38-&gt;moving_avg_loop_44</title>
+			<path fill="none" stroke="ForestGreen" d="M180,366.684C180,370.747 180,374.899 180,379.043" />
+			<polygon fill="ForestGreen" stroke="ForestGreen" points="183.5,379.272 180,389.272 176.5,379.272 183.5,379.272" />
+			<text text-anchor="middle" x="170.5" y="379.264" font-family="Arial" font-size="8.00">false</text>
+		</g>
+	</g>
+</svg>
